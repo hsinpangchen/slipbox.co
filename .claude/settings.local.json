@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(npm run docs:dev:*)",
+      "Bash(middleman init:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec middleman init:*)",
+      "Bash(bundle exec middleman:*)",
+      "Bash(curl:*)",
+      "Bash(pkill:*)",
+      "Bash(bundle update:*)"
+    ],
+    "deny": []
+  }
+}

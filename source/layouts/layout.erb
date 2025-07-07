@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title><%= current_page.data.title || "iPad POS - 極簡收銀系統" %></title>
+    <meta name="description" content="<%= current_page.data.description || '專為iPad設計的極簡收銀系統，讓您的店面管理更簡單高效' %>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+</head>
+<body>
+    <%= partial "navigation" %>
+    
+    <main>
+        <%= yield %>
+    </main>
+    
+    <%= partial "footer" %>
+</body>
+</html>
