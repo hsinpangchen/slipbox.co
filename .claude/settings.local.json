@@ -12,7 +12,8 @@
       "Bash(bundle exec middleman:*)",
       "Bash(curl:*)",
       "Bash(pkill:*)",
-      "Bash(bundle update:*)"
+      "Bash(bundle update:*)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }
