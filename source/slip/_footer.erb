@@ -1,0 +1,73 @@
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="/images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">在營業現場不會出事的 POS</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">產品</h6>
+                    <ul class="footer-list">
+                        <li><a href="/slip/#reliability" class="footer-link">現場可靠</a></li>
+                        <li><a href="/slip/#free-plan" class="footer-link">免費方案</a></li>
+                        <li><a href="/slip/#local-first" class="footer-link">Local-first</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">計畫</h6>
+                    <ul class="footer-list">
+                        <li><a href="/slip/early-operators.html" class="footer-link">前 10 家計畫</a></li>
+                        <li><a href="/slip/#stories" class="footer-link">使用故事</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">支援</h6>
+                    <ul class="footer-list">
+                        <li><a href="/slip/tutorial/" class="footer-link">教學</a></li>
+                        <li><a href="/slip/#faq" class="footer-link">常見問題</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">聯絡我們</a></li>
+                        <li><a href="/slip/support.html" class="footer-link" target="_blank">支援頁面</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">法律條款</h6>
+                    <ul class="footer-list">
+                        <li><a href="/slip/privacy.html" class="footer-link" target="_blank">隱私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>&copy; 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                <% if data.social_links %>
+                    <% data.social_links.each do |link| %>
+                        <a href="<%= link.url %>" class="social-link" aria-label="<%= link.label %>"<% if link.new_tab %> target="_blank" rel="noopener"<% end %>>
+                            <%= partial "slip/social_icon", locals: { name: link.name } %>
+                        </a>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</footer>

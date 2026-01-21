@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.2'
+gem 'middleman', '~> 4.6'
 gem 'middleman-autoprefixer', '~> 2.7'
 gem 'net-ftp'
+gem 'rake'
 
 gem "middleman-favicon-maker", "~> 4.1"
 

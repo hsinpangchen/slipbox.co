@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title><%= current_page.data.title || "Slip POS" %></title>
+        <meta name="description" content="<%= current_page.data.description || 'Slip POS' %>" />
+        <%= stylesheet_link_tag "site" %>
+        <%= javascript_include_tag "site" %>
+    </head>
+    <body class="instruction-page">
+        <%= yield %>
+    </body>
+</html>

@@ -13,7 +13,18 @@
       "Bash(curl:*)",
       "Bash(pkill:*)",
       "Bash(bundle update:*)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(git commit:*)",
+      "Bash(bundle list:*)",
+      "WebFetch(domain:tuple.app)",
+      "Bash(mv:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(convert:*)",
+      "WebFetch(domain:www.anthropic.com)",
+      "Bash(git remote:*)",
+      "Bash(rake clean:*)",
+      "Bash(rake deploy:*)"
     ],
     "deny": []
   }

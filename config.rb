@@ -1,18 +1,20 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+# Enable directory indexes for clean URLs
+# activate :directory_indexes
+
 # Commented out due to compatibility issues
 # activate :autoprefixer do |prefix|
 #   prefix.browsers = "last 2 versions"
 # end
 
-# Favicon maker (commented out - add favicon.png to source/images/ to enable)
+# Favicon maker (temporarily disabled due to compatibility issues)
 # activate :favicon_maker, :icons => {
-#   "source/images/favicon.png" => [
-#     { icon: "apple-touch-icon-152x152-precomposed.png" },
+#   "source/images/slip/logo.png" => [
+#     { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
 #     { icon: "favicon-32x32.png" },
 #     { icon: "favicon-16x16.png" },
-#     { icon: "favicon.ico", size: "64x64,32x32,24x24,16x16" },
 #   ]
 # }
 
@@ -51,17 +53,28 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+set :build_dir, 'build'
+
 configure :build do
+
+
   activate :minify_css
   # activate :minify_javascript
   # activate :asset_hash
   activate :relative_assets
   set :relative_links, true
+
+
+
+
+
 end
 
-# Deploy configuration (commented out to avoid dependency issues)
-# activate :deploy do |deploy|
-#   deploy.deploy_method = :git
-#   deploy.branch = 'gh-pages'
-#   deploy.build_before = true
-# end
+
+after_build do |builder|
+  # Copy CNAME file for GitHub Pages
+  if File.exist?('CNAME')
+    FileUtils.cp('CNAME', config[:build_dir])
+    puts "CNAME file copied to build directory"
+  end
+end

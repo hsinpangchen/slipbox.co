@@ -1,5 +1,35 @@
-.bundle
-.cache
-.DS_Store
-.sass-cache
+# Middleman build directory
 build/
+
+# Ruby/Bundler
+.bundle/
+.cache/
+.sass-cache/
+vendor/bundle/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+.tmp/
+
+# Environment variables
+.env
+.env.local

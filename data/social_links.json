@@ -1,0 +1,26 @@
+[
+    {
+        "name": "facebook",
+        "label": "Facebook",
+        "url": "https://www.facebook.com/profile.php?id=61586979264521",
+        "new_tab": true
+    },
+    {
+        "name": "instagram",
+        "label": "Instagram",
+        "url": "https://www.instagram.com/slip.pos/",
+        "new_tab": true
+    },
+    {
+        "name": "threads",
+        "label": "Threads",
+        "url": "https://www.threads.com/@slip.pos",
+        "new_tab": true
+    },
+    {
+        "name": "x",
+        "label": "X (Twitter)",
+        "url": "https://x.com/slip_pos_app",
+        "new_tab": true
+    }
+]

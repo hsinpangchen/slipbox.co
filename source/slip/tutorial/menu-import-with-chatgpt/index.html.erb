@@ -1,0 +1,144 @@
+---
+title: 使用 AI 快速匯入菜單（約 3 分鐘） – Slip POS
+description: 透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。
+layout: tutorial
+---
+
+<section class="menu-import-page">
+    <header class="menu-import-header">
+        <h1>使用 AI 快速匯入菜單（約 3 分鐘）</h1>
+        <p class="menu-import-subtitle">透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。</p>
+    </header>
+
+    <section class="menu-import-overview">
+        <p>
+            Slip 本身不會自動辨識菜單圖片。<br>
+            此流程會引導你使用 ChatGPT，將菜單圖片轉換成 Slip 可匯入的 JSON 格式。
+        </p>
+        <p>適合：</p>
+        <ul>
+            <li>已有紙本或圖片菜單</li>
+            <li>想快速建立菜單資料的使用者</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-steps">
+        <h2>步驟</h2>
+        <ol>
+            <li>
+                <h3>Step 1 — Open ChatGPT</h3>
+                <p>請打開 ChatGPT（手機或電腦皆可）。</p>
+            </li>
+            <li>
+                <h3>Step 2 — Upload Your Menu Image</h3>
+                <ul>
+                    <li>拍攝紙本菜單</li>
+                    <li>或上傳既有圖片</li>
+                    <li>清楚可讀即可，不需裁切完美</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Step 3 — Copy &amp; Paste the Prompt</h3>
+                <p>請將下方指令完整複製，貼到 ChatGPT 對話中。</p>
+                <div class="menu-import-prompt-actions">
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-prompt" aria-label="複製提示內容">複製</button>
+                </div>
+                <pre class="menu-import-prompt" id="menu-import-prompt"><code>你是餐飲菜單 OCR 與結構化專家。請讀取使用者上傳的菜單圖片，解析出分類、品項、價格、是否加購、修飾語，並輸出符合以下 JSON 結構的結果（只輸出
+JSON，不能有任何額外文字或 Markdown）：
+
+JSON 結構：
+{
+  "sections": [
+    {
+      "name": "分類名稱",
+      "sortOrder": 1,
+      "menuItems": [
+        {
+          "name": "品項名稱",
+          "price": 0,
+          "isAvailable": true,
+          "sortOrder": 1,
+          "isAddon": false,
+          "productUUID": null
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    { "term": "修飾語", "enabled": true }
+  ]
+}
+
+規則：
+
+1. sortOrder 依照圖片中出現順序，從 1 開始。
+2. 若圖片中沒有明確的可售/停售資訊，isAvailable 一律 true。
+3. 若品項屬於加料/加購（例如「加珍珠」「加起司」等），isAddon 設為 true，否則 false。
+4. productUUID 一律輸出 null（或省略該欄位也可以，但請一致）。
+5. 若圖片中沒有分類，請建立單一分類 name = "未分類"。
+6. 價格請輸出數字（可含小數），不要加幣別符號。
+7. 修飾語（modifiers）請從圖片中常見的可選詞彙整理，例如「少冰」「少糖」「不辣」「去冰」等；若沒有就輸出空陣列。
+8. 如果同一品項在不同分類出現，保持各自分類內各一筆，不要合併。
+9. 輸出必須是合法 JSON，使用雙引號。
+
+請開始解析圖片並輸出 JSON。</code></pre>
+            </li>
+            <li>
+                <h3>Step 4 — Get <span class="menu-import-inline-code">menu.json</span></h3>
+                <p>ChatGPT 回傳後，請確認內容為 JSON 格式，並完整複製（從 <span class="menu-import-inline-code">{</span> 開始，到 <span class="menu-import-inline-code">}</span> 結束）。</p>
+                <p class="menu-import-preview-label">輸出 JSON 預覽格式</p>
+                <div class="menu-import-prompt-actions">
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-json-preview" aria-label="複製 JSON 預覽內容">複製</button>
+                </div>
+                <pre class="menu-import-prompt menu-import-json-preview" id="menu-import-json-preview"><code>{
+  "sections": [
+    {
+      "name": "飲品",
+      "sortOrder": 1,
+      "menuItems": [
+        {
+          "name": "紅茶",
+          "price": 30,
+          "isAvailable": true,
+          "sortOrder": 1,
+          "isAddon": false,
+          "productUUID": null
+        },
+        {
+          "name": "加珍珠",
+          "price": 10,
+          "isAvailable": true,
+          "sortOrder": 2,
+          "isAddon": true,
+          "productUUID": null
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    { "term": "少冰", "enabled": true },
+    { "term": "少糖", "enabled": true }
+  ]
+}</code></pre>
+            </li>
+            <li>
+                <h3>Step 5 — Import into Slip</h3>
+                <p>回到 Slip → 菜單匯入 → 貼上 JSON → 預覽 → 匯入。</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="menu-import-notes">
+        <h2>重要提醒</h2>
+        <ul>
+            <li>此內容由 AI 產生，可能需要人工確認</li>
+            <li>匯入前 Slip 會提供預覽畫面</li>
+            <li>價格與分類請自行確認是否正確</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-disclaimer">
+        <h2>責任說明</h2>
+        <p>此流程僅提供操作指引。ChatGPT 的辨識結果由使用者自行確認與負責。</p>
+    </section>
+</section>
