@@ -1,0 +1,10 @@
+<% if config[:ga_measurement_id] && !config[:ga_measurement_id].strip.empty? %>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= config[:ga_measurement_id] %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "<%= config[:ga_measurement_id] %>");
+    </script>
+<% end %>

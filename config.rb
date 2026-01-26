@@ -1,6 +1,17 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+# Load .env for local development if dotenv is available.
+begin
+  require "dotenv"
+  Dotenv.load
+rescue LoadError
+  # dotenv is optional in some environments
+end
+
+# Google Analytics (GA4)
+set :ga_measurement_id, ENV["GA_MEASUREMENT_ID"]
+
 # Enable directory indexes for clean URLs
 # activate :directory_indexes
 

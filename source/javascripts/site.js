@@ -72,4 +72,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1800);
         });
     });
+
+    const appStoreLinks = document.querySelectorAll('a[href*="apps.apple.com/"]');
+
+    appStoreLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (typeof gtag !== 'function') {
+                return;
+            }
+
+            const linkText = link.textContent.trim();
+            const linkLabel = link.getAttribute('data-analytics-label') || linkText;
+
+            gtag('event', 'app_store_click', {
+                link_url: link.href,
+                link_text: linkText,
+                link_label: linkLabel,
+                page_path: window.location.pathname
+            });
+        });
+    });
 });
