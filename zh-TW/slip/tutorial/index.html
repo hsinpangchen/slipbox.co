@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>使用 AI 快速匯入菜單（約 3 分鐘） – Slip POS</title>
-    <meta name="description" content="透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。">
+    <title>教學 – Slip POS</title>
+    <meta name="description" content="開始使用 Slip 的教學，包含菜單匯入、印表機設定與開店流程。">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon-180x180.png">
@@ -49,11 +49,16 @@
             <img src="../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
         </div>
         <div class="nav-menu">
-            <a href="/slip/#free-plan" class="nav-link">免費方案</a>
-            <a href="/slip/#local-first" class="nav-link">Local-first</a>
-            <a href="/slip/#tutorials" class="nav-link">教學</a>
-            <a href="/slip/early-operators.html" class="nav-link">前 10 家計畫</a>
+            <a href="/zh-TW/slip/#free-plan" class="nav-link">免費方案</a>
+            <a href="/zh-TW/slip/#local-first" class="nav-link">Local-first</a>
+            <a href="/zh-TW/slip/#tutorials" class="nav-link">教學</a>
+            <a href="/zh-TW/slip/early-operators/" class="nav-link">前 10 家計畫</a>
             <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">下載 Slip</a>
+            <div class="nav-locale">
+                <a href="/en/slip/tutorial" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/tutorial" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+            </div>
         </div>
     </div>
 </nav>
@@ -64,8 +69,8 @@
             <nav class="tutorial-sidebar-nav">
     <p class="tutorial-sidebar-title">教學列表</p>
     <ul class="tutorial-sidebar-list">
-        <li><a href="/slip/tutorial/">教學總覽</a></li>
-        <li><a href="/slip/tutorial/menu-import-with-chatgpt/">使用 AI 快速匯入菜單</a></li>
+        <li><a href="/zh-TW/slip/tutorial/">教學總覽</a></li>
+        <li><a href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/">使用 AI 快速匯入菜單</a></li>
         <li class="is-disabled"><span>印表機設定與測試（即將上線）</span></li>
         <li class="is-disabled"><span>第一次開店流程（即將上線）</span></li>
         <li class="is-disabled"><span>商品分類與選項設定（即將上線）</span></li>
@@ -75,143 +80,69 @@
 
         </aside>
         <section class="tutorial-content">
-            <section class="menu-import-page">
-    <header class="menu-import-header">
-        <h1>使用 AI 快速匯入菜單（約 3 分鐘）</h1>
-        <p class="menu-import-subtitle">透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。</p>
-    </header>
+            <section class="guide-page">
+    <div class="guide-container">
+        <header class="guide-header">
+            <p class="section-subtitle">教學</p>
+            <h1 class="guide-title">Slip 教學總覽</h1>
+            <p class="guide-lede">從菜單匯入到開店流程，把營業現場最容易卡住的地方補齊。</p>
+        </header>
 
-    <section class="menu-import-overview">
-        <p>
-            Slip 本身不會自動辨識菜單圖片。<br>
-            此流程會引導你使用 ChatGPT，將菜單圖片轉換成 Slip 可匯入的 JSON 格式。
-        </p>
-        <p>適合：</p>
-        <ul>
-            <li>已有紙本或圖片菜單</li>
-            <li>想快速建立菜單資料的使用者</li>
-        </ul>
-    </section>
-
-    <section class="menu-import-steps">
-        <h2>步驟</h2>
-        <ol>
-            <li>
-                <h3>Step 1 — Open ChatGPT</h3>
-                <p>請打開 ChatGPT（手機或電腦皆可）。</p>
-            </li>
-            <li>
-                <h3>Step 2 — Upload Your Menu Image</h3>
-                <ul>
-                    <li>拍攝紙本菜單</li>
-                    <li>或上傳既有圖片</li>
-                    <li>清楚可讀即可，不需裁切完美</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Step 3 — Copy &amp; Paste the Prompt</h3>
-                <p>請將下方指令完整複製，貼到 ChatGPT 對話中。</p>
-                <div class="menu-import-prompt-actions">
-                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-prompt" aria-label="複製提示內容">複製</button>
+        <div class="tutorials-grid guide-grid">
+            <a class="tutorial-card" href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">約 3 分鐘</span>
                 </div>
-                <pre class="menu-import-prompt" id="menu-import-prompt"><code>你是餐飲菜單 OCR 與結構化專家。請讀取使用者上傳的菜單圖片，解析出分類、品項、價格、是否加購、修飾語，並輸出符合以下 JSON 結構的結果（只輸出
-JSON，不能有任何額外文字或 Markdown）：
+                <h4>使用 AI 快速匯入菜單</h4>
+                <p>把菜單照片轉成 Slip 可匯入的 JSON。</p>
+                <span class="tutorial-cta">開始教學 →</span>
+            </a>
 
-JSON 結構：
-{
-  "sections": [
-    {
-      "name": "分類名稱",
-      "sortOrder": 1,
-      "menuItems": [
-        {
-          "name": "品項名稱",
-          "price": 0,
-          "isAvailable": true,
-          "sortOrder": 1,
-          "isAddon": false,
-          "productUUID": null
-        }
-      ]
-    }
-  ],
-  "modifiers": [
-    { "term": "修飾語", "enabled": true }
-  ]
-}
-
-規則：
-
-1. sortOrder 依照圖片中出現順序，從 1 開始。
-2. 若圖片中沒有明確的可售/停售資訊，isAvailable 一律 true。
-3. 若品項屬於加料/加購（例如「加珍珠」「加起司」等），isAddon 設為 true，否則 false。
-4. productUUID 一律輸出 null（或省略該欄位也可以，但請一致）。
-5. 若圖片中沒有分類，請建立單一分類 name = "未分類"。
-6. 價格請輸出數字（可含小數），不要加幣別符號。
-7. 修飾語（modifiers）請從圖片中常見的可選詞彙整理，例如「少冰」「少糖」「不辣」「去冰」等；若沒有就輸出空陣列。
-8. 如果同一品項在不同分類出現，保持各自分類內各一筆，不要合併。
-9. 輸出必須是合法 JSON，使用雙引號。
-
-請開始解析圖片並輸出 JSON。</code></pre>
-            </li>
-            <li>
-                <h3>Step 4 — Get <span class="menu-import-inline-code">menu.json</span></h3>
-                <p>ChatGPT 回傳後，請確認內容為 JSON 格式，並完整複製（從 <span class="menu-import-inline-code">{</span> 開始，到 <span class="menu-import-inline-code">}</span> 結束）。</p>
-                <p class="menu-import-preview-label">輸出 JSON 預覽格式</p>
-                <div class="menu-import-prompt-actions">
-                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-json-preview" aria-label="複製 JSON 預覽內容">複製</button>
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
                 </div>
-                <pre class="menu-import-prompt menu-import-json-preview" id="menu-import-json-preview"><code>{
-  "sections": [
-    {
-      "name": "飲品",
-      "sortOrder": 1,
-      "menuItems": [
-        {
-          "name": "紅茶",
-          "price": 30,
-          "isAvailable": true,
-          "sortOrder": 1,
-          "isAddon": false,
-          "productUUID": null
-        },
-        {
-          "name": "加珍珠",
-          "price": 10,
-          "isAvailable": true,
-          "sortOrder": 2,
-          "isAddon": true,
-          "productUUID": null
-        }
-      ]
-    }
-  ],
-  "modifiers": [
-    { "term": "少冰", "enabled": true },
-    { "term": "少糖", "enabled": true }
-  ]
-}</code></pre>
-            </li>
-            <li>
-                <h3>Step 5 — Import into Slip</h3>
-                <p>回到 Slip → 菜單匯入 → 貼上 JSON → 預覽 → 匯入。</p>
-            </li>
-        </ol>
-    </section>
+                <h4>印表機設定與測試</h4>
+                <p>連線、測試列印、常見排除一次到位。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
 
-    <section class="menu-import-notes">
-        <h2>重要提醒</h2>
-        <ul>
-            <li>此內容由 AI 產生，可能需要人工確認</li>
-            <li>匯入前 Slip 會提供預覽畫面</li>
-            <li>價格與分類請自行確認是否正確</li>
-        </ul>
-    </section>
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                </div>
+                <h4>第一次開店流程</h4>
+                <p>從開店前設定到打烊對帳，完整走過一次。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
 
-    <section class="menu-import-disclaimer">
-        <h2>責任說明</h2>
-        <p>此流程僅提供操作指引。ChatGPT 的辨識結果由使用者自行確認與負責。</p>
-    </section>
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                </div>
+                <h4>商品分類與選項設定</h4>
+                <p>讓點餐流程更快、更直覺的設定方式。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                </div>
+                <h4>交班與日結對帳</h4>
+                <p>交班流程、現金對帳與報表重點。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+        </div>
+
+        <div class="guide-help">
+            <p>找不到你要的內容？</p>
+            <div class="guide-help-actions">
+                <a class="btn btn-secondary" href="https://tally.so/r/wAMX1l" target="_blank">聯絡我們</a>
+                <a class="btn btn-primary" href="/zh-TW/slip/#faq">看常見問題</a>
+            </div>
+        </div>
+    </div>
 </section>
 
         </section>
@@ -231,27 +162,27 @@ JSON 結構：
                 <div class="footer-section">
                     <h6 class="footer-title">產品</h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/#reliability" class="footer-link">現場可靠</a></li>
-                        <li><a href="/slip/#free-plan" class="footer-link">免費方案</a></li>
-                        <li><a href="/slip/#local-first" class="footer-link">Local-first</a></li>
+                        <li><a href="/zh-TW/slip/#reliability" class="footer-link">現場可靠</a></li>
+                        <li><a href="/zh-TW/slip/#free-plan" class="footer-link">免費方案</a></li>
+                        <li><a href="/zh-TW/slip/#local-first" class="footer-link">Local-first</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h6 class="footer-title">計畫</h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/early-operators.html" class="footer-link">前 10 家計畫</a></li>
-                        <li><a href="/slip/#stories" class="footer-link">使用故事</a></li>
+                        <li><a href="/zh-TW/slip/early-operators/" class="footer-link">前 10 家計畫</a></li>
+                        <li><a href="/zh-TW/slip/#stories" class="footer-link">使用故事</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
                     <h6 class="footer-title">支援</h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/tutorial/" class="footer-link">教學</a></li>
-                        <li><a href="/slip/#faq" class="footer-link">常見問題</a></li>
+                        <li><a href="/zh-TW/slip/tutorial/" class="footer-link">教學</a></li>
+                        <li><a href="/zh-TW/slip/#faq" class="footer-link">常見問題</a></li>
                         <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">聯絡我們</a></li>
-                        <li><a href="/slip/support.html" class="footer-link" target="_blank">支援頁面</a></li>
+                        <li><a href="/zh-TW/slip/support/" class="footer-link" target="_blank">支援頁面</a></li>
                     </ul>
                 </div>
 
@@ -268,7 +199,7 @@ JSON 結構：
                 <div class="footer-section">
                     <h6 class="footer-title">法律條款</h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/privacy.html" class="footer-link" target="_blank">隱私政策</a></li>
+                        <li><a href="/zh-TW/slip/privacy/" class="footer-link" target="_blank">隱私政策</a></li>
                     </ul>
                 </div>
             </div>
@@ -276,7 +207,7 @@ JSON 結構：
 
         <div class="footer-bottom">
             <div class="footer-copyright">
-                <p>&copy; 2026 Slip POS. All rights reserved.</p>
+                <p>© 2026 Slip POS. All rights reserved.</p>
             </div>
             <div class="footer-social">
                         <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
