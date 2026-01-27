@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="<%= I18n.locale.to_s %>">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%= current_page.data.title || "Slip 市集出單" %></title>
-        <meta name="description" content="<%= current_page.data.description || '市集擺攤用的免費出單工具，離線也能用。' %>" />
+        <% page_title = current_page.data.title_key ? t(current_page.data.title_key) : current_page.data.title %>
+        <% page_description = current_page.data.description_key ? t(current_page.data.description_key) : current_page.data.description %>
+        <title><%= page_title || t('market.meta.title') %></title>
+        <meta name="description" content="<%= page_description || t('market.meta.description') %>" />
         <%= partial "analytics" %>
         <%= stylesheet_link_tag "site" %>
         <%= javascript_include_tag "site" %>

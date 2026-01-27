@@ -1,69 +1,69 @@
 ---
-title: 教學 – Slip POS
-description: 開始使用 Slip 的教學，包含菜單匯入、印表機設定與開店流程。
+title_key: tutorial.pages.index.title
+description_key: tutorial.pages.index.description
 layout: tutorial
 ---
 
 <section class="guide-page">
     <div class="guide-container">
         <header class="guide-header">
-            <p class="section-subtitle">教學</p>
-            <h1 class="guide-title">Slip 教學總覽</h1>
-            <p class="guide-lede">從菜單匯入到開店流程，把營業現場最容易卡住的地方補齊。</p>
+            <p class="section-subtitle"><%= t('tutorial.index.subtitle') %></p>
+            <h1 class="guide-title"><%= t('tutorial.index.title') %></h1>
+            <p class="guide-lede"><%= t('tutorial.index.lede') %></p>
         </header>
 
         <div class="tutorials-grid guide-grid">
-            <a class="tutorial-card" href="/slip/tutorial/menu-import-with-chatgpt/">
+            <a class="tutorial-card" href="<%= localized_path('/slip/tutorial/menu-import-with-chatgpt/') %>">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag">約 3 分鐘</span>
+                    <span class="tutorial-tag"><%= t('tutorial.index.cards.menu_import.duration') %></span>
                 </div>
-                <h4>使用 AI 快速匯入菜單</h4>
-                <p>把菜單照片轉成 Slip 可匯入的 JSON。</p>
-                <span class="tutorial-cta">開始教學 →</span>
+                <h4><%= t('tutorial.index.cards.menu_import.title') %></h4>
+                <p><%= t('tutorial.index.cards.menu_import.description') %></p>
+                <span class="tutorial-cta"><%= t('tutorial.index.cards.menu_import.cta') %></span>
             </a>
 
             <div class="tutorial-card is-disabled">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                    <span class="tutorial-tag tutorial-tag--muted"><%= t('tutorial.index.cards.printer.status') %></span>
                 </div>
-                <h4>印表機設定與測試</h4>
-                <p>連線、測試列印、常見排除一次到位。</p>
-                <span class="tutorial-cta">準備中</span>
+                <h4><%= t('tutorial.index.cards.printer.title') %></h4>
+                <p><%= t('tutorial.index.cards.printer.description') %></p>
+                <span class="tutorial-cta"><%= t('tutorial.index.cards.printer.cta') %></span>
             </div>
 
             <div class="tutorial-card is-disabled">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                    <span class="tutorial-tag tutorial-tag--muted"><%= t('tutorial.index.cards.opening.status') %></span>
                 </div>
-                <h4>第一次開店流程</h4>
-                <p>從開店前設定到打烊對帳，完整走過一次。</p>
-                <span class="tutorial-cta">準備中</span>
+                <h4><%= t('tutorial.index.cards.opening.title') %></h4>
+                <p><%= t('tutorial.index.cards.opening.description') %></p>
+                <span class="tutorial-cta"><%= t('tutorial.index.cards.opening.cta') %></span>
             </div>
 
             <div class="tutorial-card is-disabled">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                    <span class="tutorial-tag tutorial-tag--muted"><%= t('tutorial.index.cards.catalog.status') %></span>
                 </div>
-                <h4>商品分類與選項設定</h4>
-                <p>讓點餐流程更快、更直覺的設定方式。</p>
-                <span class="tutorial-cta">準備中</span>
+                <h4><%= t('tutorial.index.cards.catalog.title') %></h4>
+                <p><%= t('tutorial.index.cards.catalog.description') %></p>
+                <span class="tutorial-cta"><%= t('tutorial.index.cards.catalog.cta') %></span>
             </div>
 
             <div class="tutorial-card is-disabled">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                    <span class="tutorial-tag tutorial-tag--muted"><%= t('tutorial.index.cards.shift.status') %></span>
                 </div>
-                <h4>交班與日結對帳</h4>
-                <p>交班流程、現金對帳與報表重點。</p>
-                <span class="tutorial-cta">準備中</span>
+                <h4><%= t('tutorial.index.cards.shift.title') %></h4>
+                <p><%= t('tutorial.index.cards.shift.description') %></p>
+                <span class="tutorial-cta"><%= t('tutorial.index.cards.shift.cta') %></span>
             </div>
         </div>
 
         <div class="guide-help">
-            <p>找不到你要的內容？</p>
+            <p><%= t('tutorial.index.help.title') %></p>
             <div class="guide-help-actions">
-                <a class="btn btn-secondary" href="https://tally.so/r/wAMX1l" target="_blank">聯絡我們</a>
-                <a class="btn btn-primary" href="/slip/#faq">看常見問題</a>
+                <a class="btn btn-secondary" href="https://tally.so/r/wAMX1l" target="_blank"><%= t('tutorial.index.help.contact') %></a>
+                <a class="btn btn-primary" href="<%= localized_path('/slip/#faq') %>"><%= t('tutorial.index.help.faq') %></a>
             </div>
         </div>
     </div>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="<%= I18n.locale.to_s %>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><%= current_page.data.title || "Slip POS - 教學" %></title>
-    <meta name="description" content="<%= current_page.data.description || 'Slip 教學頁' %>">
+    <% page_title = current_page.data.title_key ? t(current_page.data.title_key) : current_page.data.title %>
+    <% page_description = current_page.data.description_key ? t(current_page.data.description_key) : current_page.data.description %>
+    <title><%= page_title || t('tutorial.meta.title') %></title>
+    <meta name="description" content="<%= page_description || t('tutorial.meta.description') %>">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">

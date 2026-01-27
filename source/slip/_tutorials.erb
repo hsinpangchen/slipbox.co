@@ -1,40 +1,40 @@
 <section id="tutorials" class="tutorials">
     <div class="section-container">
-        <p class="section-subtitle">教學</p>
-        <h3 class="section-title">開始使用 Slip 的教學</h3>
-        <p class="section-lede">從匯入菜單到開店流程，先把最容易卡住的地方解決。</p>
+        <p class="section-subtitle"><%= t('slip.tutorials.subtitle') %></p>
+        <h3 class="section-title"><%= t('slip.tutorials.title') %></h3>
+        <p class="section-lede"><%= t('slip.tutorials.lede') %></p>
 
         <div class="tutorials-grid">
-            <a class="tutorial-card" href="/slip/tutorial/menu-import-with-chatgpt/">
+            <a class="tutorial-card" href="<%= localized_path('/slip/tutorial/menu-import-with-chatgpt/') %>">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag">約 3 分鐘</span>
+                    <span class="tutorial-tag"><%= t('slip.tutorials.cards.menu_import.duration') %></span>
                 </div>
-                <h4>使用 AI 快速匯入菜單</h4>
-                <p>把菜單照片轉成 Slip 可匯入的 JSON。</p>
-                <span class="tutorial-cta">開始教學 →</span>
+                <h4><%= t('slip.tutorials.cards.menu_import.title') %></h4>
+                <p><%= t('slip.tutorials.cards.menu_import.description') %></p>
+                <span class="tutorial-cta"><%= t('slip.tutorials.cards.menu_import.cta') %></span>
             </a>
 
             <div class="tutorial-card is-disabled">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                    <span class="tutorial-tag tutorial-tag--muted"><%= t('slip.tutorials.cards.printer.status') %></span>
                 </div>
-                <h4>印表機設定與測試</h4>
-                <p>連線、測試列印、常見排除一次到位。</p>
-                <span class="tutorial-cta">準備中</span>
+                <h4><%= t('slip.tutorials.cards.printer.title') %></h4>
+                <p><%= t('slip.tutorials.cards.printer.description') %></p>
+                <span class="tutorial-cta"><%= t('slip.tutorials.cards.printer.cta') %></span>
             </div>
 
             <div class="tutorial-card is-disabled">
                 <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">即將上線</span>
+                    <span class="tutorial-tag tutorial-tag--muted"><%= t('slip.tutorials.cards.opening.status') %></span>
                 </div>
-                <h4>第一次開店流程</h4>
-                <p>從開店前設定到打烊對帳，完整走過一次。</p>
-                <span class="tutorial-cta">準備中</span>
+                <h4><%= t('slip.tutorials.cards.opening.title') %></h4>
+                <p><%= t('slip.tutorials.cards.opening.description') %></p>
+                <span class="tutorial-cta"><%= t('slip.tutorials.cards.opening.cta') %></span>
             </div>
         </div>
 
         <div class="tutorials-footer">
-            <a class="btn btn-secondary" href="/slip/tutorial/">查看全部教學</a>
+            <a class="btn btn-secondary" href="<%= localized_path('/slip/tutorial/') %>"><%= t('slip.tutorials.view_all') %></a>
         </div>
     </div>
 </section>

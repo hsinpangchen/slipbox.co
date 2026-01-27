@@ -95,6 +95,22 @@ body {
     }
 }
 
+.nav-locale {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
+}
+
+.nav-locale-link {
+    font-size: 0.85rem;
+}
+
+.nav-locale-divider {
+    color: #cbd5e0;
+}
+
 /* Hero Section */
 .hero {
     padding: 10rem 2rem 8rem;
@@ -1474,6 +1490,32 @@ img {
     padding: 0.3rem 0.75rem;
     border-radius: 999px;
     letter-spacing: 0.02em;
+}
+
+.market-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.market-locale {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: #6b4c3b;
+    font-weight: 600;
+}
+
+.market-locale a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.market-locale-divider {
+    color: rgba(0, 0, 0, 0.25);
 }
 
 .market-hero {

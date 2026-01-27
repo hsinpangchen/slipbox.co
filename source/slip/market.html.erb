@@ -1,34 +1,41 @@
 ---
-title: 市集擺攤用的免費出單工具 | Slip
-description: Slip 是為台灣市集現場設計的免費出單工具，離線也能用，iPad 直接接出單機。
+title_key: market.meta.title
+description_key: market.meta.description
 layout: market
 ---
 
 <main class="market-landing">
     <header class="market-header">
         <div class="market-container market-header-inner">
-            <a class="market-brand" href="/slip/">
-                <img src="/images/slip/logo.png" alt="Slip" class="market-brand-logo" />
-                <span class="market-brand-name">Slip</span>
+            <a class="market-brand" href="<%= localized_path('/slip/') %>">
+                <img src="/images/slip/logo.png" alt="<%= t('common.brand_alt') %>" class="market-brand-logo" />
+                <span class="market-brand-name"><%= t('common.brand') %></span>
             </a>
-            <span class="market-header-tag">市集現場專用</span>
+            <div class="market-header-actions">
+                <span class="market-header-tag"><%= t('market.header.tag') %></span>
+                <div class="market-locale">
+                    <a href="<%= alternate_locale_path(:en) %>" data-set-locale="en"><%= t('common.locale.en') %></a>
+                    <span class="market-locale-divider">/</span>
+                    <a href="<%= alternate_locale_path(:"zh-TW") %>" data-set-locale="zh-TW"><%= t('common.locale.zh_tw') %></a>
+                </div>
+            </div>
         </div>
     </header>
 
     <section class="market-hero">
         <div class="market-container market-hero-grid">
             <div class="market-hero-content">
-                <p class="market-kicker">市集擺攤的那種忙，Slip 懂</p>
-                <h1 class="market-hero-title">市集擺攤用的免費出單工具</h1>
-                <p class="market-hero-subtitle">不用網路、不用月費<br />iPad 直接接出單機</p>
+                <p class="market-kicker"><%= t('market.hero.kicker') %></p>
+                <h1 class="market-hero-title"><%= t('market.hero.title') %></h1>
+                <p class="market-hero-subtitle"><%= t('market.hero.subtitle_html') %></p>
                 <div class="market-hero-actions">
-                    <a class="market-btn market-btn-primary" href="https://apps.apple.com/us/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="market_hero_download">立即免費下載 Slip</a>
-                    <p class="market-hero-note">適合市集、快閃店、臨時攤位</p>
+                    <a class="market-btn market-btn-primary" href="https://apps.apple.com/us/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="market_hero_download"><%= t('market.hero.download') %></a>
+                    <p class="market-hero-note"><%= t('market.hero.note') %></p>
                 </div>
                 <div class="market-highlight-row">
-                    <div class="market-highlight">免費下載</div>
-                    <div class="market-highlight">離線也能用</div>
-                    <div class="market-highlight">點餐就出單</div>
+                    <div class="market-highlight"><%= t('market.hero.highlights.first') %></div>
+                    <div class="market-highlight"><%= t('market.hero.highlights.second') %></div>
+                    <div class="market-highlight"><%= t('market.hero.highlights.third') %></div>
                 </div>
             </div>
             <div class="market-hero-visual">
@@ -62,7 +69,7 @@ layout: market
                         <circle cx="405" cy="235" r="12" fill="#f3b78e" />
                         <circle cx="435" cy="255" r="14" fill="#f5c5a4" />
                     </svg>
-                    <div class="market-hero-photo-label">市集現場示意圖</div>
+                    <div class="market-hero-photo-label"><%= t('market.hero.visual_label') %></div>
                 </div>
             </div>
         </div>
@@ -70,12 +77,12 @@ layout: market
 
     <section class="market-section market-pain">
         <div class="market-container">
-            <h2 class="market-section-title">擺市集時，你是不是也遇過這些事？</h2>
+            <h2 class="market-section-title"><%= t('market.pain.title') %></h2>
             <ul class="market-pain-list">
-                <li>人一多就開始寫錯單</li>
-                <li>忙到沒時間找錢</li>
-                <li>回家才慢慢算今天賺多少</li>
-                <li>網路不穩，POS 一直轉圈圈</li>
+                <li><%= t('market.pain.items.first') %></li>
+                <li><%= t('market.pain.items.second') %></li>
+                <li><%= t('market.pain.items.third') %></li>
+                <li><%= t('market.pain.items.fourth') %></li>
             </ul>
         </div>
     </section>
@@ -83,34 +90,34 @@ layout: market
     <section class="market-section market-solution">
         <div class="market-container market-solution-grid">
             <div class="market-solution-content">
-                <h2 class="market-section-title">Slip 是為「市集現場」設計的</h2>
+                <h2 class="market-section-title"><%= t('market.solution.title') %></h2>
                 <ul class="market-feature-list">
-                    <li>點餐後直接出單，不用手寫</li>
-                    <li>不用網路，離線也能用</li>
-                    <li>免費下載，沒有月費</li>
-                    <li>可接市集常見的小型出單機</li>
+                    <li><%= t('market.solution.items.first') %></li>
+                    <li><%= t('market.solution.items.second') %></li>
+                    <li><%= t('market.solution.items.third') %></li>
+                    <li><%= t('market.solution.items.fourth') %></li>
                 </ul>
-                <p class="market-solution-note">你只需要一台 iPad，其餘交給 Slip</p>
+                <p class="market-solution-note"><%= t('market.solution.note') %></p>
             </div>
             <div class="market-visual-grid">
                 <figure class="market-visual-card">
                     <div class="market-receipt">
-                        <div class="market-receipt-header">出單完成</div>
+                        <div class="market-receipt-header"><%= t('market.solution.receipt.header') %></div>
                         <div class="market-receipt-lines">
                             <span></span>
                             <span></span>
                             <span></span>
                             <span></span>
                         </div>
-                        <div class="market-receipt-total">合計 NT$ 520</div>
+                        <div class="market-receipt-total"><%= t('market.solution.receipt.total') %></div>
                     </div>
-                    <figcaption>出單紙近拍</figcaption>
+                    <figcaption><%= t('market.solution.captions.receipt') %></figcaption>
                 </figure>
                 <figure class="market-visual-card">
                     <div class="market-ipad-frame">
-                        <img src="/images/slip/slip_ipad_screen.png" alt="iPad 實際操作畫面" loading="lazy" decoding="async" />
+                        <img src="/images/slip/slip_ipad_screen.png" alt="<%= t('market.solution.captions.ipad_alt') %>" loading="lazy" decoding="async" />
                     </div>
-                    <figcaption>iPad 實際操作畫面</figcaption>
+                    <figcaption><%= t('market.solution.captions.ipad') %></figcaption>
                 </figure>
             </div>
         </div>
@@ -118,21 +125,21 @@ layout: market
 
     <section class="market-section market-use-cases">
         <div class="market-container">
-            <h2 class="market-section-title">適合這些情境</h2>
+            <h2 class="market-section-title"><%= t('market.use_cases.title') %></h2>
             <div class="market-use-grid">
-                <span>週末市集</span>
-                <span>快閃攤位</span>
-                <span>活動擺攤</span>
-                <span>餐車、咖啡攤、甜點攤</span>
+                <span><%= t('market.use_cases.items.first') %></span>
+                <span><%= t('market.use_cases.items.second') %></span>
+                <span><%= t('market.use_cases.items.third') %></span>
+                <span><%= t('market.use_cases.items.fourth') %></span>
             </div>
         </div>
     </section>
 
     <section class="market-section market-social-proof">
         <div class="market-container">
-            <h2 class="market-section-title">已經有人這樣用了</h2>
-            <blockquote class="market-quote">「第一次擺市集就用 Slip，忙的時候真的差很多。」</blockquote>
-            <p class="market-quote-note">— 市集攤主（placeholder）</p>
+            <h2 class="market-section-title"><%= t('market.social.title') %></h2>
+            <blockquote class="market-quote"><%= t('market.social.quote') %></blockquote>
+            <p class="market-quote-note"><%= t('market.social.note') %></p>
         </div>
     </section>
 
@@ -140,15 +147,15 @@ layout: market
         <div class="market-container">
             <div class="market-cta-card">
                 <div>
-                    <h2 class="market-section-title">如果你正在準備下一場市集</h2>
-                    <p class="market-cta-subtitle">免費下載 Slip，先試試看</p>
+                    <h2 class="market-section-title"><%= t('market.final.title') %></h2>
+                    <p class="market-cta-subtitle"><%= t('market.final.subtitle') %></p>
                     <ul class="market-cta-notes">
-                        <li>不用註冊</li>
-                        <li>不用刷卡</li>
-                        <li>裝好就能用</li>
+                        <li><%= t('market.final.notes.first') %></li>
+                        <li><%= t('market.final.notes.second') %></li>
+                        <li><%= t('market.final.notes.third') %></li>
                     </ul>
                 </div>
-                <a class="market-btn market-btn-primary" href="https://apps.apple.com/us/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="market_final_cta_download">免費下載 Slip，先試試看</a>
+                <a class="market-btn market-btn-primary" href="https://apps.apple.com/us/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="market_final_cta_download"><%= t('market.final.cta') %></a>
             </div>
         </div>
     </section>
@@ -157,16 +164,16 @@ layout: market
 <footer class="market-footer">
     <div class="market-container">
         <div class="market-footer-row">
-            <span>Slip ©</span>
-            <span>適合台灣市集攤商</span>
-            <span>聯絡信箱：hello@slipbox.co</span>
+            <span><%= t('market.footer.brand') %></span>
+            <span><%= t('market.footer.tagline') %></span>
+            <span><%= t('market.footer.contact') %></span>
         </div>
     </div>
 </footer>
 
-<div class="market-cta-bar" role="region" aria-label="快速下載">
+<div class="market-cta-bar" role="region" aria-label="<%= t('market.cta_bar.label') %>">
     <div class="market-cta-bar-inner">
-        <span>準備好下一場市集了嗎？</span>
-        <a class="market-btn market-btn-primary" href="https://apps.apple.com/us/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="market_bar_download">立即免費下載</a>
+        <span><%= t('market.cta_bar.question') %></span>
+        <a class="market-btn market-btn-primary" href="https://apps.apple.com/us/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="market_bar_download"><%= t('market.cta_bar.cta') %></a>
     </div>
 </div>

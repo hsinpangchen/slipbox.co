@@ -1,0 +1,485 @@
+zh-TW:
+  common:
+    brand: "Slip"
+    brand_alt: "Slip POS"
+    download_slip: "下載 Slip"
+    copy: "複製"
+    copied: "已複製"
+    locale:
+      en: "EN"
+      zh_tw: "繁中"
+
+  home:
+    meta:
+      title: "Slipbox"
+    greeting: "👋 Slipbox"
+    cta: "Slip"
+    footer: "© 2025 Slipbox.co"
+
+  redirect:
+    title: "正在轉址..."
+    body: "正在轉址..."
+    links:
+      en: "English"
+      zh_tw: "繁體中文"
+
+  slip:
+    meta:
+      title: "Slip POS - 現場不出事的 POS"
+      description: "Slip 是一個在營業現場不會出事的 POS。離線、列印、對帳三件事先穩住，讓你安心開店。"
+    pages:
+      home:
+        title: "Slip POS - 現場不出事的 POS"
+        description: "Slip 是一個在營業現場不會出事的 POS。離線、列印、對帳三件事先穩住，讓你安心開店。"
+      early_operators:
+        title: "Slip 前 10 家營業店家計畫"
+        description: "Slip 正在尋找前 10 家願意在真實營業現場使用 Slip 的店，了解哪裡做得對、哪裡做得不夠。"
+    nav:
+      free_plan: "免費方案"
+      local_first: "Local-first"
+      tutorials: "教學"
+      early_operators: "前 10 家計畫"
+      download: "下載 Slip"
+    hero:
+      title: "Slip 是一個在營業現場不會出事的 POS。"
+      subtitle_html: |-
+        沒網路也能結帳，印表機連上就能吐紙；<br>
+        一天結束，現金一定對得起來。
+      microcopy: "免費可用完整結帳流程；列印提供最多 30 張體驗上限。"
+      requirements: "支援 iOS 18.4 或更新版本"
+      screenshot_alt: "Slip POS iPad 截圖"
+    about:
+      title: "關於 Slip"
+      description:
+        first: "Slip 是專為小型商家設計的現代化收銀系統。我們相信簡單就是力量，因此打造了一款無需複雜設定、立即可用的 POS 應用程式。"
+        second: "不需要註冊帳號，沒有月租費，沒有隱藏費用。下載即可使用，讓您專注於經營事業，而不是學習複雜的系統操作。"
+      features:
+        simple:
+          title: "簡單易用"
+          body: "直觀的介面設計，無需培訓即可上手"
+        offline:
+          title: "離線優先"
+          body: "即使沒有網路連線也能正常運作"
+        no_fee:
+          title: "無月租費"
+          body: "一次購買，終身使用，沒有額外費用"
+    contact:
+      title: "準備開始了嗎？"
+      subtitle: "立即體驗 iPad POS 系統，讓您的店面管理更簡單"
+      primary_cta: "免費試用 30 天"
+      secondary_cta: "預約示範"
+    features:
+      subtitle: "營業現場最怕出事"
+      title: "離線、列印、對帳 — 三件事先穩住"
+      cards:
+        offline:
+          title: "離線也能結帳"
+          description: "網路斷了也能收銀與記錄交易，現場不需要等。"
+        print:
+          title: "列印連上就能出單"
+          description: "印表機一連上就能吐紙，不用等待雲端回傳。"
+        cash:
+          title: "一天結束，現金對得起來"
+          description: "對帳清楚、交班安心，營業結束不需要猜。"
+    tutorials:
+      subtitle: "教學"
+      title: "開始使用 Slip 的教學"
+      lede: "從匯入菜單到開店流程，先把最容易卡住的地方解決。"
+      view_all: "查看全部教學"
+      cards:
+        menu_import:
+          duration: "約 3 分鐘"
+          title: "使用 AI 快速匯入菜單"
+          description: "把菜單照片轉成 Slip 可匯入的 JSON。"
+          cta: "開始教學 →"
+        printer:
+          status: "即將上線"
+          title: "印表機設定與測試"
+          description: "連線、測試列印、常見排除一次到位。"
+          cta: "準備中"
+        opening:
+          status: "即將上線"
+          title: "第一次開店流程"
+          description: "從開店前設定到打烊對帳，完整走過一次。"
+          cta: "準備中"
+    free_plan:
+      subtitle: "免費模式"
+      title: "免費就能開始營業（列印提供體驗上限）"
+      body:
+        intro: "Slip 可以免費完成點餐、結帳、對帳，真實體驗是否適合你的營業現場。"
+        limit_html: "免費版本提供 <strong>最多 30 張單據列印</strong> 作為體驗上限。"
+        after: "張數用完後：交易資料仍會安全保留，不影響已完成營業紀錄。"
+      fine_print: "即使停止訂閱，所有資料仍然保留在你的裝置中。"
+    pricing:
+      title: "簡單透明的價格"
+      plan:
+        title: "專業版"
+        price:
+          currency: "$"
+          amount: "99"
+          period: "/月"
+        features:
+          first: "無限商品管理"
+          second: "即時報表分析"
+          third: "雲端資料備份"
+          fourth: "24/7 客戶支援"
+          fifth: "多店面管理"
+        cta: "開始使用"
+    local_first:
+      subtitle: "設計理念"
+      title: "Local-first，資料在你手上"
+      body:
+        first_html: "Slip 以 <strong>Local-first</strong> 設計：交易資料保留在你的裝置上。"
+        second: "我們不要求你把生意交給雲端，網路斷了也能繼續結帳。"
+        third: "訂閱是為了支持持續維護與改進，而不是租用你的資料。"
+        fine_print: "停止訂閱後，資料仍保留在你的裝置中。"
+    early_operators_cta:
+      subtitle: "前 10 家營業店家計畫"
+      title: "Slip 前 10 家營業店家計畫"
+      lede: "尋找真實營業現場的使用者，讓我們知道哪裡做得對、哪裡需要改。"
+      cta: "Slip 前 10 家營業店家計畫｜申請表"
+    stories:
+      subtitle: "使用故事"
+      title: "真實營業現場的使用故事"
+      placeholder: "即將公開：第一批營業店家的真實使用經驗（不論好壞）"
+    faq:
+      subtitle: "FAQ"
+      title: "常見問題"
+      items:
+        offline:
+          question: "網路斷了還能用嗎？"
+          answer: "可以。Slip 以 Local-first 設計，網路中斷仍可結帳與記錄交易。"
+        print_limit:
+          question: "列印張數用完會怎樣？"
+          answer: "交易資料仍會安全保留，不影響已完成營業紀錄；你可以選擇解鎖列印限制。"
+        subscription:
+          question: "停止訂閱後資料會不見嗎？"
+          answer: "不會。資料仍保留在你的裝置中。"
+    tutorial_sidebar:
+      title: "教學列表"
+      items:
+        overview: "教學總覽"
+        menu_import: "使用 AI 快速匯入菜單"
+        printer: "印表機設定與測試（即將上線）"
+        opening: "第一次開店流程（即將上線）"
+        catalog: "商品分類與選項設定（即將上線）"
+        shift: "交班與日結對帳（即將上線）"
+    footer:
+      tagline: "在營業現場不會出事的 POS"
+      product_title: "產品"
+      reliability: "現場可靠"
+      free_plan: "免費方案"
+      local_first: "Local-first"
+      program_title: "計畫"
+      early_operators: "前 10 家計畫"
+      stories: "使用故事"
+      support_title: "支援"
+      tutorials: "教學"
+      faq: "常見問題"
+      contact: "聯絡我們"
+      support_page: "支援頁面"
+      legal_title: "法律條款"
+      privacy: "隱私政策"
+      copyright: "© 2026 Slip POS. All rights reserved."
+
+    early_operators_page:
+      subtitle: "前 10 家營業店家計畫"
+      title: "Slip 前 10 家營業店家計畫"
+      lede: "Slip 正在尋找前 10 家願意在真實營業現場使用 Slip 的店。"
+      sections:
+        goal:
+          title: "目的"
+          body:
+            one: "這不是宣傳活動，也不是請你替我們背書。"
+            two: "我們希望了解 Slip 在現實世界中，哪裡做得對、哪裡做得不夠。"
+        benefits:
+          title: "你會獲得什麼"
+          items:
+            first_html: "受邀加入後，我們會提供 <strong>3 或 6 個月的訂閱優惠碼</strong>"
+            second: "完整列印功能"
+            third: "優先接收修正與改進版本"
+            fourth: "優惠期間結束後，你可以自由選擇是否繼續訂閱"
+        ask:
+          title: "我們希望你做的事（完全自願）"
+          body: "使用一段時間後，如果你願意分享實際使用經驗（不論好壞）："
+          items:
+            first: "可以是文字或簡短回答幾個問題"
+            second_html: "<strong>不需要公開</strong>"
+            third: "也不影響你是否繼續使用 Slip"
+        note:
+          title: "重要說明"
+          items:
+            first: "不會要求 App Store 評價"
+            second: "不會要求公開推薦"
+            third: "你的資料永遠保留在你的裝置中"
+      cta: "Slip 前 10 家營業店家計畫｜申請表"
+
+  market:
+    meta:
+      title: "市集擺攤用的免費出單工具 | Slip"
+      description: "Slip 是為台灣市集現場設計的免費出單工具，離線也能用，iPad 直接接出單機。"
+    header:
+      tag: "市集現場專用"
+    hero:
+      kicker: "市集擺攤的那種忙，Slip 懂"
+      title: "市集擺攤用的免費出單工具"
+      subtitle_html: |-
+        不用網路、不用月費<br />iPad 直接接出單機
+      download: "立即免費下載 Slip"
+      note: "適合市集、快閃店、臨時攤位"
+      highlights:
+        first: "免費下載"
+        second: "離線也能用"
+        third: "點餐就出單"
+      visual_label: "市集現場示意圖"
+    pain:
+      title: "擺市集時，你是不是也遇過這些事？"
+      items:
+        first: "人一多就開始寫錯單"
+        second: "忙到沒時間找錢"
+        third: "回家才慢慢算今天賺多少"
+        fourth: "網路不穩，POS 一直轉圈圈"
+    solution:
+      title: "Slip 是為「市集現場」設計的"
+      items:
+        first: "點餐後直接出單，不用手寫"
+        second: "不用網路，離線也能用"
+        third: "免費下載，沒有月費"
+        fourth: "可接市集常見的小型出單機"
+      note: "你只需要一台 iPad，其餘交給 Slip"
+      receipt:
+        header: "出單完成"
+        total: "合計 NT$ 520"
+      captions:
+        receipt: "出單紙近拍"
+        ipad_alt: "iPad 實際操作畫面"
+        ipad: "iPad 實際操作畫面"
+    use_cases:
+      title: "適合這些情境"
+      items:
+        first: "週末市集"
+        second: "快閃攤位"
+        third: "活動擺攤"
+        fourth: "餐車、咖啡攤、甜點攤"
+    social:
+      title: "已經有人這樣用了"
+      quote: "「第一次擺市集就用 Slip，忙的時候真的差很多。」"
+      note: "— 市集攤主（placeholder）"
+    final:
+      title: "如果你正在準備下一場市集"
+      subtitle: "免費下載 Slip，先試試看"
+      notes:
+        first: "不用註冊"
+        second: "不用刷卡"
+        third: "裝好就能用"
+      cta: "免費下載 Slip，先試試看"
+    footer:
+      brand: "Slip ©"
+      tagline: "適合台灣市集攤商"
+      contact: "聯絡信箱：hello@slipbox.co"
+    cta_bar:
+      label: "快速下載"
+      question: "準備好下一場市集了嗎？"
+      cta: "立即免費下載"
+
+  tutorial:
+    meta:
+      title: "Slip POS - 教學"
+      description: "Slip 教學頁"
+    pages:
+      index:
+        title: "教學 – Slip POS"
+        description: "開始使用 Slip 的教學，包含菜單匯入、印表機設定與開店流程。"
+      menu_import:
+        title: "使用 AI 快速匯入菜單（約 3 分鐘） – Slip POS"
+        description: "透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。"
+    index:
+      subtitle: "教學"
+      title: "Slip 教學總覽"
+      lede: "從菜單匯入到開店流程，把營業現場最容易卡住的地方補齊。"
+      cards:
+        menu_import:
+          duration: "約 3 分鐘"
+          title: "使用 AI 快速匯入菜單"
+          description: "把菜單照片轉成 Slip 可匯入的 JSON。"
+          cta: "開始教學 →"
+        printer:
+          status: "即將上線"
+          title: "印表機設定與測試"
+          description: "連線、測試列印、常見排除一次到位。"
+          cta: "準備中"
+        opening:
+          status: "即將上線"
+          title: "第一次開店流程"
+          description: "從開店前設定到打烊對帳，完整走過一次。"
+          cta: "準備中"
+        catalog:
+          status: "即將上線"
+          title: "商品分類與選項設定"
+          description: "讓點餐流程更快、更直覺的設定方式。"
+          cta: "準備中"
+        shift:
+          status: "即將上線"
+          title: "交班與日結對帳"
+          description: "交班流程、現金對帳與報表重點。"
+          cta: "準備中"
+      help:
+        title: "找不到你要的內容？"
+        contact: "聯絡我們"
+        faq: "看常見問題"
+    menu_import:
+      title: "使用 AI 快速匯入菜單（約 3 分鐘）"
+      subtitle: "透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。"
+      overview_html: |-
+        Slip 本身不會自動辨識菜單圖片。<br>
+        此流程會引導你使用 ChatGPT，將菜單圖片轉換成 Slip 可匯入的 JSON 格式。
+      suitable_title: "適合："
+      suitable_items:
+        first: "已有紙本或圖片菜單"
+        second: "想快速建立菜單資料的使用者"
+      steps:
+        title: "步驟"
+        step1:
+          title: "Step 1 — Open ChatGPT"
+          body: "請打開 ChatGPT（手機或電腦皆可）。"
+        step2:
+          title: "Step 2 — Upload Your Menu Image"
+          items:
+            first: "拍攝紙本菜單"
+            second: "或上傳既有圖片"
+            third: "清楚可讀即可，不需裁切完美"
+        step3:
+          title: "Step 3 — Copy & Paste the Prompt"
+          body: "請將下方指令完整複製，貼到 ChatGPT 對話中。"
+          copy_label: "複製提示內容"
+        step4:
+          title_html: "Step 4 — Get <span class=\"menu-import-inline-code\">menu.json</span>"
+          body_html: "ChatGPT 回傳後，請確認內容為 JSON 格式，並完整複製（從 <span class=\"menu-import-inline-code\">{</span> 開始，到 <span class=\"menu-import-inline-code\">}</span> 結束）。"
+          preview_label: "輸出 JSON 預覽格式"
+          copy_label: "複製 JSON 預覽內容"
+        step5:
+          title: "Step 5 — Import into Slip"
+          body: "回到 Slip → 菜單匯入 → 貼上 JSON → 預覽 → 匯入。"
+      prompt: |-
+        你是餐飲菜單 OCR 與結構化專家。請讀取使用者上傳的菜單圖片，解析出分類、品項、價格、是否加購、修飾語，並輸出符合以下 JSON 結構的結果（只輸出
+        JSON，不能有任何額外文字或 Markdown）：
+
+        JSON 結構：
+        {
+          "sections": [
+            {
+              "name": "分類名稱",
+              "sortOrder": 1,
+              "menuItems": [
+                {
+                  "name": "品項名稱",
+                  "price": 0,
+                  "isAvailable": true,
+                  "sortOrder": 1,
+                  "isAddon": false,
+                  "productUUID": null
+                }
+              ]
+            }
+          ],
+          "modifiers": [
+            { "term": "修飾語", "enabled": true }
+          ]
+        }
+
+        規則：
+
+        1. sortOrder 依照圖片中出現順序，從 1 開始。
+        2. 若圖片中沒有明確的可售/停售資訊，isAvailable 一律 true。
+        3. 若品項屬於加料/加購（例如「加珍珠」「加起司」等），isAddon 設為 true，否則 false。
+        4. productUUID 一律輸出 null（或省略該欄位也可以，但請一致）。
+        5. 若圖片中沒有分類，請建立單一分類 name = "未分類"。
+        6. 價格請輸出數字（可含小數），不要加幣別符號。
+        7. 修飾語（modifiers）請從圖片中常見的可選詞彙整理，例如「少冰」「少糖」「不辣」「去冰」等；若沒有就輸出空陣列。
+        8. 如果同一品項在不同分類出現，保持各自分類內各一筆，不要合併。
+        9. 輸出必須是合法 JSON，使用雙引號。
+
+        請開始解析圖片並輸出 JSON。
+      json_preview: |-
+        {
+          "sections": [
+            {
+              "name": "飲品",
+              "sortOrder": 1,
+              "menuItems": [
+                {
+                  "name": "紅茶",
+                  "price": 30,
+                  "isAvailable": true,
+                  "sortOrder": 1,
+                  "isAddon": false,
+                  "productUUID": null
+                },
+                {
+                  "name": "加珍珠",
+                  "price": 10,
+                  "isAvailable": true,
+                  "sortOrder": 2,
+                  "isAddon": true,
+                  "productUUID": null
+                }
+              ]
+            }
+          ],
+          "modifiers": [
+            { "term": "少冰", "enabled": true },
+            { "term": "少糖", "enabled": true }
+          ]
+        }
+      notes:
+        title: "重要提醒"
+        items:
+          first: "此內容由 AI 產生，可能需要人工確認"
+          second: "匯入前 Slip 會提供預覽畫面"
+          third: "價格與分類請自行確認是否正確"
+      disclaimer:
+        title: "責任說明"
+        body: "此流程僅提供操作指引。ChatGPT 的辨識結果由使用者自行確認與負責。"
+
+  privacy:
+    meta:
+      title: "隱私政策 – Slip POS"
+    title: "隱私政策"
+    intro: "Slip 尊重你的隱私。本隱私政策說明你在使用 Slip App 時，資料如何被處理。"
+    collect:
+      title: "我們收集的資訊"
+      body: "Slip 不會收集可識別個人身分的資訊。"
+      list_intro: "App 可能僅為了功能需求處理以下資料："
+      items:
+        first: "訂閱與購買狀態（由 Apple 的 In-App Purchase 服務提供）"
+        second: "必要的基本裝置資訊"
+    use:
+      title: "資訊如何使用"
+      body: "這些資訊僅用於："
+      items:
+        first: "提供並管理 Slip Pro 訂閱功能"
+        second: "跨裝置還原購買"
+        third: "在使用者要求時提供客服協助"
+    sharing:
+      title: "資料分享"
+      body: "Slip 不會與第三方分享個人資料。"
+      body_second: "所有付款與訂閱皆由 Apple 安全處理。"
+    contact:
+      title: "聯絡方式"
+      body: "如果你對本隱私政策有任何問題，請聯絡我們："
+      email: "Email: hello@slipbox.co"
+    effective:
+      label: "生效日期："
+      date: "2025 年 7 月 10 日"
+
+  support:
+    meta:
+      title: "支援 – Slip POS"
+    title: "Slip 支援"
+    body: "如需協助，請聯絡我們："
+    email: "Email: hello@slipbox.co"
+
+  instruction:
+    meta:
+      title: "Slip POS"
+      description: "Slip POS"

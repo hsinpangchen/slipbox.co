@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="<%= I18n.locale.to_s %>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title><%= current_page.data.title || "Slip POS - 現代收銀系統" %></title>
-    <meta name="description" content="<%= current_page.data.description || '專為小型商家設計的簡約 POS 系統，讓收銀變得更簡單、更高效。slipbox 旗下產品。' %>">
+    <% page_title = current_page.data.title_key ? t(current_page.data.title_key) : current_page.data.title %>
+    <% page_description = current_page.data.description_key ? t(current_page.data.description_key) : current_page.data.description %>
+    <title><%= page_title || t('slip.meta.title') %></title>
+    <meta name="description" content="<%= page_description || t('slip.meta.description') %>">
     
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">

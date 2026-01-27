@@ -3,36 +3,36 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="/images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                    <img src="/images/slip/logo.png" alt="<%= t('common.brand_alt') %>" class="footer-logo-img">
                 </div>
-                <p class="footer-description">在營業現場不會出事的 POS</p>
+                <p class="footer-description"><%= t('slip.footer.tagline') %></p>
             </div>
 
             <div class="footer-links">
                 <div class="footer-section">
-                    <h6 class="footer-title">產品</h6>
+                    <h6 class="footer-title"><%= t('slip.footer.product_title') %></h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/#reliability" class="footer-link">現場可靠</a></li>
-                        <li><a href="/slip/#free-plan" class="footer-link">免費方案</a></li>
-                        <li><a href="/slip/#local-first" class="footer-link">Local-first</a></li>
+                        <li><a href="<%= localized_path('/slip/#reliability') %>" class="footer-link"><%= t('slip.footer.reliability') %></a></li>
+                        <li><a href="<%= localized_path('/slip/#free-plan') %>" class="footer-link"><%= t('slip.footer.free_plan') %></a></li>
+                        <li><a href="<%= localized_path('/slip/#local-first') %>" class="footer-link"><%= t('slip.footer.local_first') %></a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h6 class="footer-title">計畫</h6>
+                    <h6 class="footer-title"><%= t('slip.footer.program_title') %></h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/early-operators.html" class="footer-link">前 10 家計畫</a></li>
-                        <li><a href="/slip/#stories" class="footer-link">使用故事</a></li>
+                        <li><a href="<%= localized_path('/slip/early-operators/') %>" class="footer-link"><%= t('slip.footer.early_operators') %></a></li>
+                        <li><a href="<%= localized_path('/slip/#stories') %>" class="footer-link"><%= t('slip.footer.stories') %></a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section">
-                    <h6 class="footer-title">支援</h6>
+                    <h6 class="footer-title"><%= t('slip.footer.support_title') %></h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/tutorial/" class="footer-link">教學</a></li>
-                        <li><a href="/slip/#faq" class="footer-link">常見問題</a></li>
-                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">聯絡我們</a></li>
-                        <li><a href="/slip/support.html" class="footer-link" target="_blank">支援頁面</a></li>
+                        <li><a href="<%= localized_path('/slip/tutorial/') %>" class="footer-link"><%= t('slip.footer.tutorials') %></a></li>
+                        <li><a href="<%= localized_path('/slip/#faq') %>" class="footer-link"><%= t('slip.footer.faq') %></a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank"><%= t('slip.footer.contact') %></a></li>
+                        <li><a href="<%= localized_path('/slip/support/') %>" class="footer-link" target="_blank"><%= t('slip.footer.support_page') %></a></li>
                     </ul>
                 </div>
 
@@ -47,9 +47,9 @@
                 </div> -->
 
                 <div class="footer-section">
-                    <h6 class="footer-title">法律條款</h6>
+                    <h6 class="footer-title"><%= t('slip.footer.legal_title') %></h6>
                     <ul class="footer-list">
-                        <li><a href="/slip/privacy.html" class="footer-link" target="_blank">隱私政策</a></li>
+                        <li><a href="<%= localized_path('/slip/privacy/') %>" class="footer-link" target="_blank"><%= t('slip.footer.privacy') %></a></li>
                     </ul>
                 </div>
             </div>
@@ -57,7 +57,7 @@
 
         <div class="footer-bottom">
             <div class="footer-copyright">
-                <p>&copy; 2026 Slip POS. All rights reserved.</p>
+                <p><%= t('slip.footer.copyright') %></p>
             </div>
             <div class="footer-social">
                 <% if data.social_links %>

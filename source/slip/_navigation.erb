@@ -1,14 +1,19 @@
 <nav class="nav">
     <div class="nav-container">
         <div class="logo">
-            <img src="/images/slip/logo.png" alt="Slip POS" class="logo-img">
+            <img src="/images/slip/logo.png" alt="<%= t('common.brand_alt') %>" class="logo-img">
         </div>
         <div class="nav-menu">
-            <a href="/slip/#free-plan" class="nav-link">免費方案</a>
-            <a href="/slip/#local-first" class="nav-link">Local-first</a>
-            <a href="/slip/#tutorials" class="nav-link">教學</a>
-            <a href="/slip/early-operators.html" class="nav-link">前 10 家計畫</a>
-            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">下載 Slip</a>
+            <a href="<%= localized_path('/slip/#free-plan') %>" class="nav-link"><%= t('slip.nav.free_plan') %></a>
+            <a href="<%= localized_path('/slip/#local-first') %>" class="nav-link"><%= t('slip.nav.local_first') %></a>
+            <a href="<%= localized_path('/slip/#tutorials') %>" class="nav-link"><%= t('slip.nav.tutorials') %></a>
+            <a href="<%= localized_path('/slip/early-operators/') %>" class="nav-link"><%= t('slip.nav.early_operators') %></a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download"><%= t('slip.nav.download') %></a>
+            <div class="nav-locale">
+                <a href="<%= alternate_locale_path(:en) %>" class="nav-link nav-locale-link" data-set-locale="en"><%= t('common.locale.en') %></a>
+                <span class="nav-locale-divider">/</span>
+                <a href="<%= alternate_locale_path(:"zh-TW") %>" class="nav-link nav-locale-link" data-set-locale="zh-TW"><%= t('common.locale.zh_tw') %></a>
+            </div>
         </div>
     </div>
 </nav>

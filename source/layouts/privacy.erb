@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="<%= I18n.locale.to_s %>">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%= current_page.data.title || "Privacy Policy – Slip POS" %></title>
+        <% page_title = current_page.data.title_key ? t(current_page.data.title_key) : current_page.data.title %>
+        <title><%= page_title || t('privacy.meta.title') %></title>
         <%= partial "analytics" %>
         <%= stylesheet_link_tag "site" %>
     </head>

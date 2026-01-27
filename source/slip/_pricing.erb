@@ -1,23 +1,23 @@
 <section id="pricing" class="pricing">
     <div class="pricing-container">
-        <h3 class="section-title">簡單透明的價格</h3>
+        <h3 class="section-title"><%= t('slip.pricing.title') %></h3>
         <div class="pricing-card">
             <div class="pricing-header">
-                <h4>專業版</h4>
+                <h4><%= t('slip.pricing.plan.title') %></h4>
                 <div class="price">
-                    <span class="currency">$</span>
-                    <span class="amount">99</span>
-                    <span class="period">/月</span>
+                    <span class="currency"><%= t('slip.pricing.plan.price.currency') %></span>
+                    <span class="amount"><%= t('slip.pricing.plan.price.amount') %></span>
+                    <span class="period"><%= t('slip.pricing.plan.price.period') %></span>
                 </div>
             </div>
             <ul class="pricing-features">
-                <li>無限商品管理</li>
-                <li>即時報表分析</li>
-                <li>雲端資料備份</li>
-                <li>24/7 客戶支援</li>
-                <li>多店面管理</li>
+                <li><%= t('slip.pricing.plan.features.first') %></li>
+                <li><%= t('slip.pricing.plan.features.second') %></li>
+                <li><%= t('slip.pricing.plan.features.third') %></li>
+                <li><%= t('slip.pricing.plan.features.fourth') %></li>
+                <li><%= t('slip.pricing.plan.features.fifth') %></li>
             </ul>
-            <button class="btn btn-primary pricing-btn">開始使用</button>
+            <button class="btn btn-primary pricing-btn"><%= t('slip.pricing.plan.cta') %></button>
         </div>
     </div>
 </section>

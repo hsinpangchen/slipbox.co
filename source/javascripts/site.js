@@ -1,5 +1,23 @@
 // Smooth scroll with offset for fixed navigation
 document.addEventListener('DOMContentLoaded', function() {
+    const localeLinks = document.querySelectorAll('[data-set-locale]');
+
+    localeLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const targetLocale = link.getAttribute('data-set-locale');
+
+            if (!targetLocale) {
+                return;
+            }
+
+            try {
+                window.localStorage.setItem('slip_locale', targetLocale);
+            } catch (error) {
+                return;
+            }
+        });
+    });
+
     // Get all anchor links that point to sections on the same page
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     
@@ -33,7 +51,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyButtons = document.querySelectorAll('[data-copy-target]');
 
     copyButtons.forEach(button => {
-        const originalText = button.textContent;
+        const originalText = button.getAttribute('data-copy-label') || button.textContent;
+        const copiedText = button.getAttribute('data-copied-label')
+            || (document.documentElement.lang && document.documentElement.lang.toLowerCase().startsWith('zh') ? '已複製' : 'Copied');
 
         button.addEventListener('click', async function() {
             const targetSelector = button.getAttribute('data-copy-target');
@@ -63,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            button.textContent = '已複製';
+            button.textContent = copiedText;
             button.classList.add('is-copied');
 
             window.setTimeout(() => {

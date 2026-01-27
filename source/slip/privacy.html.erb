@@ -1,5 +1,5 @@
 ---
-title: Privacy Policy – Slip POS
+title_key: privacy.meta.title
 layout: privacy
 ---
 
@@ -34,34 +34,34 @@ layout: privacy
 </footer>-->
 
 
-<h1>Privacy Policy</h1>
+<h1><%= t('privacy.title') %></h1>
 
-<p>Slip respects your privacy. This Privacy Policy explains how information is handled when you use the Slip app.</p>
+<p><%= t('privacy.intro') %></p>
 
-<h2>Information We Collect</h2>
-<p>Slip does not collect personally identifiable information.</p>
-<p>The app may process the following data solely for functional purposes:</p>
+<h2><%= t('privacy.collect.title') %></h2>
+<p><%= t('privacy.collect.body') %></p>
+<p><%= t('privacy.collect.list_intro') %></p>
 <ul>
-  <li>Subscription and purchase status, provided by Apple In-App Purchase services</li>
-  <li>Basic device information required for app functionality</li>
+  <li><%= t('privacy.collect.items.first') %></li>
+  <li><%= t('privacy.collect.items.second') %></li>
 </ul>
 
-<h2>How We Use Information</h2>
-<p>The information is used only to:</p>
+<h2><%= t('privacy.use.title') %></h2>
+<p><%= t('privacy.use.body') %></p>
 <ul>
-  <li>Provide and manage Slip Pro subscription features</li>
-  <li>Restore purchases across devices</li>
-  <li>Provide customer support when requested</li>
+  <li><%= t('privacy.use.items.first') %></li>
+  <li><%= t('privacy.use.items.second') %></li>
+  <li><%= t('privacy.use.items.third') %></li>
 </ul>
 
-<h2>Data Sharing</h2>
-<p>Slip does not share personal data with third parties.</p>
-<p>All payment and subscription processing is handled securely by Apple.</p>
+<h2><%= t('privacy.sharing.title') %></h2>
+<p><%= t('privacy.sharing.body') %></p>
+<p><%= t('privacy.sharing.body_second') %></p>
 
-<h2>Contact</h2>
-<p>If you have any questions about this Privacy Policy, please contact us:</p>
-<p>Email: hello@slipbox.co</p>
+<h2><%= t('privacy.contact.title') %></h2>
+<p><%= t('privacy.contact.body') %></p>
+<p><%= t('privacy.contact.email') %></p>
 
 <footer>
-    <p><strong>Effective Date:</strong> July 10, 2025</p>
+    <p><strong><%= t('privacy.effective.label') %></strong> <%= t('privacy.effective.date') %></p>
 </footer>

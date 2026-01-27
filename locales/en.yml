@@ -1,0 +1,485 @@
+en:
+  common:
+    brand: "Slip"
+    brand_alt: "Slip POS"
+    download_slip: "Download Slip"
+    copy: "Copy"
+    copied: "Copied"
+    locale:
+      en: "EN"
+      zh_tw: "繁中"
+
+  home:
+    meta:
+      title: "Slipbox"
+    greeting: "👋 Slipbox"
+    cta: "Slip"
+    footer: "© 2025 Slipbox.co"
+
+  redirect:
+    title: "Redirecting..."
+    body: "Redirecting..."
+    links:
+      en: "English"
+      zh_tw: "繁體中文"
+
+  slip:
+    meta:
+      title: "Slip POS - A POS that won't fail on the floor"
+      description: "Slip is a POS that won't fail on the floor. Offline, printing, and end-of-day reconciliation stay solid so you can open with confidence."
+    pages:
+      home:
+        title: "Slip POS - A POS that won't fail on the floor"
+        description: "Slip is a POS that won't fail on the floor. Offline, printing, and end-of-day reconciliation stay solid so you can open with confidence."
+      early_operators:
+        title: "Slip First 10 Operators Program"
+        description: "Slip is looking for the first 10 shops willing to use Slip on the floor so we can learn what's working and what needs improvement."
+    nav:
+      free_plan: "Free plan"
+      local_first: "Local-first"
+      tutorials: "Tutorials"
+      early_operators: "First 10 Program"
+      download: "Download Slip"
+    hero:
+      title: "Slip is a POS that won't fail on the floor."
+      subtitle_html: |-
+        Take orders without internet, print as soon as the printer connects;<br>
+        and cash balances at the end of the day.
+      microcopy: "The full checkout flow is free; printing is capped at 30 receipts."
+      requirements: "Requires iOS 18.4 or later"
+      screenshot_alt: "Slip POS on iPad"
+    about:
+      title: "About Slip"
+      description:
+        first: "Slip is a modern POS designed for small businesses. We believe simplicity is power, so it's ready to use without complex setup."
+        second: "No account signup, no monthly fee, no hidden charges. Download and go, so you can focus on running your business."
+      features:
+        simple:
+          title: "Easy to use"
+          body: "An intuitive interface that needs no training"
+        offline:
+          title: "Offline-first"
+          body: "Keeps working even without an internet connection"
+        no_fee:
+          title: "No monthly fees"
+          body: "Pay once, use forever, with no extra charges"
+    contact:
+      title: "Ready to get started?"
+      subtitle: "Try the iPad POS that keeps your shop running smoothly"
+      primary_cta: "Start a 30-day free trial"
+      secondary_cta: "Book a demo"
+    features:
+      subtitle: "The floor can't afford mistakes"
+      title: "Offline, printing, reconciliation -- lock down the three essentials"
+      cards:
+        offline:
+          title: "Checkout works offline"
+          description: "Keep ringing up sales and recording transactions even when the internet drops."
+        print:
+          title: "Prints the moment it connects"
+          description: "Receipts come out as soon as the printer connects -- no cloud lag."
+        cash:
+          title: "Cash always balances"
+          description: "Clear reconciliation and handoffs -- no guessing at close."
+    tutorials:
+      subtitle: "Tutorials"
+      title: "Get started with Slip"
+      lede: "From menu import to opening flow, fix the parts that usually get stuck."
+      view_all: "View all tutorials"
+      cards:
+        menu_import:
+          duration: "~3 min"
+          title: "Quick menu import with AI"
+          description: "Turn menu photos into Slip-ready JSON."
+          cta: "Start tutorial →"
+        printer:
+          status: "Coming soon"
+          title: "Printer setup & testing"
+          description: "Connect, test print, and troubleshoot in one place."
+          cta: "In progress"
+        opening:
+          status: "Coming soon"
+          title: "First time opening flow"
+          description: "From pre-open setup to end-of-day close, all in one run."
+          cta: "In progress"
+    free_plan:
+      subtitle: "Free mode"
+      title: "Start selling for free (printing has a trial cap)"
+      body:
+        intro: "Slip lets you take orders, checkout, and reconcile for free so you can see if it fits your floor."
+        limit_html: "The free plan includes <strong>up to 30 printed receipts</strong> as a trial cap."
+        after: "After the cap: transaction data stays safe and your completed records remain intact."
+      fine_print: "Even after canceling a subscription, all data stays on your device."
+    pricing:
+      title: "Simple, transparent pricing"
+      plan:
+        title: "Pro"
+        price:
+          currency: "$"
+          amount: "99"
+          period: "/mo"
+        features:
+          first: "Unlimited product management"
+          second: "Real-time reporting"
+          third: "Cloud backup"
+          fourth: "24/7 customer support"
+          fifth: "Multi-location management"
+        cta: "Get started"
+    local_first:
+      subtitle: "Design philosophy"
+      title: "Local-first, your data stays with you"
+      body:
+        first_html: "Slip is designed <strong>local-first</strong>: transaction data stays on your device."
+        second: "We never ask you to hand your business to the cloud -- checkout keeps going even offline."
+        third: "Subscriptions support ongoing maintenance and improvements, not renting your data."
+        fine_print: "After canceling, your data still stays on your device."
+    early_operators_cta:
+      subtitle: "First 10 Operators Program"
+      title: "Slip First 10 Operators Program"
+      lede: "We're looking for real operators to tell us what's working -- and what isn't."
+      cta: "Slip First 10 Operators Program | Apply"
+    stories:
+      subtitle: "Stories"
+      title: "Real stories from real shops"
+      placeholder: "Coming soon: the first batch of real operator stories (good or bad)"
+    faq:
+      subtitle: "FAQ"
+      title: "Frequently asked questions"
+      items:
+        offline:
+          question: "Can I use it when the internet is down?"
+          answer: "Yes. Slip is local-first, so checkout and records keep working offline."
+        print_limit:
+          question: "What happens after the print cap is reached?"
+          answer: "Your data stays safe and completed records remain intact; you can choose to unlock printing."
+        subscription:
+          question: "Will my data disappear after I cancel?"
+          answer: "No. Your data remains on your device."
+    tutorial_sidebar:
+      title: "Tutorial list"
+      items:
+        overview: "Tutorial overview"
+        menu_import: "Quick menu import with AI"
+        printer: "Printer setup & testing (coming soon)"
+        opening: "First time opening flow (coming soon)"
+        catalog: "Categories & modifiers setup (coming soon)"
+        shift: "Shift handoff & end-of-day close (coming soon)"
+    footer:
+      tagline: "A POS that won't fail on the floor"
+      product_title: "Product"
+      reliability: "Reliable on site"
+      free_plan: "Free plan"
+      local_first: "Local-first"
+      program_title: "Program"
+      early_operators: "First 10 Program"
+      stories: "Stories"
+      support_title: "Support"
+      tutorials: "Tutorials"
+      faq: "FAQ"
+      contact: "Contact"
+      support_page: "Support page"
+      legal_title: "Legal"
+      privacy: "Privacy policy"
+      copyright: "© 2026 Slip POS. All rights reserved."
+
+    early_operators_page:
+      subtitle: "First 10 Operators Program"
+      title: "Slip First 10 Operators Program"
+      lede: "Slip is looking for the first 10 shops to use Slip in real operations."
+      sections:
+        goal:
+          title: "Purpose"
+          body:
+            one: "This is not a promo campaign or an endorsement request."
+            two: "We want to learn what Slip gets right -- and what it doesn't -- in the real world."
+        benefits:
+          title: "What you'll get"
+          items:
+            first_html: "After acceptance, we'll provide <strong>3 or 6 months of subscription discount codes</strong>"
+            second: "Full printing features"
+            third: "Priority access to fixes and improvements"
+            fourth: "After the discount period, you choose whether to continue"
+        ask:
+          title: "What we hope you'll do (fully optional)"
+          body: "If you're willing to share your real experience after some time (good or bad):"
+          items:
+            first: "A short written note or a few quick answers"
+            second_html: "<strong>No public posting required</strong>"
+            third: "It won't affect your ability to keep using Slip"
+        note:
+          title: "Important notes"
+          items:
+            first: "We will not ask for App Store reviews"
+            second: "We will not ask for public endorsements"
+            third: "Your data always stays on your device"
+      cta: "Slip First 10 Operators Program | Apply"
+
+  market:
+    meta:
+      title: "Free order slips for market stalls | Slip"
+      description: "Slip is a free order printing tool for Taiwan market stalls. Works offline and connects directly to receipt printers on iPad."
+    header:
+      tag: "Built for market stalls"
+    hero:
+      kicker: "That market rush? Slip gets it."
+      title: "A free order printing tool for market stalls"
+      subtitle_html: |-
+        No internet, no monthly fee<br />
+        Connect a receipt printer directly to iPad
+      download: "Download Slip for free"
+      note: "Great for markets, pop-ups, and temporary booths"
+      highlights:
+        first: "Free download"
+        second: "Works offline"
+        third: "Order-to-print"
+      visual_label: "Market scene illustration"
+    pain:
+      title: "Ever run into these at a market stall?"
+      items:
+        first: "Orders get written wrong when it gets busy"
+        second: "Too hectic to make change"
+        third: "You only calculate profit after you get home"
+        fourth: "Unstable internet makes the POS spin"
+    solution:
+      title: "Slip is built for market stalls"
+      items:
+        first: "Orders print instantly -- no handwriting"
+        second: "Offline by default"
+        third: "Free download, no monthly fee"
+        fourth: "Works with common small receipt printers"
+      note: "All you need is an iPad -- Slip handles the rest"
+      receipt:
+        header: "Receipt printed"
+        total: "Total NT$ 520"
+      captions:
+        receipt: "Close-up receipt"
+        ipad_alt: "Slip on iPad"
+        ipad: "Slip on iPad"
+    use_cases:
+      title: "Great for"
+      items:
+        first: "Weekend markets"
+        second: "Pop-up booths"
+        third: "Event stalls"
+        fourth: "Food trucks, coffee carts, dessert stalls"
+    social:
+      title: "People already use it like this"
+      quote: '"I used Slip for my first market -- it made a huge difference when we got busy."'
+      note: "-- Market vendor (placeholder)"
+    final:
+      title: "Planning your next market?"
+      subtitle: "Download Slip for free and try it"
+      notes:
+        first: "No sign-up"
+        second: "No card required"
+        third: "Install and go"
+      cta: "Download Slip for free"
+    footer:
+      brand: "Slip ©"
+      tagline: "For Taiwan market vendors"
+      contact: "Email: hello@slipbox.co"
+    cta_bar:
+      label: "Quick download"
+      question: "Ready for the next market?"
+      cta: "Download now"
+
+  tutorial:
+    meta:
+      title: "Slip POS - Tutorials"
+      description: "Slip tutorial hub"
+    pages:
+      index:
+        title: "Tutorials – Slip POS"
+        description: "Slip tutorials covering menu import, printer setup, and opening flow."
+      menu_import:
+        title: "Quick menu import with AI (~3 min) – Slip POS"
+        description: "Use ChatGPT to convert menu images to JSON, then import into Slip."
+    index:
+      subtitle: "Tutorials"
+      title: "Slip tutorial overview"
+      lede: "From menu import to opening flow, cover the steps that usually get stuck."
+      cards:
+        menu_import:
+          duration: "~3 min"
+          title: "Quick menu import with AI"
+          description: "Turn menu photos into Slip-ready JSON."
+          cta: "Start tutorial →"
+        printer:
+          status: "Coming soon"
+          title: "Printer setup & testing"
+          description: "Connect, test print, and troubleshoot in one go."
+          cta: "In progress"
+        opening:
+          status: "Coming soon"
+          title: "First time opening flow"
+          description: "From pre-open setup to end-of-day close, all in one run."
+          cta: "In progress"
+        catalog:
+          status: "Coming soon"
+          title: "Categories & modifiers setup"
+          description: "Make ordering faster and more intuitive."
+          cta: "In progress"
+        shift:
+          status: "Coming soon"
+          title: "Shift handoff & end-of-day close"
+          description: "Handoff flow, cash reconciliation, and reports."
+          cta: "In progress"
+      help:
+        title: "Can't find what you need?"
+        contact: "Contact us"
+        faq: "See FAQ"
+    menu_import:
+      title: "Quick menu import with AI (~3 min)"
+      subtitle: "Use ChatGPT to convert menu images to JSON, then import into Slip."
+      overview_html: |-
+        Slip doesn't automatically read menu images.<br>
+        This guide shows you how to use ChatGPT to turn menu images into Slip-ready JSON.
+      suitable_title: "Good for:"
+      suitable_items:
+        first: "You already have a printed or image menu"
+        second: "You want to build menu data quickly"
+      steps:
+        title: "Steps"
+        step1:
+          title: "Step 1 -- Open ChatGPT"
+          body: "Open ChatGPT on your phone or computer."
+        step2:
+          title: "Step 2 -- Upload your menu image"
+          items:
+            first: "Take a photo of the printed menu"
+            second: "Or upload an existing image"
+            third: "Readable is enough -- perfect cropping isn't required"
+        step3:
+          title: "Step 3 -- Copy & paste the prompt"
+          body: "Copy the prompt below and paste it into ChatGPT."
+          copy_label: "Copy prompt"
+        step4:
+          title_html: "Step 4 -- Get <span class=\"menu-import-inline-code\">menu.json</span>"
+          body_html: "After ChatGPT responds, make sure it's valid JSON and copy it all (from <span class=\"menu-import-inline-code\">{</span> to <span class=\"menu-import-inline-code\">}</span>)."
+          preview_label: "JSON output preview"
+          copy_label: "Copy JSON preview"
+        step5:
+          title: "Step 5 -- Import into Slip"
+          body: "Back in Slip → Menu import → Paste JSON → Preview → Import."
+      prompt: |-
+        You are an OCR and structuring expert for restaurant menus. Read the user's uploaded menu image, extract categories, items, prices, add-ons, and modifiers, and output a result that matches the JSON structure below (output JSON only, with no extra text or Markdown):
+
+        JSON structure:
+        {
+          "sections": [
+            {
+              "name": "Category name",
+              "sortOrder": 1,
+              "menuItems": [
+                {
+                  "name": "Item name",
+                  "price": 0,
+                  "isAvailable": true,
+                  "sortOrder": 1,
+                  "isAddon": false,
+                  "productUUID": null
+                }
+              ]
+            }
+          ],
+          "modifiers": [
+            { "term": "Modifier", "enabled": true }
+          ]
+        }
+
+        Rules:
+
+        1. sortOrder follows the order in the image, starting at 1.
+        2. If availability isn't specified, set isAvailable to true.
+        3. If an item is an add-on (e.g., "Add pearls", "Add cheese"), set isAddon to true, otherwise false.
+        4. productUUID should be null (or omit the field, but be consistent).
+        5. If there are no categories, create a single category name = "Uncategorized".
+        6. Prices must be numbers (decimals allowed) without currency symbols.
+        7. Modifiers should be common selectable terms in the image, such as "Less ice", "Less sugar", "No spice", "No ice"; if none, output an empty array.
+        8. If the same item appears in different categories, keep one entry per category; do not merge.
+        9. Output must be valid JSON with double quotes.
+
+        Start parsing the image and output JSON.
+      json_preview: |-
+        {
+          "sections": [
+            {
+              "name": "Beverages",
+              "sortOrder": 1,
+              "menuItems": [
+                {
+                  "name": "Black tea",
+                  "price": 30,
+                  "isAvailable": true,
+                  "sortOrder": 1,
+                  "isAddon": false,
+                  "productUUID": null
+                },
+                {
+                  "name": "Add pearls",
+                  "price": 10,
+                  "isAvailable": true,
+                  "sortOrder": 2,
+                  "isAddon": true,
+                  "productUUID": null
+                }
+              ]
+            }
+          ],
+          "modifiers": [
+            { "term": "Less ice", "enabled": true },
+            { "term": "Less sugar", "enabled": true }
+          ]
+        }
+      notes:
+        title: "Important notes"
+        items:
+          first: "This content is AI-generated and may need manual review"
+          second: "Slip shows a preview before import"
+          third: "Please verify prices and categories"
+      disclaimer:
+        title: "Disclaimer"
+        body: "This guide is for operational reference only. Users are responsible for verifying ChatGPT's output."
+
+  privacy:
+    meta:
+      title: "Privacy Policy – Slip POS"
+    title: "Privacy Policy"
+    intro: "Slip respects your privacy. This Privacy Policy explains how information is handled when you use the Slip app."
+    collect:
+      title: "Information we collect"
+      body: "Slip does not collect personally identifiable information."
+      list_intro: "The app may process the following data solely for functional purposes:"
+      items:
+        first: "Subscription and purchase status, provided by Apple In-App Purchase services"
+        second: "Basic device information required for app functionality"
+    use:
+      title: "How we use information"
+      body: "The information is used only to:"
+      items:
+        first: "Provide and manage Slip Pro subscription features"
+        second: "Restore purchases across devices"
+        third: "Provide customer support when requested"
+    sharing:
+      title: "Data sharing"
+      body: "Slip does not share personal data with third parties."
+      body_second: "All payment and subscription processing is handled securely by Apple."
+    contact:
+      title: "Contact"
+      body: "If you have any questions about this Privacy Policy, please contact us:"
+      email: "Email: hello@slipbox.co"
+    effective:
+      label: "Effective Date:"
+      date: "July 10, 2025"
+
+  support:
+    meta:
+      title: "Support – Slip POS"
+    title: "Slip Support"
+    body: "If you need help, please contact us:"
+    email: "Email: hello@slipbox.co"
+
+  instruction:
+    meta:
+      title: "Slip POS"
+      description: "Slip POS"

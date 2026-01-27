@@ -1,22 +1,21 @@
 <section class="hero">
     <div class="hero-container">
         <div class="hero-content">
-            <h1 class="hero-title">Slip 是一個在營業現場不會出事的 POS。</h1>
+            <h1 class="hero-title"><%= t('slip.hero.title') %></h1>
             <p class="hero-subtitle">
-                沒網路也能結帳，印表機連上就能吐紙；<br>
-                一天結束，現金一定對得起來。
+                <%= t('slip.hero.subtitle_html') %>
             </p>
             <div class="hero-buttons">
                 <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="btn btn-primary" target="_blank" data-analytics-label="slip_hero_download">
                     <span class="download-icon">↓</span>
-                    下載 Slip
+                    <%= t('common.download_slip') %>
                 </a>
             </div>
-            <p class="hero-microcopy">免費可用完整結帳流程；列印提供最多 30 張體驗上限。</p>
-            <p class="hero-requirements">支援 iOS 18.4 或更新版本</p>
+            <p class="hero-microcopy"><%= t('slip.hero.microcopy') %></p>
+            <p class="hero-requirements"><%= t('slip.hero.requirements') %></p>
         </div>
         <div class="hero-screenshot">
-          <img src="/images/slip/slip_ipad_screen.png" alt="Slip POS iPad截圖" class="hero-screenshot-img">
+          <img src="/images/slip/slip_ipad_screen.png" alt="<%= t('slip.hero.screenshot_alt') %>" class="hero-screenshot-img">
         </div>
     </div>
 </section>

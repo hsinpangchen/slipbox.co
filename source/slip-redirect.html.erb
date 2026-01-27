@@ -40,7 +40,7 @@ layout: false
                 }
 
                 if (stored) {
-                    window.location.replace("/" + stored + "/");
+                    window.location.replace("/" + stored + "/slip/");
                 }
             })();
         </script>
@@ -48,9 +48,9 @@ layout: false
     <body class="locale-redirect">
         <p><%= t('redirect.body') %></p>
         <p>
-            <a href="/en/" data-set-locale="en"><%= t('redirect.links.en') %></a>
+            <a href="/en/slip/" data-set-locale="en"><%= t('redirect.links.en') %></a>
             ·
-            <a href="/zh-TW/" data-set-locale="zh-TW"><%= t('redirect.links.zh_tw') %></a>
+            <a href="/zh-TW/slip/" data-set-locale="zh-TW"><%= t('redirect.links.zh_tw') %></a>
         </p>
         <script>
             (function() {

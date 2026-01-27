@@ -1,10 +1,12 @@
 <!doctype html>
-<html lang="zh-TW">
+<html lang="<%= I18n.locale.to_s %>">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title><%= current_page.data.title || "Slip POS" %></title>
-        <meta name="description" content="<%= current_page.data.description || 'Slip POS' %>" />
+        <% page_title = current_page.data.title_key ? t(current_page.data.title_key) : current_page.data.title %>
+        <% page_description = current_page.data.description_key ? t(current_page.data.description_key) : current_page.data.description %>
+        <title><%= page_title || t('instruction.meta.title') %></title>
+        <meta name="description" content="<%= page_description || t('instruction.meta.description') %>" />
         <%= partial "analytics" %>
         <%= stylesheet_link_tag "site" %>
         <%= javascript_include_tag "site" %>
