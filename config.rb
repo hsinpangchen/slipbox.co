@@ -9,20 +9,19 @@ rescue LoadError
   # dotenv is optional in some environments
 end
 
-require "i18n"
-
-SUPPORTED_LOCALES = [:en, :"zh-TW"].freeze
-
-I18n.load_path += Dir[File.join(root, "locales", "*.yml")]
-I18n.available_locales = SUPPORTED_LOCALES
-I18n.default_locale = :en
-I18n.enforce_available_locales = false
-
 # Google Analytics (GA4)
 set :ga_measurement_id, ENV["GA_MEASUREMENT_ID"]
 
+# i18n
+activate :i18n,
+         locales: [:en, :"zh-TW"],
+         mount_at_root: false,
+         path: "/:locale/"
+
 # Legacy entrypoint for /slip (redirects to localized /{locale}/slip/)
 proxy "/slip/index.html", "/slip-redirect.html", layout: false
+# Legacy entrypoint for /slip/early-operators (redirects to localized path)
+proxy "/slip/early-operators/index.html", "/early-operators-redirect.html", layout: false
 
 # Enable directory indexes for clean URLs
 activate :directory_indexes
@@ -68,10 +67,6 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
-  def t(*args)
-    ::I18n.t(*args)
-  end
-
   def locale_prefix
     "/#{I18n.locale}"
   end
@@ -83,14 +78,15 @@ helpers do
     path_part, hash = path.split("#", 2)
     return path if path_part.start_with?("/images", "/favicons", "/javascripts", "/stylesheets")
 
-    normalized = if path_part == "" || path_part == "/"
-                   "#{locale_prefix}/"
-                 elsif path_part.start_with?("/")
-                   "#{locale_prefix}#{path_part}"
-                 else
-                   "#{locale_prefix}/#{path_part}"
-                 end
+    normalized = url_for(path_part, locale: I18n.locale, relative: false)
 
+    unless normalized.match?(%r{/(en|zh-TW)(/|$)})
+      if path_part.end_with?("/") && path_part != "/"
+        html_path = "#{path_part.chomp("/")}.html"
+        normalized = url_for(html_path, locale: I18n.locale, relative: false)
+        normalized = normalized.sub(/\.html$/, "/")
+      end
+    end
     hash ? "#{normalized}##{hash}" : normalized
   end
 
@@ -101,10 +97,7 @@ helpers do
     path = "/" if path == ""
 
     localized = "/#{locale}#{path}".gsub(%r{//+}, "/")
-
-    if localized.end_with?("/index.html")
-      localized = localized.sub(%r{/index\.html$}, "/")
-    end
+    localized = localized.sub(%r{/index\.html$}, "/")
 
     if !localized.end_with?("/") && !localized.match?(/\.[a-z0-9]+$/i)
       localized = "#{localized}/"
@@ -114,30 +107,9 @@ helpers do
   end
 end
 
-app.before_render do |body, _path, locs, _template_class|
-  I18n.locale = (locs && locs[:locale]) || I18n.default_locale
-  body
-end
-
-ready do
-  sitemap.resources.each do |resource|
-    next if resource.is_a?(Middleman::Sitemap::ProxyResource)
-    next unless resource.ext == ".html"
-    next if resource.path == "index.html"
-    next if resource.path == "slip-redirect.html"
-
-    SUPPORTED_LOCALES.each do |locale|
-      localized_path = case resource.path
-                       when "home.html"
-                         File.join(locale.to_s, "index.html")
-                       when "slip/home.html"
-                         File.join(locale.to_s, "slip/index.html")
-                       else
-                         File.join(locale.to_s, resource.path)
-                       end
-      proxy localized_path, resource.path, locals: { locale: locale }, ignore: true
-    end
-  end
+after_configuration do
+  I18n.default_locale = :en
+  I18n.locale = :en
 end
 
 # Build-specific configuration
