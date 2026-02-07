@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>使用 AI 快速匯入菜單（約 3 分鐘） – Slip POS</title>
+    <meta name="description" content="透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../../../javascripts/site.js"></script>
+</head>
+<body class="tutorial-layout">
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/zh-TW/slip/#free-plan" class="nav-link">免費方案</a>
+            <a href="/zh-TW/slip/#local-first" class="nav-link">Local-first</a>
+            <a href="/zh-TW/slip/#tutorials" class="nav-link">教學</a>
+            <a href="/zh-TW/slip/early-operators/" class="nav-link">前 10 家計畫</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">下載 Slip</a>
+            <div class="nav-locale">
+                <a href="/en/slip/tutorial/menu-import-with-chatgpt/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/tutorial/menu-import-with-chatgpt/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-sidebar-nav">
+    <p class="tutorial-sidebar-title">教學列表</p>
+    <ul class="tutorial-sidebar-list">
+        <li><a href="/zh-TW/slip/tutorial/">教學總覽</a></li>
+        <li><a href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/">使用 AI 快速匯入菜單</a></li>
+        <li class="is-disabled"><span>印表機設定與測試（即將上線）</span></li>
+        <li class="is-disabled"><span>第一次開店流程（即將上線）</span></li>
+        <li class="is-disabled"><span>商品分類與選項設定（即將上線）</span></li>
+        <li class="is-disabled"><span>交班與日結對帳（即將上線）</span></li>
+    </ul>
+</nav>
+
+        </aside>
+        <section class="tutorial-content">
+            <section class="menu-import-page">
+    <header class="menu-import-header">
+        <h1>使用 AI 快速匯入菜單（約 3 分鐘）</h1>
+        <p class="menu-import-subtitle">透過 ChatGPT 將菜單圖片轉換為 JSON，再匯入 Slip。</p>
+    </header>
+
+    <section class="menu-import-overview">
+        <p>Slip 本身不會自動辨識菜單圖片。<br>
+此流程會引導你使用 ChatGPT，將菜單圖片轉換成 Slip 可匯入的 JSON 格式。</p>
+        <p>適合：</p>
+        <ul>
+            <li>已有紙本或圖片菜單</li>
+            <li>想快速建立菜單資料的使用者</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-steps">
+        <h2>步驟</h2>
+        <ol>
+            <li>
+                <h3>Step 1 — Open ChatGPT</h3>
+                <p>請打開 ChatGPT（手機或電腦皆可）。</p>
+            </li>
+            <li>
+                <h3>Step 2 — Upload Your Menu Image</h3>
+                <ul>
+                    <li>拍攝紙本菜單</li>
+                    <li>或上傳既有圖片</li>
+                    <li>清楚可讀即可，不需裁切完美</li>
+                </ul>
+            </li>
+            <li>
+                <h3>Step 3 — Copy & Paste the Prompt</h3>
+                <p>請將下方指令完整複製，貼到 ChatGPT 對話中。</p>
+                <div class="menu-import-prompt-actions">
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-prompt" data-copy-label="複製" data-copied-label="已複製" aria-label="複製提示內容">複製</button>
+                </div>
+                <pre class="menu-import-prompt" id="menu-import-prompt"><code>你是餐飲菜單 OCR 與結構化專家。請讀取使用者上傳的菜單圖片，解析出分類、品項、價格、是否加購、修飾語，並輸出符合以下 JSON 結構的結果（只輸出
+JSON，不能有任何額外文字或 Markdown）：
+
+JSON 結構：
+{
+  "sections": [
+    {
+      "name": "分類名稱",
+      "sortOrder": 1,
+      "menuItems": [
+        {
+          "name": "品項名稱",
+          "price": 0,
+          "isAvailable": true,
+          "sortOrder": 1,
+          "isAddon": false,
+          "productUUID": null
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    { "term": "修飾語", "enabled": true }
+  ]
+}
+
+規則：
+
+1. sortOrder 依照圖片中出現順序，從 1 開始。
+2. 若圖片中沒有明確的可售/停售資訊，isAvailable 一律 true。
+3. 若品項屬於加料/加購（例如「加珍珠」「加起司」等），isAddon 設為 true，否則 false。
+4. productUUID 一律輸出 null（或省略該欄位也可以，但請一致）。
+5. 若圖片中沒有分類，請建立單一分類 name = "未分類"。
+6. 價格請輸出數字（可含小數），不要加幣別符號。
+7. 修飾語（modifiers）請從圖片中常見的可選詞彙整理，例如「少冰」「少糖」「不辣」「去冰」等；若沒有就輸出空陣列。
+8. 如果同一品項在不同分類出現，保持各自分類內各一筆，不要合併。
+9. 輸出必須是合法 JSON，使用雙引號。
+
+請開始解析圖片並輸出 JSON。</code></pre>
+            </li>
+            <li>
+                <h3>Step 4 — Get <span class="menu-import-inline-code">menu.json</span></h3>
+                <p>ChatGPT 回傳後，請確認內容為 JSON 格式，並完整複製（從 <span class="menu-import-inline-code">{</span> 開始，到 <span class="menu-import-inline-code">}</span> 結束）。</p>
+                <p class="menu-import-preview-label">輸出 JSON 預覽格式</p>
+                <div class="menu-import-prompt-actions">
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-json-preview" data-copy-label="複製" data-copied-label="已複製" aria-label="複製 JSON 預覽內容">複製</button>
+                </div>
+                <pre class="menu-import-prompt menu-import-json-preview" id="menu-import-json-preview"><code>{
+  "sections": [
+    {
+      "name": "飲品",
+      "sortOrder": 1,
+      "menuItems": [
+        {
+          "name": "紅茶",
+          "price": 30,
+          "isAvailable": true,
+          "sortOrder": 1,
+          "isAddon": false,
+          "productUUID": null
+        },
+        {
+          "name": "加珍珠",
+          "price": 10,
+          "isAvailable": true,
+          "sortOrder": 2,
+          "isAddon": true,
+          "productUUID": null
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    { "term": "少冰", "enabled": true },
+    { "term": "少糖", "enabled": true }
+  ]
+}</code></pre>
+            </li>
+            <li>
+                <h3>Step 5 — Import into Slip</h3>
+                <p>回到 Slip → 菜單匯入 → 貼上 JSON → 預覽 → 匯入。</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="menu-import-notes">
+        <h2>重要提醒</h2>
+        <ul>
+            <li>此內容由 AI 產生，可能需要人工確認</li>
+            <li>匯入前 Slip 會提供預覽畫面</li>
+            <li>價格與分類請自行確認是否正確</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-disclaimer">
+        <h2>責任說明</h2>
+        <p>此流程僅提供操作指引。ChatGPT 的辨識結果由使用者自行確認與負責。</p>
+    </section>
+</section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">在營業現場不會出事的 POS</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">產品</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/#reliability" class="footer-link">現場可靠</a></li>
+                        <li><a href="/zh-TW/slip/#free-plan" class="footer-link">免費方案</a></li>
+                        <li><a href="/zh-TW/slip/#local-first" class="footer-link">Local-first</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">計畫</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/early-operators/" class="footer-link">前 10 家計畫</a></li>
+                        <li><a href="/zh-TW/slip/#stories" class="footer-link">使用故事</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">支援</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/tutorial/" class="footer-link">教學</a></li>
+                        <li><a href="/zh-TW/slip/#faq" class="footer-link">常見問題</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">聯絡我們</a></li>
+                        <li><a href="/zh-TW/slip/support/" class="footer-link" target="_blank">支援頁面</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">法律條款</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/privacy/" class="footer-link" target="_blank">隱私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

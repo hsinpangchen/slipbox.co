@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AIで素早くメニュー取り込み（約3分） – Slip POS</title>
+    <meta name="description" content="ChatGPT でメニュー画像を JSON に変換し、Slip に取り込みます。">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../../../javascripts/site.js"></script>
+</head>
+<body class="tutorial-layout">
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/ja/slip/#free-plan" class="nav-link">無料プラン</a>
+            <a href="/ja/slip/#local-first" class="nav-link">ローカルファースト</a>
+            <a href="/ja/slip/#tutorials" class="nav-link">チュートリアル</a>
+            <a href="/ja/slip/early-operators/" class="nav-link">最初の10店舗プログラム</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">Slipをダウンロード</a>
+            <div class="nav-locale">
+                <a href="/en/slip/tutorial/menu-import-with-chatgpt/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/tutorial/menu-import-with-chatgpt/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-sidebar-nav">
+    <p class="tutorial-sidebar-title">チュートリアル一覧</p>
+    <ul class="tutorial-sidebar-list">
+        <li><a href="/ja/slip/tutorial/">チュートリアル概要</a></li>
+        <li><a href="/ja/slip/tutorial/menu-import-with-chatgpt/">AIで素早くメニュー取り込み</a></li>
+        <li class="is-disabled"><span>プリンタ設定とテスト（近日公開）</span></li>
+        <li class="is-disabled"><span>初回の開店フロー（近日公開）</span></li>
+        <li class="is-disabled"><span>カテゴリとオプション設定（近日公開）</span></li>
+        <li class="is-disabled"><span>シフト引き継ぎと日次締め（近日公開）</span></li>
+    </ul>
+</nav>
+
+        </aside>
+        <section class="tutorial-content">
+            <section class="menu-import-page">
+    <header class="menu-import-header">
+        <h1>AIで素早くメニュー取り込み（約3分）</h1>
+        <p class="menu-import-subtitle">ChatGPT でメニュー画像を JSON に変換し、Slip に取り込みます。</p>
+    </header>
+
+    <section class="menu-import-overview">
+        <p>Slip はメニュー画像を自動で読み取りません。<br>
+このガイドでは ChatGPT を使って Slip 用 JSON を作成します。</p>
+        <p>こんな方におすすめ:</p>
+        <ul>
+            <li>すでに印刷または画像のメニューがある</li>
+            <li>メニューデータを素早く作りたい</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-steps">
+        <h2>手順</h2>
+        <ol>
+            <li>
+                <h3>ステップ1 — ChatGPT を開く</h3>
+                <p>スマホまたはPCで ChatGPT を開きます。</p>
+            </li>
+            <li>
+                <h3>ステップ2 — メニュー画像をアップロード</h3>
+                <ul>
+                    <li>印刷されたメニューを撮影</li>
+                    <li>または既存の画像をアップロード</li>
+                    <li>読み取れる程度でOK — 完璧なトリミングは不要</li>
+                </ul>
+            </li>
+            <li>
+                <h3>ステップ3 — プロンプトをコピー＆ペースト</h3>
+                <p>下のプロンプトをコピーして ChatGPT に貼り付けます。</p>
+                <div class="menu-import-prompt-actions">
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-prompt" data-copy-label="コピー" data-copied-label="コピーしました" aria-label="プロンプトをコピー">コピー</button>
+                </div>
+                <pre class="menu-import-prompt" id="menu-import-prompt"><code>あなたはレストランメニューのOCRと構造化の専門家です。ユーザーがアップロードしたメニュー画像を読み取り、カテゴリ、商品、価格、追加、オプションを抽出し、下記のJSON構造に合う結果を出力してください（出力はJSONのみ。余計なテキストやMarkdownは不要）：
+
+JSON structure:
+{
+  "sections": [
+    {
+      "name": "Category name",
+      "sortOrder": 1,
+      "menuItems": [
+        {
+          "name": "Item name",
+          "price": 0,
+          "isAvailable": true,
+          "sortOrder": 1,
+          "isAddon": false,
+          "productUUID": null
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    { "term": "Modifier", "enabled": true }
+  ]
+}
+
+Rules:
+
+1. sortOrder は画像内の順番で、1から始める。
+2. availability が明記されていない場合は isAvailable を true にする。
+3. 商品が追加料金の項目（例: "Add pearls", "Add cheese"）なら isAddon を true、そうでなければ false。
+4. productUUID は null（または省略してもよいが一貫性を保つ）。
+5. カテゴリがない場合は "Uncategorized" の1カテゴリを作成する。
+6. 価格は通貨記号なしの数値（小数可）。
+7. modifiers は画像内の一般的な選択肢（例: "Less ice", "Less sugar", "No spice", "No ice"）。なければ空配列。
+8. 同じ商品が複数カテゴリにある場合はカテゴリごとに1件ずつ残し、統合しない。
+9. 出力はダブルクオートを使った有効なJSONにする。
+
+画像を解析してJSONを出力してください。</code></pre>
+            </li>
+            <li>
+                <h3>ステップ4 — <span class="menu-import-inline-code">menu.json</span> を取得</h3>
+                <p>ChatGPT の回答が返ってきたら、JSON として有効か確認し、<span class="menu-import-inline-code">{</span> から <span class="menu-import-inline-code">}</span> までをすべてコピーします。</p>
+                <p class="menu-import-preview-label">JSON 出力プレビュー</p>
+                <div class="menu-import-prompt-actions">
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-json-preview" data-copy-label="コピー" data-copied-label="コピーしました" aria-label="JSON プレビューをコピー">コピー</button>
+                </div>
+                <pre class="menu-import-prompt menu-import-json-preview" id="menu-import-json-preview"><code>{
+  "sections": [
+    {
+      "name": "ドリンク",
+      "sortOrder": 1,
+      "menuItems": [
+        {
+          "name": "紅茶",
+          "price": 30,
+          "isAvailable": true,
+          "sortOrder": 1,
+          "isAddon": false,
+          "productUUID": null
+        },
+        {
+          "name": "タピオカ追加",
+          "price": 10,
+          "isAvailable": true,
+          "sortOrder": 2,
+          "isAddon": true,
+          "productUUID": null
+        }
+      ]
+    }
+  ],
+  "modifiers": [
+    { "term": "氷少なめ", "enabled": true },
+    { "term": "甘さ控えめ", "enabled": true }
+  ]
+}</code></pre>
+            </li>
+            <li>
+                <h3>ステップ5 — Slip に取り込み</h3>
+                <p>Slip に戻る → メニュー取り込み → JSON を貼り付け → プレビュー → 取り込み。</p>
+            </li>
+        </ol>
+    </section>
+
+    <section class="menu-import-notes">
+        <h2>重要な注意</h2>
+        <ul>
+            <li>この内容は AI 生成のため、手動での確認が必要な場合があります</li>
+            <li>Slip は取り込み前にプレビューを表示します</li>
+            <li>価格とカテゴリを確認してください</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-disclaimer">
+        <h2>免責事項</h2>
+        <p>このガイドは運用の参考情報です。ChatGPT の出力確認はユーザーの責任で行ってください。</p>
+    </section>
+</section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">現場で止まらないPOS</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">プロダクト</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/#reliability" class="footer-link">現場で安定</a></li>
+                        <li><a href="/ja/slip/#free-plan" class="footer-link">無料プラン</a></li>
+                        <li><a href="/ja/slip/#local-first" class="footer-link">ローカルファースト</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">プログラム</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/early-operators/" class="footer-link">最初の10店舗プログラム</a></li>
+                        <li><a href="/ja/slip/#stories" class="footer-link">ストーリー</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">サポート</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/tutorial/" class="footer-link">チュートリアル</a></li>
+                        <li><a href="/ja/slip/#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">お問い合わせ</a></li>
+                        <li><a href="/ja/slip/support/" class="footer-link" target="_blank">サポートページ</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">法務</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/privacy/" class="footer-link" target="_blank">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

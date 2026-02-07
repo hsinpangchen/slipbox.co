@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Slip POS - A POS that won't fail on the floor</title>
+    <meta name="description" content="Slip is a POS that won't fail on the floor. Offline, printing, and end-of-day reconciliation stay solid so you can open with confidence.">
+    <meta name="keywords" content="pos,cashier,receipt,coffee shop,cafe,offline,pos app,bluetooth printer,market,small business">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../javascripts/site.js"></script>
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/en/slip/#free-plan" class="nav-link">Free plan</a>
+            <a href="/en/slip/#local-first" class="nav-link">Local-first</a>
+            <a href="/en/slip/#tutorials" class="nav-link">Tutorials</a>
+            <a href="/en/slip/early-operators/" class="nav-link">First 10 Program</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">Download Slip</a>
+            <div class="nav-locale">
+                <a href="/en/slip/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <main>
+        <section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Slip is a POS that won't fail on the floor.</h1>
+            <p class="hero-subtitle">
+                Take orders without internet, print as soon as the printer connects;<br>
+and cash balances at the end of the day.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="btn btn-primary" target="_blank" data-analytics-label="slip_hero_download">
+                    <span class="download-icon">↓</span>
+                    Download Slip
+                </a>
+            </div>
+            <p class="hero-microcopy">The full checkout flow is free; printing is capped at 30 receipts.</p>
+            <p class="hero-requirements">Requires iOS 18.4 or later</p>
+        </div>
+        <div class="hero-screenshot">
+          <img src="../../images/slip/slip_ipad_screen.png" alt="Slip POS on iPad" class="hero-screenshot-img">
+        </div>
+    </div>
+</section>
+
+<section id="reliability" class="features">
+    <div class="features-container">
+        <p class="section-subtitle">The floor can't afford mistakes</p>
+        <h3 class="section-title">Offline, printing, reconciliation -- lock down the three essentials</h3>
+
+        <div class="core-features-grid">
+            <div class="core-feature-card">
+                <div class="core-feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="8" y="12" width="32" height="20" rx="2" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <path d="M16 32L20 28L24 32L28 26L32 30" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <circle cx="12" cy="38" r="2" fill="#4F94FF"/>
+                        <circle cx="36" cy="38" r="2" fill="#4F94FF"/>
+                    </svg>
+                </div>
+                <h4 class="core-feature-title">Checkout works offline</h4>
+                <p class="core-feature-description">Keep ringing up sales and recording transactions even when the internet drops.</p>
+            </div>
+
+            <div class="core-feature-card">
+                <div class="core-feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="12" y="8" width="24" height="32" rx="2" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <path d="M16 16H32M16 20H32M16 24H28M16 28H24" stroke="#4F94FF" stroke-width="1.5"/>
+                        <circle cx="24" cy="34" r="2" fill="#4F94FF"/>
+                    </svg>
+                </div>
+                <h4 class="core-feature-title">Prints the moment it connects</h4>
+                <p class="core-feature-description">Receipts come out as soon as the printer connects -- no cloud lag.</p>
+            </div>
+
+            <div class="core-feature-card">
+                <div class="core-feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="14" y="6" width="20" height="36" rx="4" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <rect x="18" y="14" width="12" height="8" rx="1" fill="#4F94FF" opacity="0.3"/>
+                        <rect x="18" y="26" width="8" height="2" fill="#4F94FF"/>
+                        <rect x="18" y="30" width="12" height="2" fill="#4F94FF"/>
+                        <circle cx="24" cy="36" r="2" stroke="#4F94FF" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+                <h4 class="core-feature-title">Cash always balances</h4>
+                <p class="core-feature-description">Clear reconciliation and handoffs -- no guessing at close.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tutorials" class="tutorials">
+    <div class="section-container">
+        <p class="section-subtitle">Tutorials</p>
+        <h3 class="section-title">Get started with Slip</h3>
+        <p class="section-lede">From menu import to opening flow, fix the parts that usually get stuck.</p>
+
+        <div class="tutorials-grid">
+            <a class="tutorial-card" href="/en/slip/tutorial/menu-import-with-chatgpt/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">~3 min</span>
+                </div>
+                <h4>Quick menu import with AI</h4>
+                <p>Turn menu photos into Slip-ready JSON.</p>
+                <span class="tutorial-cta">Start tutorial →</span>
+            </a>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">Coming soon</span>
+                </div>
+                <h4>Printer setup & testing</h4>
+                <p>Connect, test print, and troubleshoot in one place.</p>
+                <span class="tutorial-cta">In progress</span>
+            </div>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">Coming soon</span>
+                </div>
+                <h4>First time opening flow</h4>
+                <p>From pre-open setup to end-of-day close, all in one run.</p>
+                <span class="tutorial-cta">In progress</span>
+            </div>
+        </div>
+
+        <div class="tutorials-footer">
+            <a class="btn btn-secondary" href="/en/slip/tutorial/">View all tutorials</a>
+        </div>
+    </div>
+</section>
+
+<section id="free-plan" class="free-plan">
+    <div class="section-container">
+        <p class="section-subtitle">Free mode</p>
+        <h3 class="section-title">Start selling for free (printing has a trial cap)</h3>
+        <div class="section-body">
+            <p>Slip lets you take orders, checkout, and reconcile for free so you can see if it fits your floor.</p>
+            <p>The free plan includes <strong>up to 30 printed receipts</strong> as a trial cap.</p>
+            <p>After the cap: transaction data stays safe and your completed records remain intact.</p>
+            <p class="fine-print">Translation missing: en.slip.free_plan.body.fine_print</p>
+        </div>
+    </div>
+</section>
+
+<section id="local-first" class="local-first">
+    <div class="section-container">
+        <p class="section-subtitle">Design philosophy</p>
+        <h3 class="section-title">Local-first, your data stays with you</h3>
+        <div class="section-body">
+            <p>Slip is designed <strong>local-first</strong>: transaction data stays on your device.</p>
+            <p>We never ask you to hand your business to the cloud -- checkout keeps going even offline.</p>
+            <p>Subscriptions support ongoing maintenance and improvements, not renting your data.</p>
+            <p class="fine-print">After canceling, your data still stays on your device.</p>
+        </div>
+    </div>
+</section>
+
+<section id="early-operators" class="early-operators-cta">
+    <div class="section-container">
+        <p class="section-subtitle">First 10 Operators Program</p>
+        <h3 class="section-title">Slip First 10 Operators Program</h3>
+        <p class="section-lede">We're looking for real operators to tell us what's working -- and what isn't.</p>
+        <div class="cta-buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS7BwavSE7GQK2mFF422h4DbrHsyBcT0Gudjv2YUzJ5XJmVA/viewform?usp=publish-editor" class="btn btn-secondary" target="_blank">Slip First 10 Operators Program | Apply</a>
+        </div>
+    </div>
+</section>
+
+<section id="stories" class="stories">
+    <div class="section-container">
+        <p class="section-subtitle">Stories</p>
+        <h3 class="section-title">Real stories from real shops</h3>
+        <div class="story-placeholder">
+            <p>Coming soon: the first batch of real operator stories (good or bad)</p>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq">
+    <div class="section-container">
+        <p class="section-subtitle">FAQ</p>
+        <h3 class="section-title">Frequently asked questions</h3>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h4>Can I use it when the internet is down?</h4>
+                <p>Yes. Slip is local-first, so checkout and records keep working offline.</p>
+            </div>
+            <div class="faq-item">
+                <h4>What happens after the print cap is reached?</h4>
+                <p>Your data stays safe and completed records remain intact; you can choose to unlock printing.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Will my data disappear after I cancel?</h4>
+                <p>No. Your data remains on your device.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">A POS that won't fail on the floor</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">Product</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/#reliability" class="footer-link">Reliable on site</a></li>
+                        <li><a href="/en/slip/#free-plan" class="footer-link">Free plan</a></li>
+                        <li><a href="/en/slip/#local-first" class="footer-link">Local-first</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">Program</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/early-operators/" class="footer-link">First 10 Program</a></li>
+                        <li><a href="/en/slip/#stories" class="footer-link">Stories</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">Support</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/tutorial/" class="footer-link">Tutorials</a></li>
+                        <li><a href="/en/slip/#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">Contact</a></li>
+                        <li><a href="/en/slip/support/" class="footer-link" target="_blank">Support page</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">Legal</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/privacy/" class="footer-link" target="_blank">Privacy policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

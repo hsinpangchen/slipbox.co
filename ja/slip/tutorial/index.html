@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>チュートリアル – Slip POS</title>
+    <meta name="description" content="メニュー取り込み、プリンタ設定、開店フローをカバーするチュートリアル。">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../../javascripts/site.js"></script>
+</head>
+<body class="tutorial-layout">
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/ja/slip/#free-plan" class="nav-link">無料プラン</a>
+            <a href="/ja/slip/#local-first" class="nav-link">ローカルファースト</a>
+            <a href="/ja/slip/#tutorials" class="nav-link">チュートリアル</a>
+            <a href="/ja/slip/early-operators/" class="nav-link">最初の10店舗プログラム</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">Slipをダウンロード</a>
+            <div class="nav-locale">
+                <a href="/en/slip/tutorial/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/tutorial/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/tutorial/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-sidebar-nav">
+    <p class="tutorial-sidebar-title">チュートリアル一覧</p>
+    <ul class="tutorial-sidebar-list">
+        <li><a href="/ja/slip/tutorial/">チュートリアル概要</a></li>
+        <li><a href="/ja/slip/tutorial/menu-import-with-chatgpt/">AIで素早くメニュー取り込み</a></li>
+        <li class="is-disabled"><span>プリンタ設定とテスト（近日公開）</span></li>
+        <li class="is-disabled"><span>初回の開店フロー（近日公開）</span></li>
+        <li class="is-disabled"><span>カテゴリとオプション設定（近日公開）</span></li>
+        <li class="is-disabled"><span>シフト引き継ぎと日次締め（近日公開）</span></li>
+    </ul>
+</nav>
+
+        </aside>
+        <section class="tutorial-content">
+            <section class="guide-page">
+    <div class="guide-container">
+        <header class="guide-header">
+            <p class="section-subtitle">チュートリアル</p>
+            <h1 class="guide-title">Slip チュートリアル概要</h1>
+            <p class="guide-lede">メニュー取り込みから開店フローまで、つまずきがちな手順をカバー。</p>
+        </header>
+
+        <div class="tutorials-grid guide-grid">
+            <a class="tutorial-card" href="/ja/slip/tutorial/menu-import-with-chatgpt/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">約3分</span>
+                </div>
+                <h4>AIで素早くメニュー取り込み</h4>
+                <p>メニュー写真を Slip 用 JSON に変換。</p>
+                <span class="tutorial-cta">チュートリアル開始 →</span>
+            </a>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
+                </div>
+                <h4>プリンタ設定とテスト</h4>
+                <p>接続、テスト印刷、トラブル対応を一度に。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
+                </div>
+                <h4>初回の開店フロー</h4>
+                <p>開店前設定から日次締めまで一通り。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
+                </div>
+                <h4>カテゴリとオプション設定</h4>
+                <p>注文をより速く、より直感的に。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
+                </div>
+                <h4>シフト引き継ぎと日次締め</h4>
+                <p>引き継ぎフロー、現金締め、レポート。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+        </div>
+
+        <div class="guide-help">
+            <p>探している内容が見つかりませんか？</p>
+            <div class="guide-help-actions">
+                <a class="btn btn-secondary" href="https://tally.so/r/wAMX1l" target="_blank">お問い合わせ</a>
+                <a class="btn btn-primary" href="/ja/slip/#faq">FAQを見る</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">現場で止まらないPOS</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">プロダクト</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/#reliability" class="footer-link">現場で安定</a></li>
+                        <li><a href="/ja/slip/#free-plan" class="footer-link">無料プラン</a></li>
+                        <li><a href="/ja/slip/#local-first" class="footer-link">ローカルファースト</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">プログラム</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/early-operators/" class="footer-link">最初の10店舗プログラム</a></li>
+                        <li><a href="/ja/slip/#stories" class="footer-link">ストーリー</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">サポート</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/tutorial/" class="footer-link">チュートリアル</a></li>
+                        <li><a href="/ja/slip/#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">お問い合わせ</a></li>
+                        <li><a href="/ja/slip/support/" class="footer-link" target="_blank">サポートページ</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">法務</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/privacy/" class="footer-link" target="_blank">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>正在轉址...</title>
+        <meta name="robots" content="noindex" />
+        <script>
+            (function() {
+                var target = "/zh-TW/slip/";
+                var storageKey = "slip_locale";
+                var locale = "zh-TW";
+
+                try {
+                    window.localStorage.setItem(storageKey, locale);
+                } catch (e) {
+                    // Ignore storage failures in private mode or restricted browsers.
+                }
+
+                window.location.replace(target);
+            })();
+        </script>
+    </head>
+    <body class="locale-redirect">
+        <p>正在轉址...</p>
+        <p><a href="/zh-TW/slip/">Slip</a></p>
+    </body>
+</html>

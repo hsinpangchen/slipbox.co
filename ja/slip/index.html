@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Slip POS - 現場で止まらないPOS</title>
+    <meta name="description" content="Slip は現場で止まらないPOSです。オフライン、印刷、日次の現金締めが安定し、安心して開店できます。">
+    <meta name="keywords" content="POS,レジ,レジアプリ,カフェ,飲食店,オフライン,レシート印刷,Bluetoothプリンター,キッチンカー,移動販売,屋台,マルシェ,市場出店">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../javascripts/site.js"></script>
+</head>
+<body>
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/ja/slip/#free-plan" class="nav-link">無料プラン</a>
+            <a href="/ja/slip/#local-first" class="nav-link">ローカルファースト</a>
+            <a href="/ja/slip/#tutorials" class="nav-link">チュートリアル</a>
+            <a href="/ja/slip/early-operators/" class="nav-link">最初の10店舗プログラム</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">Slipをダウンロード</a>
+            <div class="nav-locale">
+                <a href="/en/slip/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <main>
+        <section class="hero">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">Slip は現場で止まらないPOSです。</h1>
+            <p class="hero-subtitle">
+                ネットがなくても注文、プリンタがつながれば即印刷。<br>
+一日の終わりに現金がきちんと合います。
+            </p>
+            <div class="hero-buttons">
+                <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="btn btn-primary" target="_blank" data-analytics-label="slip_hero_download">
+                    <span class="download-icon">↓</span>
+                    Slipをダウンロード
+                </a>
+            </div>
+            <p class="hero-microcopy">フルの会計フローは無料。印刷は30枚までの上限。</p>
+            <p class="hero-requirements">iOS 18.4 以降が必要</p>
+        </div>
+        <div class="hero-screenshot">
+          <img src="../../images/slip/slip_ipad_screen.png" alt="iPad 上の Slip POS" class="hero-screenshot-img">
+        </div>
+    </div>
+</section>
+
+<section id="reliability" class="features">
+    <div class="features-container">
+        <p class="section-subtitle">現場はミスが許されない</p>
+        <h3 class="section-title">オフライン、印刷、締め処理 — 3つの要点を固める</h3>
+
+        <div class="core-features-grid">
+            <div class="core-feature-card">
+                <div class="core-feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="8" y="12" width="32" height="20" rx="2" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <path d="M16 32L20 28L24 32L28 26L32 30" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <circle cx="12" cy="38" r="2" fill="#4F94FF"/>
+                        <circle cx="36" cy="38" r="2" fill="#4F94FF"/>
+                    </svg>
+                </div>
+                <h4 class="core-feature-title">オフラインでも会計</h4>
+                <p class="core-feature-description">ネットが落ちても販売と取引記録を継続できます。</p>
+            </div>
+
+            <div class="core-feature-card">
+                <div class="core-feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="12" y="8" width="24" height="32" rx="2" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <path d="M16 16H32M16 20H32M16 24H28M16 28H24" stroke="#4F94FF" stroke-width="1.5"/>
+                        <circle cx="24" cy="34" r="2" fill="#4F94FF"/>
+                    </svg>
+                </div>
+                <h4 class="core-feature-title">つながった瞬間に印刷</h4>
+                <p class="core-feature-description">プリンタ接続と同時にレシート発行 — クラウド遅延なし。</p>
+            </div>
+
+            <div class="core-feature-card">
+                <div class="core-feature-icon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                        <rect x="14" y="6" width="20" height="36" rx="4" stroke="#4F94FF" stroke-width="2" fill="none"/>
+                        <rect x="18" y="14" width="12" height="8" rx="1" fill="#4F94FF" opacity="0.3"/>
+                        <rect x="18" y="26" width="8" height="2" fill="#4F94FF"/>
+                        <rect x="18" y="30" width="12" height="2" fill="#4F94FF"/>
+                        <circle cx="24" cy="36" r="2" stroke="#4F94FF" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+                <h4 class="core-feature-title">現金が必ず合う</h4>
+                <p class="core-feature-description">明確な締めと引き継ぎで、閉店時に迷いません。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="tutorials" class="tutorials">
+    <div class="section-container">
+        <p class="section-subtitle">チュートリアル</p>
+        <h3 class="section-title">Slip の始め方</h3>
+        <p class="section-lede">メニュー取り込みから開店フローまで、つまずきがちな所を解決します。</p>
+
+        <div class="tutorials-grid">
+            <a class="tutorial-card" href="/ja/slip/tutorial/menu-import-with-chatgpt/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">約3分</span>
+                </div>
+                <h4>AIで素早くメニュー取り込み</h4>
+                <p>メニュー写真を Slip 用 JSON に変換。</p>
+                <span class="tutorial-cta">チュートリアル開始 →</span>
+            </a>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
+                </div>
+                <h4>プリンタ設定とテスト</h4>
+                <p>接続、テスト印刷、トラブル対応を一度に。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+
+            <div class="tutorial-card is-disabled">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
+                </div>
+                <h4>初回の開店フロー</h4>
+                <p>開店前設定から日次締めまで一通り。</p>
+                <span class="tutorial-cta">準備中</span>
+            </div>
+        </div>
+
+        <div class="tutorials-footer">
+            <a class="btn btn-secondary" href="/ja/slip/tutorial/">すべてのチュートリアルを見る</a>
+        </div>
+    </div>
+</section>
+
+<section id="free-plan" class="free-plan">
+    <div class="section-container">
+        <p class="section-subtitle">無料モード</p>
+        <h3 class="section-title">無料で販売開始（印刷は体験上限あり）</h3>
+        <div class="section-body">
+            <p>Slip は注文、会計、締め処理を無料で使えます。現場に合うか試せます。</p>
+            <p>無料プランは <strong>印刷30枚まで</strong> を体験上限として提供します。</p>
+            <p>上限後も取引データは安全に保持され、完了済み記録は残ります。</p>
+            <p class="fine-print">Translation missing: ja.slip.free_plan.body.fine_print</p>
+        </div>
+    </div>
+</section>
+
+<section id="local-first" class="local-first">
+    <div class="section-container">
+        <p class="section-subtitle">設計思想</p>
+        <h3 class="section-title">ローカルファースト、データはあなたの手元に</h3>
+        <div class="section-body">
+            <p>Slip は <strong>ローカルファースト</strong> 設計。取引データは端末に保存されます。</p>
+            <p>ビジネスをクラウドに預ける必要はありません — オフラインでも会計は続きます。</p>
+            <p>サブスクリプションは継続的な改善のためで、データを借りるためではありません。</p>
+            <p class="fine-print">解約後もデータは端末に残ります。</p>
+        </div>
+    </div>
+</section>
+
+<section id="early-operators" class="early-operators-cta">
+    <div class="section-container">
+        <p class="section-subtitle">最初の10店舗プログラム</p>
+        <h3 class="section-title">Slip 最初の10店舗プログラム</h3>
+        <p class="section-lede">実際の店舗オペレーターから、良い点と改善点を教えてもらいたい。</p>
+        <div class="cta-buttons">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS7BwavSE7GQK2mFF422h4DbrHsyBcT0Gudjv2YUzJ5XJmVA/viewform?usp=publish-editor" class="btn btn-secondary" target="_blank">Slip 最初の10店舗プログラム | 応募</a>
+        </div>
+    </div>
+</section>
+
+<section id="stories" class="stories">
+    <div class="section-container">
+        <p class="section-subtitle">ストーリー</p>
+        <h3 class="section-title">実店舗のリアルなストーリー</h3>
+        <div class="story-placeholder">
+            <p>近日公開：最初の店舗の実体験（良い点も悪い点も）</p>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="faq">
+    <div class="section-container">
+        <p class="section-subtitle">FAQ</p>
+        <h3 class="section-title">よくある質問</h3>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h4>ネットがなくても使えますか？</h4>
+                <p>はい。Slip はローカルファーストなので、オフラインでも会計と記録が継続します。</p>
+            </div>
+            <div class="faq-item">
+                <h4>印刷上限に達したらどうなりますか？</h4>
+                <p>データは安全に保持され、完了済み記録は残ります。印刷解除を選択できます。</p>
+            </div>
+            <div class="faq-item">
+                <h4>解約したらデータは消えますか？</h4>
+                <p>いいえ。データは端末に残ります。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    </main>
+    
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">現場で止まらないPOS</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">プロダクト</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/#reliability" class="footer-link">現場で安定</a></li>
+                        <li><a href="/ja/slip/#free-plan" class="footer-link">無料プラン</a></li>
+                        <li><a href="/ja/slip/#local-first" class="footer-link">ローカルファースト</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">プログラム</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/early-operators/" class="footer-link">最初の10店舗プログラム</a></li>
+                        <li><a href="/ja/slip/#stories" class="footer-link">ストーリー</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">サポート</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/tutorial/" class="footer-link">チュートリアル</a></li>
+                        <li><a href="/ja/slip/#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">お問い合わせ</a></li>
+                        <li><a href="/ja/slip/support/" class="footer-link" target="_blank">サポートページ</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">法務</h6>
+                    <ul class="footer-list">
+                        <li><a href="/ja/slip/privacy/" class="footer-link" target="_blank">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

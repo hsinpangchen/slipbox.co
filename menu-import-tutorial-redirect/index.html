@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Redirecting...</title>
+        <meta name="robots" content="noindex" />
+        <script>
+            (function() {
+                var supported = ["en", "zh-TW", "ja"];
+                var storageKey = "slip_locale";
+                var stored = null;
+
+                try {
+                    stored = window.localStorage.getItem(storageKey);
+                } catch (e) {
+                    stored = null;
+                }
+
+                if (!stored || supported.indexOf(stored) === -1) {
+                    var preferred = window.navigator.languages || [window.navigator.language || "en"];
+                    var detected = "en";
+
+                    for (var i = 0; i < preferred.length; i += 1) {
+                        var lang = (preferred[i] || "").toLowerCase();
+                        if (lang.indexOf("ja") === 0) {
+                            detected = "ja";
+                            break;
+                        }
+                        if (lang.indexOf("zh") === 0) {
+                            detected = "zh-TW";
+                            break;
+                        }
+                        if (lang.indexOf("en") === 0) {
+                            detected = "en";
+                        }
+                    }
+
+                    stored = detected;
+                }
+
+                if (stored) {
+                    window.location.replace("/" + stored + "/slip/tutorial/menu-import-with-chatgpt/");
+                }
+            })();
+        </script>
+    </head>
+    <body class="locale-redirect">
+        <p>Redirecting...</p>
+        <p>
+            <a href="/en/slip/tutorial/menu-import-with-chatgpt/" data-set-locale="en">English</a>
+            ·
+            <a href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/" data-set-locale="zh-TW">繁體中文</a>
+            ·
+            <a href="/ja/slip/tutorial/menu-import-with-chatgpt/" data-set-locale="ja">日本語</a>
+        </p>
+        <script>
+            (function() {
+                var links = document.querySelectorAll('[data-set-locale]');
+                var storageKey = 'slip_locale';
+
+                links.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        var locale = link.getAttribute('data-set-locale');
+
+                        if (!locale) {
+                            return;
+                        }
+
+                        try {
+                            window.localStorage.setItem(storageKey, locale);
+                        } catch (e) {
+                            return;
+                        }
+                    });
+                });
+            })();
+        </script>
+    </body>
+</html>
