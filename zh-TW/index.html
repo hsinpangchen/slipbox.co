@@ -3,27 +3,26 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>正在轉址...</title>
-        <meta name="robots" content="noindex" />
-        <script>
-            (function() {
-                var target = "/zh-TW/slip/";
-                var storageKey = "slip_locale";
-                var locale = "zh-TW";
+        <title>Slipbox</title>
+            <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
 
-                try {
-                    window.localStorage.setItem(storageKey, locale);
-                } catch (e) {
-                    // Ignore storage failures in private mode or restricted browsers.
-                }
-
-                window.location.replace(target);
-            })();
-        </script>
+        <link href="../stylesheets/site.css" rel="stylesheet" />
     </head>
-    <body class="locale-redirect">
-        <p>正在轉址...</p>
-        <p><a href="/zh-TW/slip/">Slip</a></p>
+    <body class="home-page">
+        <h1>👋 Slipbox</h1>
+<p>
+    <a href="/zh-TW/slip/" class="btn btn-primary">
+        Slip
+    </a>
+</p>
+<footer>© 2025 Slipbox.co</footer>
+
     </body>
 </html>

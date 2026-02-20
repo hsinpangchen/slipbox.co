@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Slip POS - 教學</title>
+    <meta name="description" content="Slip 教學頁">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../../../javascripts/site.js"></script>
+</head>
+<body class="tutorial-layout">
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/zh-TW/slip/#free-plan" class="nav-link">免費方案</a>
+            <a href="/zh-TW/slip/#local-first" class="nav-link">Local-first</a>
+            <a href="/zh-TW/slip/#tutorials" class="nav-link">教學</a>
+            <a href="/zh-TW/slip/early-operators/" class="nav-link">前 10 家計畫</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">下載 Slip</a>
+            <div class="nav-locale">
+                <a href="/en/slip/tutorial/pos-sales-after-menu/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/tutorial/pos-sales-after-menu/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/tutorial/pos-sales-after-menu/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-sidebar-nav">
+    <p class="tutorial-sidebar-title">教學列表</p>
+    <ul class="tutorial-sidebar-list">
+        <li><a href="/zh-TW/slip/tutorial/">教學總覽</a></li>
+        <li><a href="/zh-TW/slip/tutorial/menu-import-with-chatgpt/">使用 AI 快速匯入菜單</a></li>
+        <li><a href="/zh-TW/slip/tutorial/printer-settings/">印表機設定與測試</a></li>
+        <li><a href="/zh-TW/slip/tutorial/pos-sales-after-menu/">第一次開店流程</a></li>
+        <li><a href="/zh-TW/slip/tutorial/menu-settings/">商品分類與選項設定</a></li>
+        <li class="is-disabled"><span>交班與日結對帳（即將上線）</span></li>
+    </ul>
+</nav>
+
+        </aside>
+        <section class="tutorial-content">
+            <section class="menu-import-page">
+    <header class="menu-import-header">
+        <h1>第一次開店流程（菜單建立後）</h1>
+        <p class="menu-import-subtitle">給菜單已建好的新手，5 分鐘快速走完第一筆到送單確認。</p>
+    </header>
+
+    <section class="menu-import-overview">
+        <p>這份流程會從收銀畫面開始，帶你完成一筆訂單並在訂單列表確認資料有寫入。</p>
+        <p>前提：</p>
+        <ul>
+            <li>已完成菜單設定（至少 1 個分類、1 個品項）</li>
+            <li>目前在 iPad 收銀畫面（Cashier）</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-steps">
+        <h2>步驟</h2>
+        <ol>
+            <li>
+                <h3>Step 1（F01）：先確認畫面可以點餐</h3>
+                <p>先看右側菜單區有品項、左側訂單區目前是空的。</p>
+                <ul>
+                    <li>可看到菜單品項列表</li>
+                    <li>下方有 <span class="menu-import-inline-code">Submit</span></li>
+                    <li><span class="menu-import-inline-code">Total Amount: 0</span></li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/01-pos-cashier-ready.png" alt="F01 收銀畫面可點餐">
+            </li>
+            <li>
+                <h3>Step 2（F02）：先選內用或外帶</h3>
+                <p>在左側上方，點一次 <span class="menu-import-inline-code">Dine-in</span> / <span class="menu-import-inline-code">Takeout</span>。</p>
+                <ul>
+                    <li>此切換會影響這筆訂單的 delivery type</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/02-pos-delivery-toggle.png" alt="F02 內用外帶切換">
+            </li>
+            <li>
+                <h3>Step 3（F03）：加第一個品項</h3>
+                <p>在右側菜單點一個品項（例如 Americano）。</p>
+                <ul>
+                    <li>左側訂單清單出現該品項</li>
+                    <li>Total Amount 從 0 變成該品項金額</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/03-pos-add-first-item.png" alt="F03 加第一個品項">
+            </li>
+            <li>
+                <h3>Step 4（F04）：連點同品項，確認數量會累加</h3>
+                <p>再連點同一個品項 1 到 2 次。</p>
+                <ul>
+                    <li>同一列品項的數量增加，不是新增重複列</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/04-pos-accumulate-quantity.png" alt="F04 同品項數量累加">
+            </li>
+            <li>
+                <h3>Step 5（F05）：再加第二個品項，確認總額</h3>
+                <p>再點另一個品項（例如 Latte）。</p>
+                <ul>
+                    <li>訂單會有至少兩個品項</li>
+                    <li>Total Amount 會正確往上加</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/05-pos-add-second-item-total.png" alt="F05 加第二個品項後總額更新">
+            </li>
+            <li>
+                <h3>Step 6（F06）：送出訂單</h3>
+                <p>點左下 <span class="menu-import-inline-code">Submit</span>。</p>
+                <ul>
+                    <li>這筆 sale 成功建立</li>
+                    <li>訂單草稿被清空</li>
+                    <li>畫面回到可開始下一單的狀態</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/06-pos-submit-order.png" alt="F06 送出訂單">
+            </li>
+            <li>
+                <h3>Step 7（F07）：去訂單列表確認有寫入</h3>
+                <p>點右上 toolbar 的訂單列表按鈕，進入 <span class="menu-import-inline-code">OrderListScreen</span>。</p>
+                <ul>
+                    <li>可看到剛剛送出的那筆訂單</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/pos-sales/07-pos-open-order-list.png" alt="F07 開啟訂單列表">
+            </li>
+        </ol>
+    </section>
+
+    <section class="menu-import-notes">
+        <h2>常見狀況</h2>
+        <ul>
+            <li>點 <span class="menu-import-inline-code">Submit</span> 沒反應：先確認左側有至少 1 個品項（空單不會送出）。</li>
+            <li>看不到菜單品項：先回到菜單設定確認有可用品項與分類。</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-disclaimer">
+        <h2>流程對照</h2>
+        <p>本篇對應 F01 ~ F07（POS Sales 模組）。</p>
+    </section>
+</section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">在營業現場不會出事的 POS</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">產品</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/#reliability" class="footer-link">現場可靠</a></li>
+                        <li><a href="/zh-TW/slip/#free-plan" class="footer-link">免費方案</a></li>
+                        <li><a href="/zh-TW/slip/#local-first" class="footer-link">Local-first</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">計畫</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/early-operators/" class="footer-link">前 10 家計畫</a></li>
+                        <li><a href="/zh-TW/slip/#stories" class="footer-link">使用故事</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">支援</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/tutorial/" class="footer-link">教學</a></li>
+                        <li><a href="/zh-TW/slip/#faq" class="footer-link">常見問題</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">聯絡我們</a></li>
+                        <li><a href="/zh-TW/slip/support/" class="footer-link" target="_blank">支援頁面</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">法律條款</h6>
+                    <ul class="footer-list">
+                        <li><a href="/zh-TW/slip/privacy/" class="footer-link" target="_blank">隱私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

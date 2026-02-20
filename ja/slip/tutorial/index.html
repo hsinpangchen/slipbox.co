@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>チュートリアル – Slip POS</title>
-    <meta name="description" content="メニュー取り込み、プリンタ設定、開店フローをカバーするチュートリアル。">
+    <meta name="description" content="メニュー取り込み、プリンター設定、開店フローをカバーする Slip チュートリアル。">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../../favicons/apple-touch-icon-180x180.png">
@@ -73,9 +73,9 @@
     <ul class="tutorial-sidebar-list">
         <li><a href="/ja/slip/tutorial/">チュートリアル概要</a></li>
         <li><a href="/ja/slip/tutorial/menu-import-with-chatgpt/">AIで素早くメニュー取り込み</a></li>
-        <li class="is-disabled"><span>プリンタ設定とテスト（近日公開）</span></li>
-        <li class="is-disabled"><span>初回の開店フロー（近日公開）</span></li>
-        <li class="is-disabled"><span>カテゴリとオプション設定（近日公開）</span></li>
+        <li><a href="/ja/slip/tutorial/printer-settings/">プリンター設定とテスト</a></li>
+        <li><a href="/ja/slip/tutorial/pos-sales-after-menu/">初回の開店フロー</a></li>
+        <li><a href="/ja/slip/tutorial/menu-settings/">カテゴリと修飾語の設定</a></li>
         <li class="is-disabled"><span>シフト引き継ぎと日次締め（近日公開）</span></li>
     </ul>
 </nav>
@@ -87,7 +87,7 @@
         <header class="guide-header">
             <p class="section-subtitle">チュートリアル</p>
             <h1 class="guide-title">Slip チュートリアル概要</h1>
-            <p class="guide-lede">メニュー取り込みから開店フローまで、つまずきがちな手順をカバー。</p>
+            <p class="guide-lede">メニュー取り込みから開店フローまで、詰まりやすい工程をまとめてカバーします。</p>
         </header>
 
         <div class="tutorials-grid guide-grid">
@@ -96,7 +96,34 @@
                     <span class="tutorial-tag">約3分</span>
                 </div>
                 <h4>AIで素早くメニュー取り込み</h4>
-                <p>メニュー写真を Slip 用 JSON に変換。</p>
+                <p>メニュー写真を Slip 用JSONに変換します。</p>
+                <span class="tutorial-cta">チュートリアル開始 →</span>
+            </a>
+
+            <a class="tutorial-card" href="/ja/slip/tutorial/printer-settings/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">約5分</span>
+                </div>
+                <h4>プリンター設定とテスト</h4>
+                <p>接続、テスト印刷、トラブル対応を一度に。</p>
+                <span class="tutorial-cta">チュートリアル開始 →</span>
+            </a>
+
+            <a class="tutorial-card" href="/ja/slip/tutorial/pos-sales-after-menu/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">約5分</span>
+                </div>
+                <h4>初回の開店フロー</h4>
+                <p>開店前準備から日次締めまでを一通り。</p>
+                <span class="tutorial-cta">チュートリアル開始 →</span>
+            </a>
+
+            <a class="tutorial-card" href="/ja/slip/tutorial/menu-settings/">
+                <div class="tutorial-card-meta">
+                    <span class="tutorial-tag">約5分</span>
+                </div>
+                <h4>カテゴリと修飾語の設定</h4>
+                <p>注文操作をより速く、より直感的に。</p>
                 <span class="tutorial-cta">チュートリアル開始 →</span>
             </a>
 
@@ -104,41 +131,14 @@
                 <div class="tutorial-card-meta">
                     <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
                 </div>
-                <h4>プリンタ設定とテスト</h4>
-                <p>接続、テスト印刷、トラブル対応を一度に。</p>
-                <span class="tutorial-cta">準備中</span>
-            </div>
-
-            <div class="tutorial-card is-disabled">
-                <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
-                </div>
-                <h4>初回の開店フロー</h4>
-                <p>開店前設定から日次締めまで一通り。</p>
-                <span class="tutorial-cta">準備中</span>
-            </div>
-
-            <div class="tutorial-card is-disabled">
-                <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
-                </div>
-                <h4>カテゴリとオプション設定</h4>
-                <p>注文をより速く、より直感的に。</p>
-                <span class="tutorial-cta">準備中</span>
-            </div>
-
-            <div class="tutorial-card is-disabled">
-                <div class="tutorial-card-meta">
-                    <span class="tutorial-tag tutorial-tag--muted">近日公開</span>
-                </div>
                 <h4>シフト引き継ぎと日次締め</h4>
-                <p>引き継ぎフロー、現金締め、レポート。</p>
+                <p>引き継ぎフロー、現金照合、レポート。</p>
                 <span class="tutorial-cta">準備中</span>
             </div>
         </div>
 
         <div class="guide-help">
-            <p>探している内容が見つかりませんか？</p>
+            <p>必要な情報が見つかりませんか？</p>
             <div class="guide-help-actions">
                 <a class="btn btn-secondary" href="https://tally.so/r/wAMX1l" target="_blank">お問い合わせ</a>
                 <a class="btn btn-primary" href="/ja/slip/#faq">FAQを見る</a>
@@ -174,7 +174,7 @@
                     <h6 class="footer-title">プログラム</h6>
                     <ul class="footer-list">
                         <li><a href="/ja/slip/early-operators/" class="footer-link">最初の10店舗プログラム</a></li>
-                        <li><a href="/ja/slip/#stories" class="footer-link">ストーリー</a></li>
+                        <li><a href="/ja/slip/#stories" class="footer-link">導入ストーリー</a></li>
                     </ul>
                 </div>
 
@@ -199,7 +199,7 @@
                 </div> -->
 
                 <div class="footer-section">
-                    <h6 class="footer-title">法務</h6>
+                    <h6 class="footer-title">法的情報</h6>
                     <ul class="footer-list">
                         <li><a href="/ja/slip/privacy/" class="footer-link" target="_blank">プライバシーポリシー</a></li>
                     </ul>

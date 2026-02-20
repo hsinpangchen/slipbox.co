@@ -24,12 +24,12 @@
 
                     for (var i = 0; i < preferred.length; i += 1) {
                         var lang = (preferred[i] || "").toLowerCase();
-                        if (lang.indexOf("ja") === 0) {
-                            detected = "ja";
-                            break;
-                        }
                         if (lang.indexOf("zh") === 0) {
                             detected = "zh-TW";
+                            break;
+                        }
+                        if (lang.indexOf("ja") === 0) {
+                            detected = "ja";
                             break;
                         }
                         if (lang.indexOf("en") === 0) {
@@ -41,7 +41,7 @@
                 }
 
                 if (stored) {
-                    window.location.replace("/" + stored + "/slip/");
+                    window.location.replace("/" + stored + "/");
                 }
             })();
         </script>
@@ -49,11 +49,11 @@
     <body class="locale-redirect">
         <p>Redirecting...</p>
         <p>
-            <a href="/en/slip/" data-set-locale="en">English</a>
+            <a href="/en/" data-set-locale="en">English</a>
             ·
-            <a href="/zh-TW/slip/" data-set-locale="zh-TW">繁體中文</a>
+            <a href="/zh-TW/" data-set-locale="zh-TW">繁體中文</a>
             ·
-            <a href="/ja/slip/" data-set-locale="ja">日本語</a>
+            <a href="/ja/" data-set-locale="ja">日本語</a>
         </p>
         <script>
             (function() {

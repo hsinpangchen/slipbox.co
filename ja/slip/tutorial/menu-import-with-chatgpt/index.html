@@ -73,9 +73,9 @@
     <ul class="tutorial-sidebar-list">
         <li><a href="/ja/slip/tutorial/">チュートリアル概要</a></li>
         <li><a href="/ja/slip/tutorial/menu-import-with-chatgpt/">AIで素早くメニュー取り込み</a></li>
-        <li class="is-disabled"><span>プリンタ設定とテスト（近日公開）</span></li>
-        <li class="is-disabled"><span>初回の開店フロー（近日公開）</span></li>
-        <li class="is-disabled"><span>カテゴリとオプション設定（近日公開）</span></li>
+        <li><a href="/ja/slip/tutorial/printer-settings/">プリンター設定とテスト</a></li>
+        <li><a href="/ja/slip/tutorial/pos-sales-after-menu/">初回の開店フロー</a></li>
+        <li><a href="/ja/slip/tutorial/menu-settings/">カテゴリと修飾語の設定</a></li>
         <li class="is-disabled"><span>シフト引き継ぎと日次締め（近日公開）</span></li>
     </ul>
 </nav>
@@ -89,12 +89,12 @@
     </header>
 
     <section class="menu-import-overview">
-        <p>Slip はメニュー画像を自動で読み取りません。<br>
-このガイドでは ChatGPT を使って Slip 用 JSON を作成します。</p>
+        <p>Slip 自体はメニュー画像を自動認識しません。<br>
+このガイドでは、ChatGPT を使ってメニュー画像を Slip 用JSONに変換する方法を説明します。</p>
         <p>こんな方におすすめ:</p>
         <ul>
-            <li>すでに印刷または画像のメニューがある</li>
-            <li>メニューデータを素早く作りたい</li>
+            <li>紙または画像のメニューがすでにある</li>
+            <li>メニューデータを短時間で作成したい</li>
         </ul>
     </section>
 
@@ -102,24 +102,24 @@
         <h2>手順</h2>
         <ol>
             <li>
-                <h3>ステップ1 — ChatGPT を開く</h3>
+                <h3>Step 1 -- ChatGPT を開く</h3>
                 <p>スマホまたはPCで ChatGPT を開きます。</p>
             </li>
             <li>
-                <h3>ステップ2 — メニュー画像をアップロード</h3>
+                <h3>Step 2 -- メニュー画像をアップロード</h3>
                 <ul>
-                    <li>印刷されたメニューを撮影</li>
+                    <li>紙メニューを撮影</li>
                     <li>または既存の画像をアップロード</li>
-                    <li>読み取れる程度でOK — 完璧なトリミングは不要</li>
+                    <li>読み取れる状態ならOK。完璧なトリミングは不要</li>
                 </ul>
             </li>
             <li>
-                <h3>ステップ3 — プロンプトをコピー＆ペースト</h3>
-                <p>下のプロンプトをコピーして ChatGPT に貼り付けます。</p>
+                <h3>Step 3 -- プロンプトをコピーして貼り付け</h3>
+                <p>以下のプロンプトをコピーし、ChatGPT に貼り付けます。</p>
                 <div class="menu-import-prompt-actions">
-                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-prompt" data-copy-label="コピー" data-copied-label="コピーしました" aria-label="プロンプトをコピー">コピー</button>
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-prompt" data-copy-label="コピー" data-copied-label="コピー済み" aria-label="プロンプトをコピー">コピー</button>
                 </div>
-                <pre class="menu-import-prompt" id="menu-import-prompt"><code>あなたはレストランメニューのOCRと構造化の専門家です。ユーザーがアップロードしたメニュー画像を読み取り、カテゴリ、商品、価格、追加、オプションを抽出し、下記のJSON構造に合う結果を出力してください（出力はJSONのみ。余計なテキストやMarkdownは不要）：
+                <pre class="menu-import-prompt" id="menu-import-prompt"><code>あなたは飲食メニューのOCRと構造化の専門家です。ユーザーがアップロードしたメニュー画像を読み取り、カテゴリ・商品・価格・追加項目・修飾語を抽出し、以下のJSON構造に一致する結果を出力してください（出力はJSONのみ、余計な説明やMarkdownは不要）。
 
 JSON structure:
 {
@@ -146,24 +146,24 @@ JSON structure:
 
 Rules:
 
-1. sortOrder は画像内の順番で、1から始める。
-2. availability が明記されていない場合は isAvailable を true にする。
-3. 商品が追加料金の項目（例: "Add pearls", "Add cheese"）なら isAddon を true、そうでなければ false。
-4. productUUID は null（または省略してもよいが一貫性を保つ）。
-5. カテゴリがない場合は "Uncategorized" の1カテゴリを作成する。
+1. sortOrder は画像内の出現順に従い、1 から開始。
+2. 販売可否の記載がなければ isAvailable は true。
+3. 商品が追加項目（例: "タピオカ追加"、"チーズ追加"）なら isAddon を true、そうでなければ false。
+4. productUUID は null（省略する場合は一貫性を保つ）。
+5. カテゴリがない場合は name = "Uncategorized" の単一カテゴリを作成。
 6. 価格は通貨記号なしの数値（小数可）。
-7. modifiers は画像内の一般的な選択肢（例: "Less ice", "Less sugar", "No spice", "No ice"）。なければ空配列。
-8. 同じ商品が複数カテゴリにある場合はカテゴリごとに1件ずつ残し、統合しない。
-9. 出力はダブルクオートを使った有効なJSONにする。
+7. modifiers は画像内で選択される語句（例: "氷少なめ"、"糖分少なめ"、"辛さなし"、"氷なし"）を抽出。なければ空配列。
+8. 同一商品が複数カテゴリにある場合はカテゴリごとに保持し、統合しない。
+9. 出力はダブルクォートを使用した有効なJSON。
 
-画像を解析してJSONを出力してください。</code></pre>
+画像解析を開始し、JSONを出力してください。</code></pre>
             </li>
             <li>
-                <h3>ステップ4 — <span class="menu-import-inline-code">menu.json</span> を取得</h3>
-                <p>ChatGPT の回答が返ってきたら、JSON として有効か確認し、<span class="menu-import-inline-code">{</span> から <span class="menu-import-inline-code">}</span> までをすべてコピーします。</p>
-                <p class="menu-import-preview-label">JSON 出力プレビュー</p>
+                <h3>Step 4 -- <span class="menu-import-inline-code">menu.json</span> を取得</h3>
+                <p>ChatGPT の返答後、有効な JSON であることを確認し、<span class="menu-import-inline-code">{</span> から <span class="menu-import-inline-code">}</span> まで全文をコピーします。</p>
+                <p class="menu-import-preview-label">JSON出力プレビュー</p>
                 <div class="menu-import-prompt-actions">
-                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-json-preview" data-copy-label="コピー" data-copied-label="コピーしました" aria-label="JSON プレビューをコピー">コピー</button>
+                    <button class="menu-import-copy-btn" type="button" data-copy-target="#menu-import-json-preview" data-copy-label="コピー" data-copied-label="コピー済み" aria-label="JSONプレビューをコピー">コピー</button>
                 </div>
                 <pre class="menu-import-prompt menu-import-json-preview" id="menu-import-json-preview"><code>{
   "sections": [
@@ -192,29 +192,29 @@ Rules:
   ],
   "modifiers": [
     { "term": "氷少なめ", "enabled": true },
-    { "term": "甘さ控えめ", "enabled": true }
+    { "term": "糖分少なめ", "enabled": true }
   ]
 }</code></pre>
             </li>
             <li>
-                <h3>ステップ5 — Slip に取り込み</h3>
+                <h3>Step 5 -- Slip に取り込み</h3>
                 <p>Slip に戻る → メニュー取り込み → JSON を貼り付け → プレビュー → 取り込み。</p>
             </li>
         </ol>
     </section>
 
     <section class="menu-import-notes">
-        <h2>重要な注意</h2>
+        <h2>重要な注意事項</h2>
         <ul>
-            <li>この内容は AI 生成のため、手動での確認が必要な場合があります</li>
-            <li>Slip は取り込み前にプレビューを表示します</li>
-            <li>価格とカテゴリを確認してください</li>
+            <li>この内容は AI 生成であり、手動確認が必要な場合があります</li>
+            <li>Slip では取り込み前にプレビューを確認できます</li>
+            <li>価格とカテゴリは必ず確認してください</li>
         </ul>
     </section>
 
     <section class="menu-import-disclaimer">
         <h2>免責事項</h2>
-        <p>このガイドは運用の参考情報です。ChatGPT の出力確認はユーザーの責任で行ってください。</p>
+        <p>このガイドは操作案内です。ChatGPT の出力確認は利用者の責任で行ってください。</p>
     </section>
 </section>
 
@@ -245,7 +245,7 @@ Rules:
                     <h6 class="footer-title">プログラム</h6>
                     <ul class="footer-list">
                         <li><a href="/ja/slip/early-operators/" class="footer-link">最初の10店舗プログラム</a></li>
-                        <li><a href="/ja/slip/#stories" class="footer-link">ストーリー</a></li>
+                        <li><a href="/ja/slip/#stories" class="footer-link">導入ストーリー</a></li>
                     </ul>
                 </div>
 
@@ -270,7 +270,7 @@ Rules:
                 </div> -->
 
                 <div class="footer-section">
-                    <h6 class="footer-title">法務</h6>
+                    <h6 class="footer-title">法的情報</h6>
                     <ul class="footer-list">
                         <li><a href="/ja/slip/privacy/" class="footer-link" target="_blank">プライバシーポリシー</a></li>
                     </ul>

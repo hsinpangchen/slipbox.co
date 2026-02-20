@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Slip POS - Tutorials</title>
+    <meta name="description" content="Slip tutorial hub">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../../favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../favicons/apple-touch-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="196x196" href="../../../../favicons/favicon-196x196.png">
+    <link rel="icon" type="image/png" sizes="160x160" href="../../../../favicons/favicon-160x160.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../../favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="../../../../favicons/favicon.ico">
+    <meta name="msapplication-TileImage" content="../../../../favicons/mstile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VXMVDGRV4D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag("js", new Date());
+        gtag("config", "G-VXMVDGRV4D");
+    </script>
+
+    <link href="../../../../stylesheets/site.css" rel="stylesheet" />
+    <script src="../../../../javascripts/site.js"></script>
+</head>
+<body class="tutorial-layout">
+    <nav class="nav">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="../../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
+        </div>
+        <div class="nav-menu">
+            <a href="/en/slip/#free-plan" class="nav-link">Free plan</a>
+            <a href="/en/slip/#local-first" class="nav-link">Local-first</a>
+            <a href="/en/slip/#tutorials" class="nav-link">Tutorials</a>
+            <a href="/en/slip/early-operators/" class="nav-link">First 10 Program</a>
+            <a href="https://apps.apple.com/us/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">Download Slip</a>
+            <div class="nav-locale">
+                <a href="/en/slip/tutorial/printer-settings/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/zh-TW/slip/tutorial/printer-settings/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
+                <span class="nav-locale-divider">/</span>
+                <a href="/ja/slip/tutorial/printer-settings/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <main class="tutorial-main">
+        <aside class="tutorial-sidebar">
+            <nav class="tutorial-sidebar-nav">
+    <p class="tutorial-sidebar-title">Tutorial list</p>
+    <ul class="tutorial-sidebar-list">
+        <li><a href="/en/slip/tutorial/">Tutorial overview</a></li>
+        <li><a href="/en/slip/tutorial/menu-import-with-chatgpt/">Quick menu import with AI</a></li>
+        <li><a href="/en/slip/tutorial/printer-settings/">Printer setup & testing</a></li>
+        <li><a href="/en/slip/tutorial/pos-sales-after-menu/">First time opening flow</a></li>
+        <li><a href="/en/slip/tutorial/menu-settings/">Categories & modifiers setup</a></li>
+        <li class="is-disabled"><span>Shift handoff & end-of-day close (coming soon)</span></li>
+    </ul>
+</nav>
+
+        </aside>
+        <section class="tutorial-content">
+            <section class="menu-import-page">
+    <header class="menu-import-header">
+        <h1>印表機設定與測試（新手版）</h1>
+        <p class="menu-import-subtitle">第一次設定出單機，先熟悉位置，再接實機。</p>
+    </header>
+
+    <section class="menu-import-overview">
+        <p>這份流程會帶你從 Printer 管理入口開始，走到新增路由與模板預覽。</p>
+        <p>前提：</p>
+        <ul>
+            <li>目前在 iPad 的設定畫面（Settings）</li>
+            <li>已進入有側邊欄的設定頁</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-steps">
+        <h2>步驟</h2>
+        <ol>
+            <li>
+                <h3>Step 1（F01）：先進到 Printer 畫面</h3>
+                <p>在左側 sidebar 點 <span class="menu-import-inline-code">Printer</span>，先確認你有進到正確模組。</p>
+                <ul>
+                    <li>右上有 <span class="menu-import-inline-code">Register</span> 按鈕</li>
+                    <li>中間有已註冊印表機列表</li>
+                    <li>下方有 Receipt template 區塊</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/01-printer-settings-main.png" alt="F01 進入 Printer 管理">
+            </li>
+            <li>
+                <h3>Step 2（F02）：打開新增印表機流程</h3>
+                <p>點右上 <span class="menu-import-inline-code">Register</span>，進到品牌選擇步驟。</p>
+                <ul>
+                    <li>可看到 Star / Epson 品牌卡片</li>
+                    <li><span class="menu-import-inline-code">下一步</span> 會先是不可按狀態</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/02-printer-open-setup-brand.png" alt="F02 開啟新增印表機品牌選擇">
+            </li>
+            <li>
+                <h3>Step 3（F03）：選品牌，前往配對說明</h3>
+                <p>先選品牌（例如 Star），再按 <span class="menu-import-inline-code">下一步</span>。</p>
+                <ul>
+                    <li>會進到 iOS 藍牙配對說明</li>
+                    <li>可看到 <span class="menu-import-inline-code">我已完成配對</span></li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/03-printer-pair-step.png" alt="F03 進入配對說明步驟">
+            </li>
+            <li>
+                <h3>Step 4（F04）：進到裝置偵測</h3>
+                <p>在配對說明頁按 <span class="menu-import-inline-code">我已完成配對</span>。</p>
+                <ul>
+                    <li>會進入偵測步驟</li>
+                    <li>可看到 <span class="menu-import-inline-code">重新偵測</span></li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/04-printer-discover-step.png" alt="F04 進入偵測步驟">
+            </li>
+            <li>
+                <h3>Step 5（F05）：看已註冊印表機資訊</h3>
+                <p>回到 Printer 管理頁，點一台已註冊印表機。</p>
+                <ul>
+                    <li>會開啟印表機資訊頁</li>
+                    <li>可看到 <span class="menu-import-inline-code">Default Drawer</span> 開關</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/05-printer-info-default-drawer.png" alt="F05 已註冊印表機資訊">
+            </li>
+            <li>
+                <h3>Step 6（F06）：打開收據模板路由設定</h3>
+                <p>在 Receipt template 區塊，點 <span class="menu-import-inline-code">Checkout Receipt</span> 這一列。</p>
+                <ul>
+                    <li>開啟 Print Routing 畫面</li>
+                    <li>可看到可加入路由的印表機列</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/06-printer-routing-screen.png" alt="F06 開啟收據模板路由">
+            </li>
+            <li>
+                <h3>Step 7（F07）：新增一筆路由</h3>
+                <p>在路由畫面，點印表機列右側 <span class="menu-import-inline-code">Add</span>。</p>
+                <ul>
+                    <li>上方輸出順序區會出現剛新增的路由</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/07-printer-routing-added.png" alt="F07 新增路由">
+            </li>
+            <li>
+                <h3>Step 8（F08）：打開模板預覽</h3>
+                <p>回到 Printer 管理頁，在 <span class="menu-import-inline-code">Checkout Receipt</span> 右側點預覽（眼睛圖示）。</p>
+                <ul>
+                    <li>會跳出模板預覽 sheet</li>
+                    <li>可捲動查看完整收據內容</li>
+                </ul>
+                <img src="../../../../images/slip/tutorial/printer-settings/08-printer-template-preview.png" alt="F08 開啟模板預覽">
+            </li>
+        </ol>
+    </section>
+
+    <section class="menu-import-notes">
+        <h2>常見狀況</h2>
+        <ul>
+            <li>看不到已註冊印表機：先確認是否完成註冊，或重進一次 Printer 管理頁。</li>
+            <li>偵測不到裝置：先到 iOS <span class="menu-import-inline-code">設定 &gt; 藍牙</span> 確認印表機已配對且電源開啟。</li>
+        </ul>
+    </section>
+
+    <section class="menu-import-disclaimer">
+        <h2>流程對照</h2>
+        <p>本篇對應 F01 ~ F08（Printer Settings 模組）。</p>
+    </section>
+</section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../../../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
+                </div>
+                <p class="footer-description">A POS that won't fail on the floor</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h6 class="footer-title">Product</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/#reliability" class="footer-link">Reliable on site</a></li>
+                        <li><a href="/en/slip/#free-plan" class="footer-link">Free plan</a></li>
+                        <li><a href="/en/slip/#local-first" class="footer-link">Local-first</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">Program</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/early-operators/" class="footer-link">First 10 Program</a></li>
+                        <li><a href="/en/slip/#stories" class="footer-link">Stories</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h6 class="footer-title">Support</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/tutorial/" class="footer-link">Tutorials</a></li>
+                        <li><a href="/en/slip/#faq" class="footer-link">FAQ</a></li>
+                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">Contact</a></li>
+                        <li><a href="/en/slip/support/" class="footer-link" target="_blank">Support page</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="footer-section">
+                    <h6 class="footer-title">公司</h6>
+                    <ul class="footer-list">
+                        <li><a href="#about" class="footer-link">關於我們</a></li>
+                        <li><a href="#careers" class="footer-link">加入我們</a></li>
+                        <li><a href="#news" class="footer-link">最新消息</a></li>
+                        <li><a href="#blog" class="footer-link">開發日誌</a></li>
+                    </ul>
+                </div> -->
+
+                <div class="footer-section">
+                    <h6 class="footer-title">Legal</h6>
+                    <ul class="footer-list">
+                        <li><a href="/en/slip/privacy/" class="footer-link" target="_blank">Privacy policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                <p>© 2026 Slip POS. All rights reserved.</p>
+            </div>
+            <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <rect x="4" y="4" width="16" height="16" rx="4"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
+    </svg>
+
+                        </a>
+                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
+    </svg>
+
+                        </a>
+                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+
+                        </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

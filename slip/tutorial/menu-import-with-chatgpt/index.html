@@ -24,12 +24,12 @@
 
                     for (var i = 0; i < preferred.length; i += 1) {
                         var lang = (preferred[i] || "").toLowerCase();
-                        if (lang.indexOf("ja") === 0) {
-                            detected = "ja";
-                            break;
-                        }
                         if (lang.indexOf("zh") === 0) {
                             detected = "zh-TW";
+                            break;
+                        }
+                        if (lang.indexOf("ja") === 0) {
+                            detected = "ja";
                             break;
                         }
                         if (lang.indexOf("en") === 0) {
