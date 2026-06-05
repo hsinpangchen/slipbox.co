@@ -1,5 +1,20 @@
 // Smooth scroll with offset for fixed navigation
 document.addEventListener('DOMContentLoaded', function() {
+    const pageLocale = document.documentElement.lang || '';
+
+    if (pageLocale === 'zh-TW' || pageLocale === 'ja') {
+        const titleElements = document.querySelectorAll('.slip-site h1, .slip-site h2, .slip-site h3, .slip-site h4');
+
+        titleElements.forEach(title => {
+            if (title.dataset.cjkPunctuationBreaks === 'true') {
+                return;
+            }
+
+            addCJKPunctuationBreaks(title);
+            title.dataset.cjkPunctuationBreaks = 'true';
+        });
+    }
+
     const localeLinks = document.querySelectorAll('[data-set-locale]');
 
     localeLinks.forEach(link => {
@@ -113,3 +128,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function addCJKPunctuationBreaks(root) {
+    const punctuationBreakPattern = /([。！？；：、，])\s*(?=\S)/g;
+
+    Array.from(root.childNodes).forEach(node => {
+        if (node.nodeType === Node.TEXT_NODE) {
+            const text = node.textContent;
+            const updatedText = text.replace(punctuationBreakPattern, '$1\n');
+
+            if (updatedText === text) {
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            const parts = updatedText.split('\n');
+
+            parts.forEach((part, index) => {
+                if (part) {
+                    fragment.appendChild(document.createTextNode(part));
+                }
+
+                if (index < parts.length - 1) {
+                    fragment.appendChild(document.createElement('br'));
+                }
+            });
+
+            node.parentNode.replaceChild(fragment, node);
+            return;
+        }
+
+        if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'BR') {
+            addCJKPunctuationBreaks(node);
+        }
+    });
+}

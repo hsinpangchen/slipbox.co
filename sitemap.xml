@@ -2,150 +2,190 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.slipbox.co/stashr/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/stashr/support/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/stashr/privacy/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/stashr/terms/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/slip/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/</loc>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/zh-TW/slip/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/ja/slip/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/slip/home/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/home/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/zh-TW/slip/home/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/ja/slip/home/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/slip/product/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/product/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/zh-TW/slip/product/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/ja/slip/product/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/slip/solutions/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/solutions/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/zh-TW/slip/solutions/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/ja/slip/solutions/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/slip/why-slip/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/why-slip/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/zh-TW/slip/why-slip/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/ja/slip/why-slip/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/slip/pricing/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/pricing/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/zh-TW/slip/pricing/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/ja/slip/pricing/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/slip/partners/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/en/slip/partners/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/zh-TW/slip/partners/</loc>
+        <lastmod>2026-06-05</lastmod>
+    </url>
+    <url>
+        <loc>https://www.slipbox.co/ja/slip/partners/</loc>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/en/slip/offline-ipad-pos/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/zh-TW/slip/offline-ipad-pos/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/ja/slip/offline-ipad-pos/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/en/slip/cafe-pos/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/zh-TW/slip/cafe-pos/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/ja/slip/cafe-pos/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/en/slip/tutorial/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/zh-TW/slip/tutorial/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/ja/slip/tutorial/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/en/slip/tutorial/menu-import-with-chatgpt/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/zh-TW/slip/tutorial/menu-import-with-chatgpt/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/ja/slip/tutorial/menu-import-with-chatgpt/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/en/slip/tutorial/printer-settings/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/zh-TW/slip/tutorial/printer-settings/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/ja/slip/tutorial/printer-settings/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/en/slip/tutorial/pos-sales-after-menu/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/zh-TW/slip/tutorial/pos-sales-after-menu/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/ja/slip/tutorial/pos-sales-after-menu/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/en/slip/tutorial/menu-settings/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/zh-TW/slip/tutorial/menu-settings/</loc>
-        <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-        <loc>https://www.slipbox.co/ja/slip/tutorial/menu-settings/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/en/slip/market/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/zh-TW/slip/market/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/ja/slip/market/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/en/slip/privacy/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/zh-TW/slip/privacy/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/ja/slip/privacy/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/en/slip/support/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/zh-TW/slip/support/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
     <url>
         <loc>https://www.slipbox.co/ja/slip/support/</loc>
-        <lastmod>2026-05-18</lastmod>
+        <lastmod>2026-06-05</lastmod>
     </url>
 </urlset>

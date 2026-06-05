@@ -10,7 +10,7 @@
     <link rel="alternate" hreflang="zh-TW" href="https://www.slipbox.co/zh-TW/slip/">
     <link rel="alternate" hreflang="ja" href="https://www.slipbox.co/ja/slip/">
     <link rel="alternate" hreflang="x-default" href="https://www.slipbox.co/slip/">
-    <meta name="description" content="Slip POS is an offline iPad POS app for small shops, cafes, and market stalls that need checkout, receipt printing, and reliable cash reconciliation on iOS.">
+    <meta name="description" content="A simple standalone POS for small shops.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Slip POS | Offline iPad POS app for small shops">
 <meta property="og:url" content="https://www.slipbox.co/slip/">
@@ -19,10 +19,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Slip POS | Offline iPad POS app for small shops">
 <meta name="twitter:image" content="https://www.slipbox.co/images/slip/slip_ipad_screen.png">
-    <meta property="og:description" content="Slip POS is an offline iPad POS app for small shops, cafes, and market stalls that need checkout, receipt printing, and reliable cash reconciliation on iOS.">
-    <meta name="twitter:description" content="Slip POS is an offline iPad POS app for small shops, cafes, and market stalls that need checkout, receipt printing, and reliable cash reconciliation on iOS.">
+    <meta property="og:description" content="A simple standalone POS for small shops.">
+    <meta name="twitter:description" content="A simple standalone POS for small shops.">
 
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Slip POS","applicationCategory":"BusinessApplication","operatingSystem":"iOS 18.4 or later","url":"https://www.slipbox.co/slip/","description":"Slip POS is an offline iPad POS app for small shops, cafes, and market stalls that need checkout, receipt printing, and reliable cash reconciliation on iOS.","image":"https://www.slipbox.co/images/slip/slip_ipad_screen.png","downloadUrl":"https://apps.apple.com/app/slip-pos/id6747707174","inLanguage":"en"}</script>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Slip POS","applicationCategory":"BusinessApplication","operatingSystem":"iOS 18.4 or later","url":"https://www.slipbox.co/slip/","description":"A simple standalone POS for small shops.","image":"https://www.slipbox.co/images/slip/slip_ipad_screen.png","downloadUrl":"https://apps.apple.com/app/slip-pos/id6747707174","inLanguage":"en"}</script>
 
     
     <!-- Favicons -->
@@ -60,323 +60,72 @@
     <link href="../stylesheets/site.css" rel="stylesheet" />
     <script src="../javascripts/site.js"></script>
 </head>
-<body>
-    <nav class="nav">
-    <div class="nav-container">
-        <div class="logo">
-            <a href="/slip/" aria-label="Slip POS">
-                <img src="../images/slip/logo.png" alt="Slip POS" class="logo-img">
-            </a>
-        </div>
-        <div class="nav-menu">
-            <a href="/slip/#free-plan" class="nav-link">Free plan</a>
-            <a href="/slip/#local-first" class="nav-link">Local-first</a>
-            <a href="/slip/#tutorials" class="nav-link">Tutorials</a>
-            <a href="https://apps.apple.com/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">Download Slip</a>
-            <div class="nav-locale">
-                <a href="/slip/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
-                <span class="nav-locale-divider">/</span>
-                <a href="/zh-TW/slip/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
-                <span class="nav-locale-divider">/</span>
-                <a href="/ja/slip/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
-            </div>
+<body class="slip-site">
+    <header class="topnav">
+    <div class="container topnav-inner">
+        <a class="brand" href="/slip/" aria-label="Slip POS">
+            <img class="brand-logo" src="../images/slip/logo.png" alt="Slip POS" width="32" height="32">
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="/en/slip/product/">Features</a>
+            <a href="/en/slip/solutions/">Solutions</a>
+            <a href="/en/slip/why-slip/">Why Slip</a>
+        </nav>
+
+        <div class="nav-actions">
+            <details class="language-switcher">
+                <summary><span>EN</span></summary>
+                <div class="language-menu" aria-label="Language options">
+                    <a href="/slip/" lang="en" aria-current="true" data-set-locale="en">EN</a>
+                    <a href="/zh-TW/slip/" lang="zh-Hant" data-set-locale="zh-TW">繁中</a>
+                    <a href="/ja/slip/" lang="ja" data-set-locale="ja">日本語</a>
+                </div>
+            </details>
+            <a class="btn btn-secondary" href="/en/slip/pricing/">Pricing</a>
+            <a class="btn btn-primary" href="https://apps.apple.com/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="slip_nav_download">Download Slip</a>
         </div>
     </div>
-</nav>
+</header>
 
     
     <main>
-        <section class="hero">
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title">Slip POS, an offline iPad POS for small shops.</h1>
-            <p class="hero-subtitle">
-                Run checkout on iPad even when the internet drops;<br>
-print fast, and close the day with cash that balances.
-            </p>
-            <div class="hero-buttons">
-                <a href="https://apps.apple.com/app/slip-pos/id6747707174" class="btn btn-primary" target="_blank" data-analytics-label="slip_hero_download">
-                    <span class="download-icon">↓</span>
-                    Download Slip
-                </a>
-            </div>
-            <p class="hero-search-links">
-                <a href="/en/slip/offline-ipad-pos/">Looking for an offline iPad POS?</a>
-                <span>·</span>
-                <a href="/en/slip/cafe-pos/">Running a cafe?</a>
-                <span>·</span>
-                <a href="/en/slip/market/">Selling at a market stall?</a>
-            </p>
-            <p class="hero-microcopy">The full checkout flow is free; printing is capped at 30 receipts.</p>
-            <p class="hero-requirements">Requires iOS 18.4 or later</p>
+        <section class="section hero home-hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>A simple standalone POS for small shops.</h1>
+          <p class="hero-copy">Slip helps small shops take orders, send tickets, accept cash payments, print receipts, and close the day without depending on a cloud system.</p>
+          <div class="hero-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/slip-pos/id6747707174" target="_blank" rel="noopener">Download</a><a class="btn btn-secondary" href="/en/slip/why-slip/">Why Slip</a></div>
         </div>
-        <div class="hero-screenshot">
-          <img src="../images/slip/slip_ipad_screen.png" alt="Slip POS on iPad" class="hero-screenshot-img">
-        </div>
-    </div>
-</section>
-
-<section id="reliability" class="features">
-    <div class="features-container">
-        <p class="section-subtitle">An iPad POS for shops that cannot afford floor mistakes</p>
-        <h3 class="section-title">Offline, printing, reconciliation -- the three essentials Slip POS locks down first</h3>
-
-        <div class="core-features-grid">
-            <div class="core-feature-card">
-                <div class="core-feature-icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <rect x="8" y="12" width="32" height="20" rx="2" stroke="#4F94FF" stroke-width="2" fill="none"/>
-                        <path d="M16 32L20 28L24 32L28 26L32 30" stroke="#4F94FF" stroke-width="2" fill="none"/>
-                        <circle cx="12" cy="38" r="2" fill="#4F94FF"/>
-                        <circle cx="36" cy="38" r="2" fill="#4F94FF"/>
-                    </svg>
-                </div>
-                <h4 class="core-feature-title">Checkout works offline</h4>
-                <p class="core-feature-description">Keep ringing up sales and recording transactions even when the internet drops.</p>
-            </div>
-
-            <div class="core-feature-card">
-                <div class="core-feature-icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <rect x="12" y="8" width="24" height="32" rx="2" stroke="#4F94FF" stroke-width="2" fill="none"/>
-                        <path d="M16 16H32M16 20H32M16 24H28M16 28H24" stroke="#4F94FF" stroke-width="1.5"/>
-                        <circle cx="24" cy="34" r="2" fill="#4F94FF"/>
-                    </svg>
-                </div>
-                <h4 class="core-feature-title">Prints the moment it connects</h4>
-                <p class="core-feature-description">Receipts come out as soon as the printer connects -- no cloud lag.</p>
-            </div>
-
-            <div class="core-feature-card">
-                <div class="core-feature-icon">
-                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                        <rect x="14" y="6" width="20" height="36" rx="4" stroke="#4F94FF" stroke-width="2" fill="none"/>
-                        <rect x="18" y="14" width="12" height="8" rx="1" fill="#4F94FF" opacity="0.3"/>
-                        <rect x="18" y="26" width="8" height="2" fill="#4F94FF"/>
-                        <rect x="18" y="30" width="12" height="2" fill="#4F94FF"/>
-                        <circle cx="24" cy="36" r="2" stroke="#4F94FF" stroke-width="1.5" fill="none"/>
-                    </svg>
-                </div>
-                <h4 class="core-feature-title">Cash always balances</h4>
-                <p class="core-feature-description">Clear reconciliation and handoffs -- no guessing at close.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="tutorials" class="tutorials">
-    <div class="section-container">
-        <p class="section-subtitle">Tutorials</p>
-        <h3 class="section-title">Get started with Slip</h3>
-        <p class="section-lede">From menu import to opening flow, fix the parts that usually get stuck.</p>
-
-        <div class="tutorials-grid">
-            <a class="tutorial-card" href="/en/slip/tutorial/menu-import-with-chatgpt/">
-                <div class="tutorial-card-meta">
-                    <span class="tutorial-tag">~3 min</span>
-                </div>
-                <h4>Quick menu import with AI</h4>
-                <p>Turn menu photos into Slip-ready JSON.</p>
-                <span class="tutorial-cta">Start tutorial →</span>
-            </a>
-
-            <a class="tutorial-card" href="/en/slip/tutorial/printer-settings/">
-                <div class="tutorial-card-meta">
-                    <span class="tutorial-tag">~5 min</span>
-                </div>
-                <h4>Printer setup & testing</h4>
-                <p>Connect, test print, and troubleshoot in one place.</p>
-                <span class="tutorial-cta">Start tutorial →</span>
-            </a>
-
-            <a class="tutorial-card" href="/en/slip/tutorial/pos-sales-after-menu/">
-                <div class="tutorial-card-meta">
-                    <span class="tutorial-tag">~5 min</span>
-                </div>
-                <h4>First time opening flow</h4>
-                <p>From pre-open setup to end-of-day close, all in one run.</p>
-                <span class="tutorial-cta">Start tutorial →</span>
-            </a>
-        </div>
-
-        <div class="tutorials-footer">
-            <a class="btn btn-secondary" href="/en/slip/tutorial/">View all tutorials</a>
-        </div>
-    </div>
-</section>
-
-<section id="free-plan" class="free-plan">
-    <div class="section-container split-feature-layout free-plan-layout">
-        <div class="split-feature-copy free-plan-copy">
-            <p class="section-subtitle">Free to try on the floor</p>
-            <h3 class="section-title">Try checkout free</h3>
-            <div class="section-body split-feature-body free-plan-body">
-                <p>Use Slip for orders, checkout, and end-of-day cash checks without creating an account.</p>
-                <p>Printing includes <strong>30 trial receipts</strong>. Unlock continued printing later; your sales and menu data stay on the device.</p>
-            </div>
-        </div>
-
-        <div class="split-feature-visual free-plan-visual" aria-hidden="true">
-            <img src="../images/slip/free-mode-pos-showcase.png" alt="" class="free-plan-showcase-image" loading="lazy" decoding="async">
-        </div>
-    </div>
-</section>
-
-<section id="local-first" class="local-first">
-    <div class="section-container split-feature-layout local-first-layout">
-        <div class="split-feature-copy local-first-copy">
-            <p class="section-subtitle">Offline-first by design</p>
-            <h3 class="section-title">A POS tool that keeps working on the counter</h3>
-            <div class="section-body split-feature-body local-first-body">
-                <p>Slip keeps sales records <strong>on the device first</strong>, so checkout can continue when cafe Wi-Fi or market internet gets unreliable.</p>
-                <p>No account is required to start. Open the app, set up a menu, connect a receipt printer, and sell from iPad or iPhone.</p>
-                <p>Cloud should support the tool, not become the tool. Slip stays focused on checkout, receipt printing, and simple cash reconciliation.</p>
-                <p class="fine-print">If you stop subscribing later, your existing records still stay on your device.</p>
-            </div>
-        </div>
-
-        <div class="split-feature-visual local-first-visual" aria-hidden="true">
-            <svg class="split-feature-illustration local-first-illustration" viewBox="0 0 420 360" role="img">
-                <rect x="74" y="34" width="210" height="270" rx="28" fill="#111827" />
-                <rect x="90" y="54" width="178" height="230" rx="18" fill="#f8fafc" />
-                <rect x="112" y="80" width="78" height="12" rx="6" fill="#1f2937" />
-                <rect x="112" y="108" width="128" height="22" rx="11" fill="#dbeafe" />
-                <rect x="112" y="146" width="58" height="46" rx="12" fill="#eff6ff" stroke="#93c5fd" />
-                <rect x="184" y="146" width="58" height="46" rx="12" fill="#f1f5f9" stroke="#cbd5e1" />
-                <rect x="112" y="206" width="130" height="12" rx="6" fill="#e2e8f0" />
-                <rect x="112" y="230" width="96" height="12" rx="6" fill="#e2e8f0" />
-                <circle cx="178" cy="320" r="8" fill="#374151" />
-
-                <path d="M292 94c36 0 58 21 58 48 0 26-22 48-58 48h-18" fill="none" stroke="#94a3b8" stroke-width="10" stroke-linecap="round" />
-                <path d="M316 104c6-26 28-42 56-38 30 5 48 32 42 61" fill="none" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round" />
-                <path d="M294 190l84-84" stroke="#dc2626" stroke-width="8" stroke-linecap="round" />
-
-                <rect x="272" y="220" width="102" height="86" rx="16" fill="#ffffff" stroke="#cbd5e1" />
-                <rect x="292" y="204" width="62" height="32" rx="10" fill="#1f2937" />
-                <path d="M296 244h54M296 262h42M296 280h50" stroke="#94a3b8" stroke-width="7" stroke-linecap="round" />
-
-                <path d="M276 250c-26 0-42-14-42-34" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round" />
-                <path d="M236 216l-14 12M236 216l12 14" fill="none" stroke="#2563eb" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-
-            <div class="split-feature-badges local-first-badges">
-                <span>Offline checkout</span>
-                <span>No login to start</span>
-                <span>Data on device</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="faq" class="faq">
-    <div class="section-container">
-        <p class="section-subtitle">FAQ</p>
-        <h3 class="section-title">Frequently asked questions</h3>
-        <div class="faq-list">
-            <div class="faq-item">
-                <h4>Can I use it when the internet is down?</h4>
-                <p>Yes. Slip is local-first, so checkout and records keep working offline.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Is Slip POS an offline POS app for iPad?</h4>
-                <p>Yes. Slip POS runs on iPad and is built for teams that need offline checkout, receipt printing, and reliable cash reconciliation on iOS.</p>
-            </div>
-            <div class="faq-item">
-                <h4>What happens after the print cap is reached?</h4>
-                <p>Your data stays safe and completed records remain intact; you can choose to unlock printing.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Will my data disappear after I cancel?</h4>
-                <p>No. Your data remains on your device.</p>
-            </div>
-            <div class="faq-item">
-                <h4>What kinds of shops is Slip POS for?</h4>
-                <p>Slip POS is built for cafes, small shops, market stalls, and food service teams that need an offline iPad POS with reliable checkout, receipt printing, and cash reconciliation.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
+        <figure class="hero-photo">
+          <img src="../images/slip/redesign/mpzotcue-c1e88ade-222d-4cd1-9ca4-95d7fe722ee8.png" alt="A shop owner using Slip POS on an iPad at the counter" width="1024" height="1536">
+        </figure>
+      </div>
+    </section>
+    <section class="section"><div class="container"><div class="section-head"><h2>Run the essential flow of a shop.</h2><p>Slip is organized around the work that happens every day, from the first order to the final close.</p></div><div class="workflow"><article class="workflow-step"><span class="mono">01 · CATALOG</span><h3>What you sell</h3><p>Keep items, options, prices, and sales modes close to where every order begins.</p></article><article class="workflow-step"><span class="mono">02 · ORDERS</span><h3>Take the order</h3><p>Create, edit, and track counter, table, and takeout orders from one focused surface.</p></article><article class="workflow-step"><span class="mono">03 · TICKETS</span><h3>Send the work</h3><p>Print the right ticket with the right notes so prep can move without extra explanation.</p></article><article class="workflow-step"><span class="mono">04 · CASH</span><h3>Finish clearly</h3><p>Accept cash payments, print receipts, handle refunds, and keep the shift state visible.</p></article></div></div></section>
+    <section class="section"><div class="container split"><div class="section-head section-head-flush"><h2>The tools stay close to the sale.</h2><p>Slip keeps the core POS actions direct instead of spreading a small shop across dashboards.</p></div><div class="grid-2"><article class="card"><span class="mono">CATALOG</span><h3>Menu and item setup</h3><p>Build the things you sell once, then reuse them across orders, tickets, receipts, and reports.</p></article><article class="card"><span class="mono">CASH REVIEW</span><h3>Cash payments and refunds</h3><p>Review cash collected, refunds, and what needs attention before daily close.</p></article><article class="card"><span class="mono">RECEIPTS</span><h3>Print when the shop needs paper</h3><p>Receipt and ticket printing are part of the flow, not a separate back-office task.</p></article><article class="card"><span class="mono">DAILY CLOSE</span><h3>Know where the day stands</h3><p>Sales, refunds, cash count, and close stay in one operational review.</p></article></div></div></section>
+    <section class="section"><div class="container"><div class="section-head"><h2>Start with the kind of shop you run.</h2><p>Slip is designed for small operators who need the basics to stay dependable during service.</p></div><div class="grid-2"><article class="card card-link"><span class="mono">CAFE POS</span><div><h3><a href="/en/slip/solutions/">Coffee shops and counters</a></h3><p>Fast ordering, clear receipts, and simple daily close for teams that work from a small counter.</p></div></article><article class="card card-link"><span class="mono">MARKET STALL POS</span><div><h3><a href="/en/slip/solutions/">Pop-ups and market stalls</a></h3><p>A standalone flow for sellers who need to take orders and keep moving without heavy setup.</p></div></article></div></div></section>
+    <section class="section"><div class="container cta-center"><h2>Start with a POS that works on its own.</h2><p class="hero-copy">Download Slip POS and begin with the essential sales flow. Add more only when the shop needs it.</p><div class="hero-cta"><a class="btn btn-primary" href="https://apps.apple.com/app/slip-pos/id6747707174" target="_blank" rel="noopener">Download Slip POS</a></div></div></section>
 
     </main>
     
     <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img src="../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
-                </div>
-                <p class="footer-description">A POS that won't fail on the floor</p>
-            </div>
+    <div class="container footer-inner">
+        <a class="footer-brand" href="/slip/">
+            <img class="footer-logo" src="../images/slip/logo.png" alt="" width="32" height="32">
+            <span class="sr-only">Slip POS</span>
+        </a>
 
-            <div class="footer-links">
-                <div class="footer-section">
-                    <h6 class="footer-title">Product</h6>
-                    <ul class="footer-list">
-                        <li><a href="/slip/#reliability" class="footer-link">Reliable on site</a></li>
-                        <li><a href="/slip/#free-plan" class="footer-link">Free plan</a></li>
-                        <li><a href="/slip/#local-first" class="footer-link">Local-first</a></li>
-                        <li><a href="/en/slip/offline-ipad-pos/" class="footer-link">Offline iPad POS guide</a></li>
-                        <li><a href="/en/slip/cafe-pos/" class="footer-link">Cafe POS</a></li>
-                        <li><a href="/en/slip/market/" class="footer-link">Market stalls</a></li>
-                    </ul>
-                </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="/en/slip/product/">Features</a>
+            <a href="/en/slip/solutions/">Solutions</a>
+            <a href="/en/slip/pricing/">Pricing</a>
+            <a href="/en/slip/partners/">Partners</a>
+            <a href="/en/slip/support/">Support page</a>
+            <a href="/en/slip/privacy/">Privacy policy</a>
+        </nav>
 
-                <div class="footer-section">
-                    <h6 class="footer-title">Support</h6>
-                    <ul class="footer-list">
-                        <li><a href="/en/slip/tutorial/" class="footer-link">Tutorials</a></li>
-                        <li><a href="/slip/#faq" class="footer-link">FAQ</a></li>
-                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">Contact</a></li>
-                        <li><a href="/en/slip/support/" class="footer-link" target="_blank">Support page</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h6 class="footer-title">Legal</h6>
-                    <ul class="footer-list">
-                        <li><a href="/en/slip/privacy/" class="footer-link" target="_blank">Privacy policy</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>© 2026 Slip POS. All rights reserved.</p>
-            </div>
-            <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
-    </svg>
-
-                        </a>
-                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-        <rect x="4" y="4" width="16" height="16" rx="4"/>
-        <circle cx="12" cy="12" r="3.5"/>
-        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
-    </svg>
-
-                        </a>
-                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-        <circle cx="12" cy="12" r="8.5"/>
-        <circle cx="12" cy="12" r="3.5"/>
-        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
-    </svg>
-
-                        </a>
-                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-
-                        </a>
-            </div>
-        </div>
+        <span class="footer-copy">© 2026 Slip POS. All rights reserved.</span>
     </div>
 </footer>
 

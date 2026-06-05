@@ -60,29 +60,33 @@
     <link href="../../../stylesheets/site.css" rel="stylesheet" />
     <script src="../../../javascripts/site.js"></script>
 </head>
-<body>
-    <nav class="nav">
-    <div class="nav-container">
-        <div class="logo">
-            <a href="/zh-TW/slip/" aria-label="Slip POS">
-                <img src="../../../images/slip/logo.png" alt="Slip POS" class="logo-img">
-            </a>
-        </div>
-        <div class="nav-menu">
-            <a href="/zh-TW/slip/#free-plan" class="nav-link">免費方案</a>
-            <a href="/zh-TW/slip/#local-first" class="nav-link">Local-first</a>
-            <a href="/zh-TW/slip/#tutorials" class="nav-link">教學</a>
-            <a href="https://apps.apple.com/app/slip-pos/id6747707174" class="nav-link download-btn" target="_blank" data-analytics-label="slip_nav_download">下載 Slip</a>
-            <div class="nav-locale">
-                <a href="/en/slip/cafe-pos/" class="nav-link nav-locale-link" data-set-locale="en">EN</a>
-                <span class="nav-locale-divider">/</span>
-                <a href="/zh-TW/slip/cafe-pos/" class="nav-link nav-locale-link" data-set-locale="zh-TW">繁中</a>
-                <span class="nav-locale-divider">/</span>
-                <a href="/ja/slip/cafe-pos/" class="nav-link nav-locale-link" data-set-locale="ja">日本語</a>
-            </div>
+<body class="slip-site">
+    <header class="topnav">
+    <div class="container topnav-inner">
+        <a class="brand" href="/zh-TW/slip/" aria-label="Slip POS">
+            <img class="brand-logo" src="../../../images/slip/logo.png" alt="Slip POS" width="32" height="32">
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="/zh-TW/slip/product/">功能</a>
+            <a href="/zh-TW/slip/solutions/">解決方案</a>
+            <a href="/zh-TW/slip/why-slip/">為什麼選 Slip</a>
+        </nav>
+
+        <div class="nav-actions">
+            <details class="language-switcher">
+                <summary><span>繁中</span></summary>
+                <div class="language-menu" aria-label="Language options">
+                    <a href="/en/slip/cafe-pos/" lang="en" data-set-locale="en">EN</a>
+                    <a href="/zh-TW/slip/cafe-pos/" lang="zh-Hant" aria-current="true" data-set-locale="zh-TW">繁中</a>
+                    <a href="/ja/slip/cafe-pos/" lang="ja" data-set-locale="ja">日本語</a>
+                </div>
+            </details>
+            <a class="btn btn-secondary" href="/zh-TW/slip/pricing/">價格</a>
+            <a class="btn btn-primary" href="https://apps.apple.com/app/slip-pos/id6747707174" target="_blank" rel="noopener" data-analytics-label="slip_nav_download">下載 Slip</a>
         </div>
     </div>
-</nav>
+</header>
 
     
     <main>
@@ -143,82 +147,22 @@
     </main>
     
     <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img src="../../../images/slip/logo.png" alt="Slip POS" class="footer-logo-img">
-                </div>
-                <p class="footer-description">在營業現場不會出事的 POS</p>
-            </div>
+    <div class="container footer-inner">
+        <a class="footer-brand" href="/zh-TW/slip/">
+            <img class="footer-logo" src="../../../images/slip/logo.png" alt="" width="32" height="32">
+            <span class="sr-only">Slip POS</span>
+        </a>
 
-            <div class="footer-links">
-                <div class="footer-section">
-                    <h6 class="footer-title">產品</h6>
-                    <ul class="footer-list">
-                        <li><a href="/zh-TW/slip/#reliability" class="footer-link">現場可靠</a></li>
-                        <li><a href="/zh-TW/slip/#free-plan" class="footer-link">免費方案</a></li>
-                        <li><a href="/zh-TW/slip/#local-first" class="footer-link">Local-first</a></li>
-                        <li><a href="/zh-TW/slip/offline-ipad-pos/" class="footer-link">離線 iPad POS 介紹</a></li>
-                        <li><a href="/zh-TW/slip/cafe-pos/" class="footer-link">咖啡廳 POS</a></li>
-                        <li><a href="/zh-TW/slip/market/" class="footer-link">市集擺攤</a></li>
-                    </ul>
-                </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+            <a href="/zh-TW/slip/product/">功能</a>
+            <a href="/zh-TW/slip/solutions/">解決方案</a>
+            <a href="/zh-TW/slip/pricing/">價格</a>
+            <a href="/zh-TW/slip/partners/">合作</a>
+            <a href="/zh-TW/slip/support/">支援頁面</a>
+            <a href="/zh-TW/slip/privacy/">隱私政策</a>
+        </nav>
 
-                <div class="footer-section">
-                    <h6 class="footer-title">支援</h6>
-                    <ul class="footer-list">
-                        <li><a href="/zh-TW/slip/tutorial/" class="footer-link">教學</a></li>
-                        <li><a href="/zh-TW/slip/#faq" class="footer-link">常見問題</a></li>
-                        <li><a href="https://tally.so/r/wAMX1l" class="footer-link" target="_blank">聯絡我們</a></li>
-                        <li><a href="/zh-TW/slip/support/" class="footer-link" target="_blank">支援頁面</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h6 class="footer-title">法律條款</h6>
-                    <ul class="footer-list">
-                        <li><a href="/zh-TW/slip/privacy/" class="footer-link" target="_blank">隱私政策</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                <p>© 2026 Slip POS. All rights reserved.</p>
-            </div>
-            <div class="footer-social">
-                        <a href="https://www.facebook.com/profile.php?id=61586979264521" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M13 9h4V5h-4c-2.8 0-5 2.2-5 5v3H6v4h2v7h4v-7h3l1-4h-4v-3c0-.6.4-1 1-1z"/>
-    </svg>
-
-                        </a>
-                        <a href="https://www.instagram.com/slip.pos/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-        <rect x="4" y="4" width="16" height="16" rx="4"/>
-        <circle cx="12" cy="12" r="3.5"/>
-        <circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>
-    </svg>
-
-                        </a>
-                        <a href="https://www.threads.com/@slip.pos" class="social-link" aria-label="Threads" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-        <circle cx="12" cy="12" r="8.5"/>
-        <circle cx="12" cy="12" r="3.5"/>
-        <path d="M15.5 12v1.6a2.4 2.4 0 0 0 4.8 0V12" stroke-linecap="round"/>
-    </svg>
-
-                        </a>
-                        <a href="https://x.com/slip_pos_app" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-
-                        </a>
-            </div>
-        </div>
+        <span class="footer-copy">© 2026 Slip POS. All rights reserved.</span>
     </div>
 </footer>
 
