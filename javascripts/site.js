@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const titleElements = document.querySelectorAll('.slip-site h1, .slip-site h2, .slip-site h3, .slip-site h4');
 
         titleElements.forEach(title => {
+            if (title.dataset.cjkPunctuationBreaks === 'false') {
+                return;
+            }
+
             if (title.dataset.cjkPunctuationBreaks === 'true') {
                 return;
             }
